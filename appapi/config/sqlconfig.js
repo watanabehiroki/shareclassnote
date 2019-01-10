@@ -1,6 +1,8 @@
-var mysql = {
-    host:
-    name:
-    port:
+exports.mysql = {
+    host: '******',
+    user:  '*****',
+    password: '****',
+    database: '****',
+    port: 3306
 
 }
