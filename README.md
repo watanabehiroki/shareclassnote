@@ -24,6 +24,7 @@
 - <clientuser>テーブル => 生徒側
     - userid<string>        => primary
     - name<string>
+    - profilepicture<string>
     - mailflg<boolean>
     - age<integer>
     - delflg<boolean>
@@ -55,5 +56,5 @@
 - <rolenumber>テーブル => 教員＆管理者側のアクセス権限
     - roleid<string>        => primary
     - rolenumber<intger>
-    - descriptor<string>
+    - descriptor<string> => 記述事項など
     - delflg<boolean>
