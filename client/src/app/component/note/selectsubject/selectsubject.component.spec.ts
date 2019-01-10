@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SharenoteComponent } from './sharenote.component';
+import { SelectsubjectComponent } from './selectsubject.component';
 
-describe('SharenoteComponent', () => {
-  let component: SharenoteComponent;
-  let fixture: ComponentFixture<SharenoteComponent>;
+describe('SelectsubjectComponent', () => {
+  let component: SelectsubjectComponent;
+  let fixture: ComponentFixture<SelectsubjectComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SharenoteComponent ]
+      declarations: [ SelectsubjectComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SharenoteComponent);
+    fixture = TestBed.createComponent(SelectsubjectComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

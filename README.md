@@ -6,6 +6,15 @@
   - client(angular)
   - appapi(express json)
 
+### client画面遷移
+- componentで表示する
+    - noteディレクトリ
+        - selectnoteoperation => ノートの提出かノート閲覧を選択させる
+        - submitnote => ノートのアップロードを行う
+        - selectsubject => 教科の選択を行う
+        - detailnote => ノート一覧を表示する
+        - readingnote => ノートの詳細情報
+    - 授業計画表()
 ### api設計
 - login時
     - /gethashkey => useridとhashkeyをデータベースに登録し、hashkeyを返す.
@@ -48,13 +57,21 @@
     - releaseflg<boolean>
     - groupname<string>     => outerjoin
     - adminid<string>       => outerjoin
+    - timeid<integer>       => outerjoin
+    - subject<integer>      => outerjoin
 - <timetable>テーブル =>　授業予定表
     - adminid<string>       => outerjoin
     - groupname<string>     => outerjoin
     - clientid<string>      => outerjoin
     - jpegnumber<string>
 - <rolenumber>テーブル => 教員＆管理者側のアクセス権限
-    - roleid<string>        => primary
+    - roleid<string>        => primary key
     - rolenumber<intger>
     - descriptor<string> => 記述事項など
     - delflg<boolean>
+- <time>テーブル => 時間割をしていする
+    - id<integer>           =>primary key
+    - name<string>時間割・その他
+- <subject> テーブル => 教科をしていする
+    - id<integer>           =>primary key
+    - name<string>教科名
