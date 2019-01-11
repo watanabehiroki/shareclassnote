@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReadingnoteComponent } from './readingnote.component';
+import { PubnotelistComponent } from './pubnotelist.component';
 
-describe('ReadingnoteComponent', () => {
-  let component: ReadingnoteComponent;
-  let fixture: ComponentFixture<ReadingnoteComponent>;
+describe('PubnotelistComponent', () => {
+  let component: PubnotelistComponent;
+  let fixture: ComponentFixture<PubnotelistComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ReadingnoteComponent ]
+      declarations: [ PubnotelistComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ReadingnoteComponent);
+    fixture = TestBed.createComponent(PubnotelistComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -7,25 +7,23 @@
 .footer{
   height: 12%;
 }
-input.button.btn.btn-primary {
-  width: 48%;
-  height: 80vw;
-  font-size: 40px;
-  padding-right:50px;
-}
-input.button.btn.btn-danger {
-  width: 48%;
-  height: 80vw;
-  font-size: 40px;
-}
-.main{
 
+.main{
   text-align: center;
 }
-
-.main.card-body{
-  height: 86vw;
+.card{
+  height: 100%;
+ }
+.card-body{
+  padding: 1px;
+  height: 80%;
 }
 .card-header{
-  height: 20vw;
+  height: 20%;
+}
+.button {
+  font-size: 30px;
+  margin:0;
+  height: 100%;
+  width:50%;
 }
