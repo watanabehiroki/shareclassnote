@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: '', redirectTo:'/home',pathMatch:'full'},
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'selectnoteoperatio', component: SelectnoteoperationComponent},
+  {path: 'selectnoteope', component: SelectnoteoperationComponent},
   {path: 'submitnote', component: SubmitnoteComponent},
   {path: 'selectsubject', component: SelectsubjectComponent},
   {path: 'detailnote',  component: DetailnoteComponent},

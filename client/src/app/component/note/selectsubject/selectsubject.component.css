@@ -1,0 +1,28 @@
+.header{
+  height: 8%;
+}
+.middle{
+  height:80%;
+}
+.footer{
+  height: 12%;
+}
+.subbtn{
+  width: 20vw;
+  height:80%;
+}
+.card{
+  height: 100%;
+}
+.card-body{
+  height: 20%;
+}
+.card-body{
+  height: 75%;
+}
+.card-footer{
+  height: 10%;
+}
+.card-footer{
+  text-align: center;
+}

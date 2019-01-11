@@ -1,0 +1,31 @@
+.header{
+  height: 8%;
+}
+.middle{
+  height:80%;
+}
+.footer{
+  height: 12%;
+}
+input.button.btn.btn-primary {
+  width: 48%;
+  height: 80vw;
+  font-size: 40px;
+  padding-right:50px;
+}
+input.button.btn.btn-danger {
+  width: 48%;
+  height: 80vw;
+  font-size: 40px;
+}
+.main{
+
+  text-align: center;
+}
+
+.main.card-body{
+  height: 86vw;
+}
+.card-header{
+  height: 20vw;
+}

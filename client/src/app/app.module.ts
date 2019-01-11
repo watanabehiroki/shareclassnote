@@ -11,6 +11,8 @@ import { ReadingnoteComponent } from './component/note/readingnote/readingnote.c
 import { SelectnoteoperationComponent } from './component/note/selectnoteoperation/selectnoteoperation.component';
 import { SelectsubjectComponent } from './component/note/selectsubject/selectsubject.component';
 import { DetailnoteComponent } from './component/note/detailnote/detailnote.component';
+import { FooterComponent } from './component/headerfooter/footer/footer.component';
+import { HeaderComponent } from './component/headerfooter/header/header.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { DetailnoteComponent } from './component/note/detailnote/detailnote.comp
     ReadingnoteComponent,
     SelectnoteoperationComponent,
     SelectsubjectComponent,
-    DetailnoteComponent
+    DetailnoteComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
