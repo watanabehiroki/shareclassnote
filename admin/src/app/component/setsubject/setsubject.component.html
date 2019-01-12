@@ -1,0 +1,43 @@
+<div class="header">
+  <app-header ></app-header>
+</div>
+<div class="middle">
+  <form class="card">
+    <div class="card-header">科目入力ページ</div>
+    <table class="card-body table">
+      <tr>
+        <th><span>科目</span></th>
+        <td><input  type='text'  [(ngModel)]='subname' name="subname" required/></td>
+      </tr>
+      <tr>
+        <th><span>必要事項</span></th>
+        <td><input type="textarea" [(ngModel)]="other" name="other" value="" required="false" /></td>
+      </tr>
+      <tr>
+        <th><span>色選択</span></th>
+        <td><input  type="color" [(ngModel)]="color" name="color" required /></td>
+      </tr>
+    </table>
+    <div class="card-footer">
+      <input type="button" value="登録" class=" btn btn-primary" (click)="submitclick()"/>
+    </div>
+  </form>
+  <div class="subjectmenu card">
+    <div class="card-header">
+      <span>サンプル</span>
+      <button class="btn btn-primary" data-toggle="collapse" data-target="#ListSubject">↓</button>
+      <div class="collapse" id="ListSubject">
+        <table class="card-body">
+          <tr>
+            <th>科目名</th>
+            <th>色</th>
+            <th>その他</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>

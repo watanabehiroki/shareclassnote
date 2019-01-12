@@ -1,6 +1,6 @@
-var serverurl = url: 'http://localhost:8080';
+var serverurl = 'http://localhost:8080';
 
-export function geturl(){
+export function geturl() {
   return serverurl;
 }
 

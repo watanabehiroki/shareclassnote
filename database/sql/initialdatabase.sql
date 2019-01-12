@@ -24,4 +24,4 @@ create table subject(id int not null primary key,name varchar(40)not null);
 # 時間割テ―ブル
 create table time(id int not null primary key, name varchar(40)not null);
 #各科目ごとに色を設定するテーブル
-create table subjectcolor(subjectid int not null, red varchar(255) not null, greed varchar(255) not null, blue varchar(255) not null, startday date not null, primary key (subjectid,startday), foreign  key(subjectid) references subject(id));
+create table subjectcolor(subjectid int not null, color varchar(255) not null, startday date not null, primary key(subjectid,startday), foreign  key(subjectid) references subject(id));
