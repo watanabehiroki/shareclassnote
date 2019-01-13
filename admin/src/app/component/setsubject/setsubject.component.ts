@@ -12,11 +12,17 @@ export class SetsubjectComponent implements OnInit {
   listsubjectobj;
   constructor(private httpservice: HttpService) { }
   ngOnInit() {
-    this.httpservice.httpget('/getsubject').subscribe(resdata => {
-      this.listsubjectobj = resdata;
-    });
+    this.httpservice.httpget('/subject/getallsubject').subscribe(resdata =>
+    {
+      this.listsubjectobj = resdata; console.log(resdata);
+    },
+      err => console.log(err)
+    );
   }
   submitclick() {
+    this.httpservice.httpget('/').subscribe((data) =>
+      console.log(data)
+    );
   }
 
 }

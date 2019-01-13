@@ -14,7 +14,6 @@ router.get('/getallsubject',function(req,res){
         //ここではsessionidの判定を行う予定
     }
     try {
-        connection.connect();
         connection.query(sql, function (err, rows, fields) {
 
             if (err) {
@@ -26,7 +25,6 @@ router.get('/getallsubject',function(req,res){
             }
             return res.json(result);
         });
-        connection.end();
     }catch (e){
         result= {
             err:'conectionerr'

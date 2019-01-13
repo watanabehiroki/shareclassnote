@@ -10,6 +10,14 @@ var subjectRouter = require('./routes/subject');
 var app = express();
 
 // view engine setup
+// cros問題対策
+app.use(function(req, res, next){
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');  // ← コレを追加
+  next();
+});
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 

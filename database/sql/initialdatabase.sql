@@ -6,8 +6,10 @@ create table rolenumber(roleid varchar(20) not null primary key,rolenumber int n
 delflg boolean not null);
 # 生徒テーブル
 create table clientuser(userid varchar(255) primary key not null,name varchar(255)not null,profilepicture varchar(255),mailflg boolean,age int not null,delflg boolean not null,password varchar(20) not null);
-# APIセッションテーブル
-create table apisession(userid varchar(255) ,endday date , sessionid varchar(255) not null,foreign key(userid)references clientuser(userid),foreign  key(userid) references adminuser(userid),primary key(userid,endday));
+# APIセッションテーブル(client)
+create table clientapisession(userid varchar(255) ,endday date , sessionid varchar(255) not null,foreign key(userid)references clientuser(userid), primary key(userid,endday));
+# APIセッションテーブル(admin)
+create table adminapisession(userid varchar(255) ,endday date , sessionid varchar(255) not null, foreign  key(userid) references adminuser(userid),primary key(userid,endday));
 # グループ用テーブル
 create table grouptable(groupname varchar(40),adminid varchar(255),qcode varchar(255) not null,endday date not null,foreign key(adminid) references adminuser(userid),primary key(groupname,adminid));
 # １グループ内のメンバー

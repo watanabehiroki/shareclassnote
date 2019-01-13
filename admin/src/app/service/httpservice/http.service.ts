@@ -6,10 +6,11 @@ import {serverurl} from '../../../confing/urlconfig';
 })
 export class HttpService {
   host = serverurl;
-  headers: any =  new Headers({'Content-Type': 'application/json'});
   constructor(private http: HttpClient) { }
-  httpget(path) {
+  public httpget(path) {
      const respocnceurl: string = this.host + path;
-     return this.http.get(respocnceurl, this.headers);
+     const result = this.http.get(respocnceurl);
+     console.log(result);
+     return result;
   }
 }
