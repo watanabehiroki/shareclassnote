@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {geturl} from '../../../confing/urlconfig';
+import {serverurl} from '../../../confing/urlconfig';
 @Injectable({
   providedIn: 'root'
 })
 export class HttpService {
-  host = geturl();
+  host = serverurl;
   headers: any =  new Headers({'Content-Type': 'application/json'});
   constructor(private http: HttpClient) { }
   httpget(path) {
-     var respocnceurl: string = this.host + path;
+     const respocnceurl: string = this.host + path;
      return this.http.get(respocnceurl, this.headers);
   }
 }

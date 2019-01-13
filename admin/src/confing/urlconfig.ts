@@ -1,7 +1,3 @@
-var serverurl = 'http://localhost:8080';
-
-export function geturl() {
-  return serverurl;
-}
+export const serverurl = 'http://localhost:3000';
 
 

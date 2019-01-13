@@ -6,15 +6,15 @@ import {HttpService} from '../../service/httpservice/http.service';
   styleUrls: ['./setsubject.component.css']
 })
 export class SetsubjectComponent implements OnInit {
-  color: string = '';
-  subname: string = '';
-  other: string = '';
-  listsubjectobj = [];
+  color = '';
+  subname = '';
+  other = '';
+  listsubjectobj;
   constructor(private httpservice: HttpService) { }
   ngOnInit() {
-    this.httpservice.httpget('/getsubject').subscribe(resdata=>{
+    this.httpservice.httpget('/getsubject').subscribe(resdata => {
       this.listsubjectobj = resdata;
-    })
+    });
   }
   submitclick() {
   }

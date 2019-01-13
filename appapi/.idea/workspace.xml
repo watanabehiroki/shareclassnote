@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="444a9397-a04d-42a6-ab20-98d89e7cfbc5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/setsubject/setsubject.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/setsubject/setsubject.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/confing/urlconfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/confing/urlconfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/.sailsrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/Gruntfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/api/controllers/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/api/controllers/SubjectController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/api/helpers/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/api/models/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/api/models/Subject.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/api/models/SubjectColor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/api/policies/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/assets/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/assets/dependencies/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/assets/dependencies/sails.io.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/assets/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/assets/images/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/assets/js/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/assets/styles/importer.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/assets/templates/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/config/blueprints.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/config/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/config/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/config/datastores.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/config/env/production.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/config/globals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/config/http.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/config/i18n.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/config/locales/de.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/config/locales/en.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/config/locales/es.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/config/locales/fr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/config/log.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/config/models.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/config/policies.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/config/routes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/config/security.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/config/session.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/config/sockets.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/config/views.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/config/babel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/config/clean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/config/coffee.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/config/concat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/config/copy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/config/cssmin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/config/hash.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/config/jst.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/config/less.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/config/sails-linker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/config/sync.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/config/uglify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/config/watch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/pipeline.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/register/build.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/register/buildProd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/register/compileAssets.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/register/default.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/register/linkAssets.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/register/linkAssetsBuild.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/register/linkAssetsBuildProd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/register/polyfill.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/register/prod.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/tasks/register/syncAssets.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/views/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/views/404.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/views/500.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/views/layouts/layout.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiapp/views/pages/homepage.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/appapi.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/www" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sqlconfig.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/module/connectsql.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/module/connectsql.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/subject.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/subject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/error.jade" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.jade" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout.jade" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/sql/initialdatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../database/sql/initialdatabase.sql" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/node_modules/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/subject.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="723">
+              <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/users.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/module/connectsql.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="57" lean-forward="true" selection-end-line="3" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/conf/databaseconf.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/routes/module/connectsql.js" />
+        <option value="$PROJECT_DIR$/routes/subject.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1296" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="appapi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appapi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appapi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appapi" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appapi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appapi" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appapi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appapi" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547381111611" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="444a9397-a04d-42a6-ab20-98d89e7cfbc5" name="Default Changelist" comment="" />
+      <created>1547376355205</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1547376355205</updated>
+      <workItem from="1547376356554" duration="4748000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4748000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1296" height="1040" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Designer" order="0" />
+      <window_info id="UI Designer" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Database Changes" order="2" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="bottom" id="Run" order="7" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="right" id="Theme Preview" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Palette&#9;" order="2" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/conf/databaseconf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/sqlconfig.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/module/connectsql.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="57" lean-forward="true" selection-end-line="3" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/subject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="723">
+          <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,18 +1,28 @@
 const mysql = require('mysql');
 const sqlconf = require('../../config/sqlconfig');
 
-const connection = mysql.createConnection(sqlconf);
+const connection = mysql.createConnection(sqlconf.mysql);
 
-export function connectsql(sql){
-    connection.connect();
-    result;
-    connection.query(sql,function(err,rows,fields){
-        if(err){
-           result = null;
-        }else{
-            result = rows;
+ exports.connectdatabase= async function(sql){
+    var result;
+    try {
+        connection.connect();
+        connection.query(sql, function (err, rows, fields) {
+
+            if (err) {
+                result = {
+                    err:'conectionerr'
+                };
+            } else {
+                result = rows;
+            }
+            console.log(result);
+            return result;
+        });
+        connection.end();
+    }catch (e){
+        result= {
+            err:'conectionerr'
         }
-    });
-    connection.end();
-    return result;
+    }
 }

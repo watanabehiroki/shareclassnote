@@ -118,7 +118,8 @@
 - <subject> テーブル => 教科をしていする
     - id<integer>           =>primary key
     - name<string>教科名
-    
+    - color<string>
+    - updatetday<date>
 - 追加内容 rgb　各科目の色を自由に選択させるため
 - <subjectcolor>テーブル =>教科ごとに色の選択をさせる.
     - subjectid<integer>    =>primarykey・outerjoin      

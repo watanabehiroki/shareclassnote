@@ -20,8 +20,6 @@ create table classnote(noteid varchar(255) primary key, clientid varchar(255) no
 # 授業計画表
 create table timetable(adminid varchar(255) not null, groupname varchar(255) not null, clientid varchar(255) not null, jpegnumber varchar(255) not null, foreign key(adminid) references adminuser(userid), foreign key(groupname) references grouptable(groupname), foreign key(clientid) references clientuser(userid));
 # 教科テーブル
-create table subject(id int not null primary key,name varchar(40)not null);
+create table subject(id int not null primary key,name varchar(40)not null, color varchar(255) not null, updateday date not null);
 # 時間割テ―ブル
-create table time(id int not null primary key, name varchar(40)not null);
-#各科目ごとに色を設定するテーブル
-create table subjectcolor(subjectid int not null, color varchar(255) not null, startday date not null, primary key(subjectid,startday), foreign  key(subjectid) references subject(id));
+create table time(id int not null primary key, name varchar(40)not null, );
