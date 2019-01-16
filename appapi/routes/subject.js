@@ -2,8 +2,9 @@ var express = require('express');
 var router = express.Router();
 const mysql = require('mysql');
 const sqlconf = require('../config/sqlconfig');
-
 const connection = mysql.createConnection(sqlconf.mysql);
+
+
 /*GET*/
 /*登録されている教科を返却する*/
 router.get('/getallsubject',function(req,res){
@@ -18,6 +19,7 @@ router.get('/getallsubject',function(req,res){
 
             if (err) {
                 result = {
+                    result:'err',
                     err:'conectionerr'
                 };
             } else {
@@ -27,7 +29,7 @@ router.get('/getallsubject',function(req,res){
         });
     }catch (e){
         result= {
-            err:true
+            result:'err'
         }
         return res.json(result);
     }
@@ -38,25 +40,34 @@ router.get('/getallsubject',function(req,res){
 /*各教科の登録を行う*/
 router.post('/addsubject',function(req,res){
     var result = "";
-    var name = res.body.name;
-    var updateday = res.body.updateday;
-    var color = res.body.color;
+    var name = req.body.name;
+    console.log(name);
+    var updateday = new Date();
+    var color = req.body.color;
     var result = "";
-    var sql = "insert into subject(name,color,updateday) values ("+name+","+color+","+updateday+")";
+    var sql;
     try{
+
+        var sql = 'insert into subject(name,color,updateday)'
+            +' values ("'+name+'","'+color+'",now());';
         connection.query(sql,function(err,rows){
             if(err){
                 result = {
-                    err:'connectionerr'
+                    result: 'err',
+                    err:'connectionerr',
+                    message: err
                 }
             }else{
-                result = rows;
+                result = {
+                    result:'success',
+                    message:'OK Regist'
+                };
             }
             return res.json(result);
         })
     }catch (e){
         result={
-            err: 'err',
+            result: 'err',
             message:"err"
         }
         return res.json(result);

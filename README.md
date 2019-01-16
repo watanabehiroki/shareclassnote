@@ -15,6 +15,11 @@
         - pubnotelist => ノート一覧を表示する
         - detailnote => ノートの詳細情報
     - 授業計画表()
+### admin画面遷移
+-component
+    -
+-service 
+    -   
 ### api設計
 - login時
     - /gethashkey => useridとhashkeyをデータベースに登録し、hashkeyを返す.
@@ -23,6 +28,18 @@
         →　失敗時：errorメッセージを返却する。
         
 - client作成時
+    - /user/clientuseradd => 利用者を登録する。
+        request json {
+            name: '',
+            age:  '',
+            mailflg: '',
+            profilepicture: '',
+        }
+        responce json {
+            result: 'sucess or err',
+            message or err :''
+        
+        }
 - その他
     - /getsubject => 登録されている科目を返却する. getで受け取る(session必要)
        responce json {

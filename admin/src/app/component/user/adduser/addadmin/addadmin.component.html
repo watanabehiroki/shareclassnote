@@ -1,0 +1,41 @@
+<div class="header">
+  <app-header ></app-header>
+</div>
+<div class="middle">
+  <form class="card ">
+    <div class="card-header"><span>説明文導入</span></div>
+    <table class=" table card-body">
+      <tr>
+        <th>名前:</th>
+        <td><input type="text" /></td>
+      </tr>
+      <tr>
+        <th>年齢:</th>
+        <td><input type="number" /></td>
+      </tr>
+      <tr>
+        <th>メールアドレス</th>
+        <td><input type="email"/></td>
+      </tr>
+      <tr>
+        <th>パスワード:</th>
+        <td>
+          <input type="radio" name="passradio" value=false checked="checked"/>自動生成
+          <input type="radio" name="passradio" value=true/>手動入力
+          <br/><br/>
+          <div>
+            <input type="password"/>
+          </div>
+        </td>
+      </tr>
+
+    </table>
+    <div class="card-footer">
+      <span>結果表示</span>
+      <input type="submit" value="登録" class="btn btn-primary"/>
+    </div>
+  </form>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>

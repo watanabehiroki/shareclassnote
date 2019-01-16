@@ -7,11 +7,17 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './component/headerfooter/footer/footer.component';
 import { HeaderComponent } from './component/headerfooter/header/header.component';
-import { SetsubjectComponent } from './component/setsubject/setsubject.component';
-import { AddclientComponent } from './component/adduser/addclient/addclient.component';
-import { AddadminComponent } from './component/adduser/addadmin/addadmin.component';
+import { SetsubjectComponent } from './component/subject/setsubject/setsubject.component';
+import { AddclientComponent } from './component/user/adduser/addclient/addclient.component';
+import { AddadminComponent } from './component/user/adduser/addadmin/addadmin.component';
 import { LoginComponent } from './component/login/login.component';
 import {  HttpService } from  './service/httpservice/http.service';
+import { GroupaddComponent } from './component/group/groupadd/groupadd.component';
+import { GrouplistComponent } from './component/group/grouplist/grouplist.component';
+import { DetailgroupComponent } from './component/group/detailgroup/detailgroup.component';
+import { UserlistComponent } from './component/user/userlist/userlist.component';
+import { DetailuserComponent } from './component/user/detailuser/detailuser.component';
+import { ListsubjectComponent } from './component/subject/listsubject/listsubject.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +26,13 @@ import {  HttpService } from  './service/httpservice/http.service';
     SetsubjectComponent,
     AddclientComponent,
     AddadminComponent,
-    LoginComponent
+    LoginComponent,
+    GroupaddComponent,
+    GrouplistComponent,
+    DetailgroupComponent,
+    UserlistComponent,
+    DetailuserComponent,
+    ListsubjectComponent
   ],
   imports: [
     HttpClientModule,

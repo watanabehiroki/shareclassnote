@@ -12,7 +12,7 @@
       <tbody>
       <tr *ngFor="let n of rowcountlist;index as count">
         <td *ngFor="let data of rowcountlist[count] index as colam">
-          <input type="button" class="btn subbtn" style="background-color:{{data.color}}" value="{{data.name}}" (click)="accesslistnote(data.id)"/>
+          <input type="button" class="btn subbtn" [ngStyle]="{'background-color':data.color}" value="{{data.name}}" (click)="accesslistnote(data.id)"/>
         </td>
       </tr>
       </tbody>
