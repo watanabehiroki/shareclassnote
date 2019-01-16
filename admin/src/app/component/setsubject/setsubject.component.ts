@@ -10,19 +10,24 @@ export class SetsubjectComponent implements OnInit {
   subname = '';
   other = '';
   listsubjectobj;
+  responsevalue = '';
   constructor(private httpservice: HttpService) { }
   ngOnInit() {
     this.httpservice.httpget('/subject/getallsubject').subscribe(resdata =>
     {
-      this.listsubjectobj = resdata; console.log(resdata);
+      this.listsubjectobj = resdata; console.log(this.listsubjectobj);
     },
       err => console.log(err)
     );
   }
   submitclick() {
-    this.httpservice.httpget('/').subscribe((data) =>
-      console.log(data)
-    );
+    const httpbodyobj = {
+      name: this.subname,
+      color: this.color
+    }
+    this.httpservice.httppost('/subject/addsubject', httpbodyobj).subscribe(resdata => {}), err => {
+      };
+      });
   }
 
 }

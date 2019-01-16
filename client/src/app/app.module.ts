@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './component/login/login.component';
@@ -13,6 +13,8 @@ import { DetailnoteComponent } from './component/note/detailnote/detailnote.comp
 import { FooterComponent } from './component/headerfooter/footer/footer.component';
 import { HeaderComponent } from './component/headerfooter/header/header.component';
 import { PubnotelistComponent } from './component/note/pubnotelist/pubnotelist.component';
+import { HttpclientService } from './service/httpclient.service';
+
 
 @NgModule({
   declarations: [
@@ -30,9 +32,10 @@ import { PubnotelistComponent } from './component/note/pubnotelist/pubnotelist.c
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpclientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

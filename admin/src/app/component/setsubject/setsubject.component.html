@@ -19,6 +19,7 @@
       </tr>
     </table>
     <div class="card-footer">
+      <span>{{responsevalue}}</span>
       <input type="button" value="登録" class=" btn btn-primary" (click)="submitclick()"/>
     </div>
   </form>
@@ -31,7 +32,12 @@
           <tr>
             <th>科目名</th>
             <th>色</th>
-            <th>その他</th>
+            <th>更新日</th>
+          </tr>
+          <tr *ngFor="let subjeobj of listsubjectobj  ">
+            <td>{{subjeobj.name}}</td>
+            <td><input type="color" value={{subjeobj.color}} disabled="disabled" /></td>
+            <td>{{subjeobj.updateday}}</td>
           </tr>
         </table>
       </div>

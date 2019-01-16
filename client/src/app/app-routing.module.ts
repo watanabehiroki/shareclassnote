@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: 'submitnote', component: SubmitnoteComponent},
   {path: 'selectsubject', component: SelectsubjectComponent},
   {path: 'detailnote',  component: DetailnoteComponent},
-  {path: 'pubnotelist',component:PubnotelistComponent}
+  {path: 'pubnotelist/:subjectid',component:PubnotelistComponent}
   ];
 
 @NgModule({

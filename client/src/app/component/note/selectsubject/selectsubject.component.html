@@ -10,28 +10,17 @@
     </div>
     <table class="table card-body">
       <tbody>
-        <tr>
-          <td><input type="button" class="btn subbtn" value="教科1" (click)="accesslistnote('dsfnjkdsa')"/></td>
-          <td><input type="button" class="btn subbtn" value="教科2" /></td>
-          <td><input type="button" class="btn subbtn" value="教科3" /></td>
-        </tr>
-        <tr>
-          <td><input type="button" class="btn subbtn" value="教科4" /></td>
-          <td><input type="button" class="btn subbtn" value="教科5" /></td>
-          <td><input type="button" class="btn subbtn" value="教科6" /></td>
-        </tr>
-        <tr>
-          <td><input type="button" class="btn subbtn" value="教科4" /></td>
-          <td><input type="button" class="btn subbtn" value="教科5" /></td>
-          <td><input type="button" class="btn subbtn" value="教科6" /></td>
-        </tr>
-
+      <tr *ngFor="let n of rowcountlist;index as count">
+        <td *ngFor="let data of rowcountlist[count] index as colam">
+          <input type="button" class="btn subbtn" style="background-color:{{data.color}}" value="{{data.name}}" (click)="accesslistnote(data.id)"/>
+        </td>
+      </tr>
       </tbody>
     </table>
     <div class="card-footer">
-      <input type="button" class="btn " value="<" />
-      <span>｜</span>
-      <input type="button" class="btn" value=">" />
+      <input type="button" *ngIf="countpage>1" class="btn " value="<" />
+      <span>{{countpage}}</span>
+      <input type="button" *ngIf="countpage<=max_page" class="btn" value=">" />
     </div>
   </div>
 </div>

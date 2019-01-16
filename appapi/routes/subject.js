@@ -27,7 +27,7 @@ router.get('/getallsubject',function(req,res){
         });
     }catch (e){
         result= {
-            err:'conectionerr'
+            err:true
         }
         return res.json(result);
     }
@@ -36,12 +36,31 @@ router.get('/getallsubject',function(req,res){
 
 
 /*各教科の登録を行う*/
-router.post('newsubject',function(req,res){
+router.post('/addsubject',function(req,res){
     var result = "";
-    var id = res.body.userid
-    var subject = res.body.subject;
+    var name = res.body.name;
+    var updateday = res.body.updateday;
     var color = res.body.color;
-   return res.json([]);
+    var result = "";
+    var sql = "insert into subject(name,color,updateday) values ("+name+","+color+","+updateday+")";
+    try{
+        connection.query(sql,function(err,rows){
+            if(err){
+                result = {
+                    err:'connectionerr'
+                }
+            }else{
+                result = rows;
+            }
+            return res.json(result);
+        })
+    }catch (e){
+        result={
+            err: 'err',
+            message:"err"
+        }
+        return res.json(result);
+    }
 });
 
 module.exports=router;
