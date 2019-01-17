@@ -18,6 +18,7 @@ import { DetailgroupComponent } from './component/group/detailgroup/detailgroup.
 import { UserlistComponent } from './component/user/userlist/userlist.component';
 import { DetailuserComponent } from './component/user/detailuser/detailuser.component';
 import { ListsubjectComponent } from './component/subject/listsubject/listsubject.component';
+import { EditsubjectComponent } from './component/subject/editsubject/editsubject.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { ListsubjectComponent } from './component/subject/listsubject/listsubjec
     DetailgroupComponent,
     UserlistComponent,
     DetailuserComponent,
-    ListsubjectComponent
+    ListsubjectComponent,
+    EditsubjectComponent
   ],
   imports: [
     HttpClientModule,

@@ -1,11 +1,13 @@
 # 管理者＆教員用テーブル
-create table adminuser(userid varchar(255) not null primary key,name varchar(255) not null, age int not null,
-deflg boolean not null,password varchar(255) not null,rolenumber varchar(20) not null ,mail varchar(255) not null, foreign key(rolenumber) references rolenumber(roleid));
+create table adminuser(userid varchar(255) not null primary key, firstname varchar(255)not null, lastname varchar(255)not null, firstkananame varchar(255) not null,lastkananame varchar(255) not null,
+ age int not null, deflg boolean not null,password varchar(255) not null,
+ rolenumber varchar(20) not null ,mail varchar(255) not null, foreign key(rolenumber) references rolenumber(roleid));
 # 教員管理者用アクセス権限
 create table rolenumber(roleid varchar(20) not null primary key,rolenumber int not null,descriptor varchar(255),
 delflg boolean not null);
 # 生徒テーブル
-create table clientuser(userid varchar(255) primary key not null,name varchar(255)not null,profilepicture varchar(255),mailflg boolean,age int not null,delflg boolean not null,password varchar(20) not null);
+create table clientuser(userid varchar(255) primary key not null, firstname varchar(255)not null, lastname varchar(255)not null, firstkananame varchar(255) not null,lastkananame varchar(255) not null,
+ profilepicture varchar(255),mailflg boolean,age int not null,delflg boolean not null,password varchar(20) not null);
 # APIセッションテーブル(client)
 create table clientapisession(userid varchar(255) ,endday date , sessionid varchar(255) not null,foreign key(userid)references clientuser(userid), primary key(userid,endday));
 # APIセッションテーブル(admin)

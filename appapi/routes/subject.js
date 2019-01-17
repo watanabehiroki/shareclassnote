@@ -6,6 +6,33 @@ const connection = mysql.createConnection(sqlconf.mysql);
 
 
 /*GET*/
+//１教科を返す
+router.get('/findsubject/:id',function(req,res){
+    var id= req.params.id;
+    var sql = "select * from subject where id="+id+";";
+    var result;
+    try{
+        connection.query(sql,function(err,rows){
+            if(err){
+                result ={
+                    result: 'err',
+                    message: err
+                }
+            }else{
+                result = rows;
+            }
+            return result;
+        });
+    }catch(e){
+        result = {
+            result: "err",
+            message: e
+        }
+
+        return result;
+    }
+});
+
 /*登録されている教科を返却する*/
 router.get('/getallsubject',function(req,res){
     //var id = res.request.id;

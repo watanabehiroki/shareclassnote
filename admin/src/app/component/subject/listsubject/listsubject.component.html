@@ -1,3 +1,30 @@
-<p>
-  listsubject works!
-</p>
+<div class="header">
+  <app-header ></app-header>
+</div>
+<div class="middle">
+  <div class="card ">
+    <div class="card-header">
+      <span>教科一覧</span>
+      <a href="/setsubject" class="btn btn-primary">新規作成</a>
+    </div>
+    <table class="table card-body">
+      <tr>
+        <th>NO.</th>
+        <th>科目名</th>
+        <th>色</th>
+        <th>更新日</th>
+        <th>オプション</th>
+      </tr>
+      <tr *ngFor=" let subjectobj of listsubject">
+        <td>{{subjectobj.id}}</td>
+        <td>{{subjectobj.name}}</td>
+        <td><input type="color" value="{{subjectobj.color}}" disabled="disabled"/></td>
+        <td>{{subjectobj.updateday}}</td>
+        <td><a href="/editsubject/{{subjectobj.id}}" class="btn btn-primary">編集ボタン</a></td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>

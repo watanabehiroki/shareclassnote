@@ -5,26 +5,18 @@
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../admin/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../admin/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/adduser/addadmin/addadmin.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/routes/module/random.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/adduser/addadmin/addadmin.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/adduser/addadmin/addadmin.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/adduser/addadmin/addadmin.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/adduser/addclient/addclient.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/adduser/addclient/addclient.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/adduser/addclient/addclient.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/adduser/addclient/addclient.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/setsubject/setsubject.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/subject/setsubject/setsubject.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/setsubject/setsubject.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/subject/setsubject/setsubject.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/setsubject/setsubject.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/subject/setsubject/setsubject.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/setsubject/setsubject.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/subject/setsubject/setsubject.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/subject/listsubject/listsubject.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/subject/listsubject/listsubject.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/subject/listsubject/listsubject.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/subject/listsubject/listsubject.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/subject/listsubject/listsubject.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/subject/listsubject/listsubject.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/subject.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/subject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/selectsubject/selectsubject.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/selectsubject/selectsubject.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/submitnote/submitnote.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/submitnote/submitnote.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/.idea/database.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../database/sql/initialdatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../database/sql/initialdatabase.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
@@ -35,53 +27,35 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.21061093">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/../README.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="FIRST">
-                  <first_editor />
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" selection-start-line="6" selection-end-line="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/routes/subject.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="50" column="39" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/routes/module/random.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/subject.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/module/random.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -103,17 +77,20 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="838" />
-    <option name="y" value="277" />
+    <option name="x" value="4" />
     <option name="width" value="1023" />
-    <option name="height" value="762" />
+    <option name="height" value="1091" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -150,15 +127,16 @@
       <workItem from="1547428627669" duration="319000" />
       <workItem from="1547599708133" duration="424000" />
       <workItem from="1547600150088" duration="8977000" />
-      <workItem from="1547612519866" duration="1274000" />
+      <workItem from="1547612519866" duration="1367000" />
+      <workItem from="1547683031855" duration="2841000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20358000" />
+    <option name="totallyTimeSpent" value="23292000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="559" y="185" width="682" height="508" extended-state="0" />
+    <frame x="3" y="0" width="682" height="727" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -166,10 +144,10 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" weight="0.948553" />
+      <window_info content_ui="combo" id="Project" order="5" weight="0.94736844" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Database Changes" order="2" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
@@ -228,14 +206,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -250,10 +220,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="43">
+            <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/subject.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="50" column="39" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
+        <state relative-caret-position="85">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
         </state>
       </provider>
     </entry>
