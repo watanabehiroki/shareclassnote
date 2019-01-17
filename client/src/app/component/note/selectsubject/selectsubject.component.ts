@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import { HttpclientService } from '../../../service/httpclient.service';
+import { HttpclientService } from '../../../service/http/httpclient.service';
 @Component({
   selector: 'app-selectsubject',
   templateUrl: './selectsubject.component.html',

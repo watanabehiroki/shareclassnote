@@ -6,36 +6,47 @@
     <div class="card-header"><span>説明文導入</span></div>
     <table class=" table card-body">
       <tr>
-        <th>名前:</th>
-        <td><input type="text" /></td>
+        <th>姓:</th>
+        <td><input type="text"  [(ngModel)]="userprofile.firstname"  name="first"/></td>
+      </tr>
+      <tr>
+        <th>名:</th>
+        <td><input type="text" [(ngModel)]="userprofile.lastname" name="last"/></td>
+      </tr>
+      <tr>
+        <th>よみがな(姓):</th>
+        <td><input type="text" [(ngModel)]="userprofile.firstkananame" name="firstkana"/></td>
+      </tr>
+      <tr>
+        <th>よみがな(名):</th>
+        <td><input type="text" [(ngModel)]="userprofile.lastkananame" name="lastkana" /></td>
       </tr>
       <tr>
         <th>年齢:</th>
-        <td><input type="number" /></td>
+        <td><input type="number" [(ngModel)]="userprofile.age" name="age"/></td>
       </tr>
       <tr>
         <th>性別:</th>
         <td>
-          <input type="radio" name="mailflg" value=false checked="checked"> 男性
-          <input type="radio" name="mailflg" value=true  >女性
+          <input type="radio" name="sex" value="man" [(ngModel)]="userprofile.sex" > 男性
+          <input type="radio" name="sex" value="woman" [(ngModel)]="userprofile.sex" >女性
         </td>
       </tr>
       <tr>
         <th>パスワード:</th>
         <td>
-          <input type="radio" name="passradio" value=false checked="checked"/>自動生成
-          <input type="radio" name="passradio" value=true/>手動入力
+          <input type="button" value="{{buttonword}}" (click)="passwordbuttonclick()"/>
           <br/><br/>
-          <div>
-            <input type="password"/>
+          <div *ngIf="passwordflg">
+            <input type="password" [(ngModel)]="userprofile.password" name="password" />
           </div>
         </td>
       </tr>
 
     </table>
     <div class="card-footer">
-      <span>結果表示</span>
-      <input type="submit" value="登録" class="btn btn-primary"/>
+      <span>{{result}}</span>
+      <input type="submit" value="登録" class="btn btn-primary" (click)="submitclick()"/>
     </div>
   </form>
 </div>

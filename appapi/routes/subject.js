@@ -7,9 +7,9 @@ const connection = mysql.createConnection(sqlconf.mysql);
 
 /*GET*/
 //１教科を返す
-router.get('/findsubject/:id',function(req,res){
-    var id= req.params.id;
-    var sql = "select * from subject where id="+id+";";
+router.get('/findsubject',function(req,res){
+    var id= req.query.subjectid;
+    var sql = "select * from subject where id = "+id+";";
     var result;
     try{
         connection.query(sql,function(err,rows){
@@ -21,7 +21,7 @@ router.get('/findsubject/:id',function(req,res){
             }else{
                 result = rows;
             }
-            return result;
+            return res.json(result);
         });
     }catch(e){
         result = {
@@ -29,7 +29,7 @@ router.get('/findsubject/:id',function(req,res){
             message: e
         }
 
-        return result;
+        return res.json(result);
     }
 });
 
@@ -62,6 +62,40 @@ router.get('/getallsubject',function(req,res){
     }
 });
 
+
+/*POST*/
+/*更新を行う*/
+router.post('/updatesubject',function (req,res) {
+   var name = req.body.subjectname;
+   var color = req.body.subjectcolor;
+   var id = req.body.subject.id;
+   var sql;
+   var result;
+   try{
+       sql = "update subject set  name = "+ name+", color ="+ color +
+           ", updateday = now() where id = "+id+";";
+       connection.query(sql,function(errrows){
+           if(err){
+               result = {
+                   result:'err',
+                   message: err
+               }
+           }else{
+               result = {
+                   result:'success',
+                   messsege:'update'
+               }
+           }
+           return res.json(result);
+       });
+   }catch (e){
+       result ={
+           result: 'err',
+           message: e
+       }
+       return res.json(result);
+   }
+});
 
 
 /*各教科の登録を行う*/

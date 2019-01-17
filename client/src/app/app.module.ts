@@ -13,8 +13,8 @@ import { DetailnoteComponent } from './component/note/detailnote/detailnote.comp
 import { FooterComponent } from './component/headerfooter/footer/footer.component';
 import { HeaderComponent } from './component/headerfooter/header/header.component';
 import { PubnotelistComponent } from './component/note/pubnotelist/pubnotelist.component';
-import { HttpclientService } from './service/httpclient.service';
-
+import { HttpclientService } from './service/http/httpclient.service';
+import { LocalStrageService} from "./service/local_strage/local-strage.service";
 
 @NgModule({
   declarations: [
@@ -35,7 +35,7 @@ import { HttpclientService } from './service/httpclient.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [HttpclientService],
+  providers: [HttpclientService, LocalStrageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

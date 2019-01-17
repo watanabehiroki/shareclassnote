@@ -9,14 +9,22 @@ router.post('/clientuseradd', function(req,res){
   var age = res.body.age;
   var mailflg = res.body.mailflg;
   var profilepicture = res.body.profilepicture;
-  var password = "sample";
+  var password = res.body.password;
   var insertusersql = "inset into clientuser(name,profilepicture,mailflg,age,defflg,password)"+
                           "values("+")";
-  var insertsessionsql = '';
   try{
+    if(password === undefined){
+      //パスワード自動生成を行う。
 
-    connection.query('',function (err,rows){
+    }
+    connection.query(insertusersql,function (err,rows){
       //データ加工を行う
+      if(err){
+        console.log()
+      }else{
+
+      }
+      return res.json();
     });
   }catch (e){
 

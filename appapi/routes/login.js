@@ -1,5 +1,8 @@
 var express = require('express');
 var router = express.Router();
+const mysql = require('mysql');
+const sqlconf = require('../config/sqlconfig');
+const connection = mysql.createConnection(sqlconf.mysql);
 
 /*GET only*/
 /*router.get('/gethashkey',function(req,res) {
@@ -8,23 +11,31 @@ var router = express.Router();
 
     }
 });*/
+/*POST*/
 /*ログイン認証 client*/
 router.post('/logincertifi',function(req,res){
     var result = "";
     var userid = req.body.userid;
     var password = req.body.password;
+    var sql="select * from clientuser left outer join clientapisession" +
+        " on clientuser.userid = clientapisession.userid " +
+        "where clientuser.userid = "+userid +" and clientuser.password = " + password + ";";
 
-    if(userid !==undefined && password !== undefined){
-        if(true){
-            /*Login成功時*/
-        }else{
-            /*Login失敗時*/
-        }
-    }else{
-        result.result = false;
-        result.message = "loginerror";
+    try{
+        connection.query(sql,function(err,rows){
+           if(err){
+
+           } else {
+
+           }
+           console.log(rows);
+
+        });
+    }catch (e){
+
     }
-    return result;
+
+    return res.json();
 });
 /*ログイン認証 admin*/
 router.post('/admin/logincertifi',function(req,res){
