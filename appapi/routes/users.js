@@ -2,33 +2,94 @@ var express = require('express');
 var router = express.Router();
 const mysql = require('mysql');
 const sqlconf = require('../config/sqlconfig');
+const connection = mysql.createConnection(sqlconf.mysql);
+var  randommodule = require('./module/random');
+
+
 /* GET users listing. */
+router.get('/getallclient', function( req, res){
+  var sql = 'select * from clientuser;'
+  var resultdata;
+  try{
+    connection.query(sql,function (err,rows) {
+      if(err){
+        resultdata = {
+         result: 'err',
+         message: err
+        }
+      }else{
+        resultdata = rows;
+      }
+      return res.json(resultdata);
+    });
+  }catch (e){
+    return resultdata = {
+      result: 'err',
+      message: 'catcherr'
+    }
+  }
+});
+
 
 router.post('/clientuseradd', function(req,res){
   var name = res.body.name;
   var age = res.body.age;
   var mailflg = res.body.mailflg;
-  var profilepicture = res.body.profilepicture;
   var password = res.body.password;
-  var insertusersql = "inset into clientuser(name,profilepicture,mailflg,age,defflg,password)"+
-                          "values("+")";
+  var insertusersql ;
+  var result;
+  var userid ='';
+  var findsql;
   try{
-    if(password === undefined){
-      //パスワード自動生成を行う。
-
+    //userid 生成
+    while(true) {
+      userid = randommodule.getrandomstring(4);
+      findsql ='select count(*) as number from clientuser' +
+          ' where userid = "'+userid+'";';
+          connection.query(sql,function(err,rows){
+            result = rows;
+            if(err){
+              userid = undefined;
+              break;
+            }else {
+              if (result[0].number < 1) {
+                break;
+              }
+            }
+          });
     }
+    if(password === undefined || password === null){
+      //パスワード自動生成を行う。
+      password = randommodule.getrandomstring(5);
+    }
+    insertusersql = 'inset into clientuser(userid,firstname,lastname,fistnamekana,lastnamekana' +
+        ',age,defflg,password) values ("'+userid+'","'+name.fistname+'","' +
+        name.lastname+'","'+name.fistnamakana+'","'+name.lastnamakana+'",'+age+','+false+',"'+password+'");';
+    //データベースへの登録処理
     connection.query(insertusersql,function (err,rows){
       //データ加工を行う
       if(err){
-        console.log()
+        result = {
+          result: 'err',
+          message: err
+        }
       }else{
-
+        result = rows;
+        result = {
+          result: 'success',
+          password: result[0].password
+        }
       }
-      return res.json();
+      return res.json(result);
     });
   }catch (e){
-
+    result = {
+      result: 'err',
+      message: 'catcherr'
+    }
   }
-  return res.json()
-})
+  return res.json(result);
+});
+
+
 module.exports = router;

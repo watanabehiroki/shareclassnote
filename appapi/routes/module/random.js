@@ -1,8 +1,12 @@
 var crypto = require('crypto');
-export  function getrandomint(){
+  function getrandomint(){
     let array = new Uint8Array(6);
     return crypto.getRandomValues(array);
 }
-export function getrandomstring(){
-
+ function getrandomstring(byte){
+    return crypto.randomBytes(byte).toString('hex');
+}
+module.exports ={
+    getrandomstring,
+    getrandomint
 }

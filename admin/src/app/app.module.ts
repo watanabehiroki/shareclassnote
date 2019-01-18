@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './component/headerfooter/footer/footer.component';
-import { HeaderComponent } from './component/headerfooter/header/header.component';
 import { SetsubjectComponent } from './component/subject/setsubject/setsubject.component';
 import { AddclientComponent } from './component/user/adduser/addclient/addclient.component';
 import { AddadminComponent } from './component/user/adduser/addadmin/addadmin.component';
@@ -18,14 +17,14 @@ import { UserlistComponent } from './component/user/userlist/userlist.component'
 import { DetailuserComponent } from './component/user/detailuser/detailuser.component';
 import { ListsubjectComponent } from './component/subject/listsubject/listsubject.component';
 import { EditsubjectComponent } from './component/subject/editsubject/editsubject.component';
-import {  HttpService } from  './service/httpservice/http.service';
+import {  HttpService }　from  './service/httpservice/http.service';
 import { LocalStrageService} from './service/local_strage/local-strage.service';
+import { MenuComponent } from './component/headerfooter/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    HeaderComponent,
     SetsubjectComponent,
     AddclientComponent,
     AddadminComponent,
@@ -36,7 +35,8 @@ import { LocalStrageService} from './service/local_strage/local-strage.service';
     UserlistComponent,
     DetailuserComponent,
     ListsubjectComponent,
-    EditsubjectComponent
+    EditsubjectComponent,
+    MenuComponent
   ],
   imports: [
     HttpClientModule,
