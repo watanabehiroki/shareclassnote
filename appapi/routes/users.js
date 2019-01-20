@@ -32,10 +32,15 @@ router.get('/getallclient', function( req, res){
 
 
 router.post('/clientuseradd', function(req,res){
-  var name = res.body.name;
-  var age = res.body.age;
-  var mailflg = res.body.mailflg;
-  var password = res.body.password;
+  var name ={
+    fistname: req.bodu.fistname,
+    lastname: req.body.lastname,
+    fistkananame: req.body.fistkananame,
+    lastkananame: req.body.lastkananame
+  };
+  var age = req.body.age;
+  var mailflg = req.body.mailflg;
+  var password = req.body.password;
   var insertusersql ;
   var result;
   var userid ='';
@@ -53,12 +58,12 @@ router.post('/clientuseradd', function(req,res){
               break;
             }else {
               if (result[0].number < 1) {
-                break;
+                 break;
               }
             }
           });
     }
-    if(password === undefined || password === null){
+    if(password === undefined || password === null || password === ''){
       //パスワード自動生成を行う。
       password = randommodule.getrandomstring(5);
     }
@@ -66,6 +71,7 @@ router.post('/clientuseradd', function(req,res){
         ',age,defflg,password) values ("'+userid+'","'+name.fistname+'","' +
         name.lastname+'","'+name.fistnamakana+'","'+name.lastnamakana+'",'+age+','+false+',"'+password+'");';
     //データベースへの登録処理
+
     connection.query(insertusersql,function (err,rows){
       //データ加工を行う
       if(err){

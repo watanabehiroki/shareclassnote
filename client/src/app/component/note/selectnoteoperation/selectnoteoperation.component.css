@@ -1,8 +1,8 @@
 .header{
-  height: 8%;
+  height: 10%;
 }
 .middle{
-  height:80%;
+  height:78%;
 }
 .footer{
   height: 12%;
@@ -16,10 +16,10 @@
  }
 .card-body{
   padding: 1px;
-  height: 80%;
+  height: 50%;
 }
 .card-header{
-  height: 20%;
+  height: 15%;
 }
 .button {
   font-size: 30px;

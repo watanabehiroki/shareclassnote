@@ -18,8 +18,8 @@
       <tr>
         <th>公開選択</th>
         <td>
-        <input type="radio" name=releaseflg value=false > 非公開
-        <input type="radio" name=releaseflg value=true > 公開
+        <input type="radio" name=releaseflg [value]=false  > 非公開
+        <input type="radio" name=releaseflg [value]=true > 公開
         </td>
       </tr>
       <tr>
@@ -48,7 +48,17 @@
       </tr>
       <tr>
         <th>画像選択:</th>
-        <td><input type="file"/></td>
+        <td>
+          <input type="radio" name="radiofile"  [(ngModel)]="cameraflg" [value]="true"/>ファイル選択
+          <input type="radio" name="radioflg"  [(ngModel)]="cameraflg" [value]="false"/>カメラ起動
+          <div *ngIf="cameraflg == true">
+            <input type="file" >
+            サンプル
+          </div>
+          <div *ngIf="cameraflg == false">
+            <input type="file" accept="image/*; capture=camera" />
+          </div>
+        </td>
       </tr>
     </table>
     <div class="card-footer">

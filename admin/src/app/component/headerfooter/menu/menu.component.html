@@ -10,8 +10,23 @@
           <li class="nav-item">
             <a class="nav-link active" href="">サンプル</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">サンプル２</a>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button"
+               data-toggle="dropdown" id="#useraddlist" aria-haspopup="true"
+               aria-expanded="false">利用者追加</a>
+            <div class="dropdown-menu" aria-labelledby="useraddlist">
+              <a class="nav-link" href="/addclient">生徒用アカウント</a>
+              <a class="nav-link" href="/addadmin" >管理者用アカウント</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button"
+               data-toggle="dropdown" id="#subjectlist" aria-haspopup="true"
+               aria-expanded="false" >教科</a>
+            <div class="dropdown-menu" aria-labelledby="subjectlist">
+              <a class="nav-link" href="/listsubject">登録一覧</a>
+              <a class="nav-link" href="/setsubject">新規登録</a>
+            </div>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" role="button"

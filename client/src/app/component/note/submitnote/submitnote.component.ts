@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./submitnote.component.css']
 })
 export class SubmitnoteComponent implements OnInit {
-
+  cameraflg = true;
   constructor() { }
 
   ngOnInit() {

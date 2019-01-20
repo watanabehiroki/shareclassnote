@@ -7,6 +7,7 @@ import {SubmitnoteComponent} from './component/note/submitnote/submitnote.compon
 import {SelectsubjectComponent} from './component/note/selectsubject/selectsubject.component';
 import {DetailnoteComponent} from './component/note/detailnote/detailnote.component';
 import {PubnotelistComponent} from './component/note/pubnotelist/pubnotelist.component';
+import {UserprofileComponent} from "./component/userprofile/userprofile.component";
 
 const routes: Routes = [
   {path: '', redirectTo:'/home',pathMatch:'full'},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'submitnote', component: SubmitnoteComponent},
   {path: 'selectsubject', component: SelectsubjectComponent},
   {path: 'detailnote',  component: DetailnoteComponent},
-  {path: 'pubnotelist/:subjectid',component:PubnotelistComponent}
+  {path: 'pubnotelist/:subjectid',component:PubnotelistComponent},
+  {path: 'userprofile', component:UserprofileComponent}
   ];
 
 @NgModule({

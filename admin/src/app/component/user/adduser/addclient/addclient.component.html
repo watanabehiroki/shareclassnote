@@ -28,14 +28,15 @@
       <tr>
         <th>性別:</th>
         <td>
-          <input type="radio" name="sex" value="man" [(ngModel)]="userprofile.sex" > 男性
-          <input type="radio" name="sex" value="woman" [(ngModel)]="userprofile.sex" >女性
+          <input type="radio" name="sex"  [(ngModel)]="userprofile.sex" [value]="true" /> 男性
+          <input type="radio" name="sex"  [(ngModel)]="userprofile.sex" [value]="false" />女性
         </td>
       </tr>
       <tr>
         <th>パスワード:</th>
         <td>
-          <input type="button" value="{{buttonword}}" (click)="passwordbuttonclick()"/>
+          <input type="radio" name="passwordradio" [(ngModel)]="passwordflg" [value]="false" />自動生成
+          <input type="radio" name="passwordradio" [(ngModel)]="passwordflg" [value]="true" />手動生成
           <br/><br/>
           <div *ngIf="passwordflg">
             <input type="password" [(ngModel)]="userprofile.password" name="password" />

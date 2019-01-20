@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule} from "@angular/forms";
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +16,7 @@ import { HeaderComponent } from './component/headerfooter/header/header.componen
 import { PubnotelistComponent } from './component/note/pubnotelist/pubnotelist.component';
 import { HttpclientService } from './service/http/httpclient.service';
 import { LocalStrageService} from "./service/local_strage/local-strage.service";
+import { UserprofileComponent } from './component/userprofile/userprofile.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +30,14 @@ import { LocalStrageService} from "./service/local_strage/local-strage.service";
     DetailnoteComponent,
     FooterComponent,
     HeaderComponent,
-    PubnotelistComponent
+    PubnotelistComponent,
+    UserprofileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [HttpclientService, LocalStrageService],
   bootstrap: [AppComponent]
