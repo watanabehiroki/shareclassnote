@@ -1,24 +1,45 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule} from "@angular/forms";
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
-import { SharenoteComponent } from './sharenote/sharenote.component';
+import { LoginComponent } from './component/login/login.component';
+import { HomeComponent } from './component/home/home.component';
+import { AddgroupComponent } from './component/addgroup/addgroup.component';
+import { SubmitnoteComponent } from './component/note/submitnote/submitnote.component';
+import { SelectnoteoperationComponent } from './component/note/selectnoteoperation/selectnoteoperation.component';
+import { SelectsubjectComponent } from './component/note/selectsubject/selectsubject.component';
+import { DetailnoteComponent } from './component/note/detailnote/detailnote.component';
+import { FooterComponent } from './component/headerfooter/footer/footer.component';
+import { HeaderComponent } from './component/headerfooter/header/header.component';
+import { PubnotelistComponent } from './component/note/pubnotelist/pubnotelist.component';
+import { HttpclientService } from './service/http/httpclient.service';
+import { LocalStrageService} from "./service/local_strage/local-strage.service";
+import { UserprofileComponent } from './component/userprofile/userprofile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    SharenoteComponent
+    AddgroupComponent,
+    SubmitnoteComponent,
+    SelectnoteoperationComponent,
+    SelectsubjectComponent,
+    DetailnoteComponent,
+    FooterComponent,
+    HeaderComponent,
+    PubnotelistComponent,
+    UserprofileComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [HttpclientService, LocalStrageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

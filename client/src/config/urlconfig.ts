@@ -1,5 +1,2 @@
-let serverurl = 'http://localhost:23121';
+export const  serverurl = 'http://localhost:3000';
 
-export function geturl(){
-  return serverurl;
-}

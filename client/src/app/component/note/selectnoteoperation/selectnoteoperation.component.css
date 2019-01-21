@@ -1,0 +1,29 @@
+.header{
+  height: 10%;
+}
+.middle{
+  height:78%;
+}
+.footer{
+  height: 12%;
+}
+
+.main{
+  text-align: center;
+}
+.card{
+  height: 100%;
+ }
+.card-body{
+  padding: 1px;
+  height: 50%;
+}
+.card-header{
+  height: 15%;
+}
+.button {
+  font-size: 30px;
+  margin:0;
+  height: 100%;
+  width:50%;
+}

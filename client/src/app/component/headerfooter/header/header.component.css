@@ -1,0 +1,12 @@
+.headermain{
+  background-color: rgba(27,27,32,0.86);
+  color: white;
+  height: 100%;
+}
+.headerappname{
+  margin:0;
+  float:left;
+}
+.headerlogout{
+  text-align:right
+}

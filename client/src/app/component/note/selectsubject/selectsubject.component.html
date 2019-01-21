@@ -1,0 +1,29 @@
+<div class="header">
+  <app-header></app-header>
+</div>
+<div class="middle ">
+  <div class="card">
+    <div class="card-header">
+      説明文など
+      <br/>
+      <br/>
+    </div>
+    <table class="table card-body">
+      <tbody>
+      <tr *ngFor="let n of rowcountlist;index as count">
+        <td *ngFor="let data of rowcountlist[count] index as colam">
+          <input type="button" class="btn subbtn" [ngStyle]="{'background-color':data.color}" value="{{data.name}}" (click)="accesslistnote(data.id)"/>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="card-footer">
+      <input type="button" *ngIf="countpage>1" class="btn " value="<" />
+      <span>{{countpage}}</span>
+      <input type="button" *ngIf="countpage<=max_page" class="btn" value=">" />
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>
