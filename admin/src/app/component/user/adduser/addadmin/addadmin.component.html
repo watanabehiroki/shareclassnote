@@ -3,36 +3,50 @@
 </div>
 <div class="middle">
   <form class="card ">
-    <div class="card-header"><span>説明文導入</span></div>
+    <div class="card-header"><span>管理者＆教員追加  説明文導入</span></div>
     <table class=" table card-body">
       <tr>
-        <th>名前:</th>
-        <td><input type="text" /></td>
+        <th>姓:</th>
+        <td><input type="text" [(ngModel)]="userprofile.firstname"/></td>
+      </tr>
+      <tr>
+        <th>名:</th>
+        <td><input type="text" [(ngModel)]="userprofile.lastname"/></td>
+      </tr>
+      <tr>
+        <th>姓(よみがな)</th>
+        <td><input type="text" [(ngModel)]="userprofile.firstkananame"/></td>
+      </tr>
+      <tr>
+        <th>名(よみがな)</th>
+        <td><input type="text" [(ngModel)]="userprofile.lastkananame"/></td>
       </tr>
       <tr>
         <th>年齢:</th>
-        <td><input type="number" /></td>
+        <td><input type="number" [(ngModel)]="userprofile.age"/></td>
       </tr>
       <tr>
         <th>メールアドレス</th>
-        <td><input type="email"/></td>
+        <td><input type="email" [(ngModel)]="userprofile.password" /></td>
       </tr>
       <tr>
         <th>パスワード:</th>
         <td>
-          <input type="radio" name="passradio" value=false checked="checked"/>自動生成
-          <input type="radio" name="passradio" value=true/>手動入力
+          <input type="radio" name="passradio" [(ngModel)]="autopasswordflg"
+                 [value]=false checked="checked"/>自動生成
+          <input type="radio" name="passradio" [(ngModel)]="autopasswordflg"
+                 [value]=true />手動入力
           <br/><br/>
-          <div>
-            <input type="password"/>
+          <div *ngIf="!autopasswordflg">
+            <input type="password" [(ngModel)]="userprofile.password"/>
           </div>
         </td>
       </tr>
 
     </table>
     <div class="card-footer">
-      <span>結果表示</span>
-      <input type="submit" value="登録" class="btn btn-primary"/>
+      <span>{{responceresult}}</span>
+      <input type="submit" value="登録" class="btn btn-primary" (click)="click()"/>
     </div>
   </form>
 </div>

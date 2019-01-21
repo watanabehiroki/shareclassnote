@@ -30,71 +30,142 @@ router.get('/getallclient', function( req, res){
   }
 });
 
-
-router.post('/clientuseradd', function(req,res){
-  var name ={
-    fistname: req.bodu.fistname,
-    lastname: req.body.lastname,
-    fistkananame: req.body.fistkananame,
-    lastkananame: req.body.lastkananame
-  };
-  var age = req.body.age;
-  var mailflg = req.body.mailflg;
-  var password = req.body.password;
-  var insertusersql ;
+router.post('/adminuseradd',function(req,res){
+  var user = {
+    userid:'',
+    name:{
+      firstname: req.body.firstname,
+      lastname: req.body.lastname,
+      firstkananame: req.body.firstkananame,
+      lastkananame: req.body.lastkananame
+    },
+    password:req.body.password,
+    email:req.body.email,
+    age: req.body.age,
+  }
+  var sql;
   var result;
-  var userid ='';
-  var findsql;
   try{
-    //userid 生成
-    while(true) {
-      userid = randommodule.getrandomstring(4);
-      findsql ='select count(*) as number from clientuser' +
-          ' where userid = "'+userid+'";';
-          connection.query(sql,function(err,rows){
-            result = rows;
-            if(err){
-              userid = undefined;
-              break;
-            }else {
-              if (result[0].number < 1) {
-                 break;
-              }
-            }
-          });
-    }
-    if(password === undefined || password === null || password === ''){
-      //パスワード自動生成を行う。
-      password = randommodule.getrandomstring(5);
-    }
-    insertusersql = 'inset into clientuser(userid,firstname,lastname,fistnamekana,lastnamekana' +
-        ',age,defflg,password) values ("'+userid+'","'+name.fistname+'","' +
-        name.lastname+'","'+name.fistnamakana+'","'+name.lastnamakana+'",'+age+','+false+',"'+password+'");';
-    //データベースへの登録処理
-
-    connection.query(insertusersql,function (err,rows){
-      //データ加工を行う
-      if(err){
-        result = {
-          result: 'err',
-          message: err
-        }
-      }else{
-        result = rows;
-        result = {
-          result: 'success',
-          password: result[0].password
+    //userid生成検索
+    sql = "select userid from adminuser;";
+    var sqlresdata;
+    connection.query(sql,function(err,rows){
+      sqlresdata = resdata;
+      var whileflg = true;
+      while (whileflg){
+        user.userid =randommodule.getrandomstring();
+        for(i = 0; i < sqlresdata.length; i++){
+          if(i ==(sqlresdata.length-1) && sqlresdata[i] !== user.userid){
+            whileflg = false;
+          }
         }
       }
-      return res.json(result);
+      //password自動生成
+      if(user.password !== null|| user.password != undefined
+          || user.password != ''){
+        user.password = randommodule.getrandomstring();
+      }
+      //データベースに登録
+      sql = 'insert into adminuser( userid, firstname, lastname, firstkananame, lastkananame,' +
+          ' age, delflg, password, rolenumber,mail) values ( "'+user.userid+'","'+user.name.firstname+
+          '","'+user.name.lastname+'","'+user.name.firstkananame+'","'+user.name.lastkananame+'",'+user.age+','
+          +false+',"'+user.password+'","1","'+user.email+'");';
+      connection.query(sq,function(err,rows){
+        if(err){
+          result={
+            result:'err',
+            messagge:'sqlerr'
+          }
+        }else{
+          result={
+            result:'success',
+            password: user.password,
+            message: '登録しました。'
+          }
+        }
+      })
     });
   }catch (e){
     result = {
-      result: 'err',
-      message: 'catcherr'
+      result : err,
+      message: tryerr
+
     }
   }
-  return res.json(result);
+  res.json(result);
+});
+
+router.post('/clientuseradd', function(req,res){
+  var name ={
+    fistname: req.body.firstname,
+    lastname: req.body.lastname,
+    fistkananame: req.body.firstkananame,
+    lastkananame: req.body.lastkananame
+  };
+  var age = req.body.age;
+  var mailflg = req.body.sex;
+  var password = req.body.password;
+  var sql ;
+  var result;
+  var userid ='';
+  try{
+    //userid 生成
+    sql ='select userid from clientuser;';
+    connection.query(sql,function(err,rows){
+      result = rows;
+      if(err){
+        result={
+          result:'err',
+          message:'sqlerr'
+        }
+
+      }else{
+        var whileflg= true;
+        userid = randommodule.getrandomstring(4);
+        while(whileflg){
+          for(var i=0;i<result.length;i++){
+            if(i==(result.length-1) && result[result.length-1].userid != userid){
+              whileflg=false;
+              break;
+            }
+          }
+        }
+        if(password === undefined || password === null || password == ""){
+          //パスワード自動生成を行う。
+          password = randommodule.getrandomstring(5);
+        }
+        sql = 'insert into clientuser(userid,firstname,lastname,firstkananame,lastkananame' +
+            ',age,delflg,password) values ("'+userid+'","'+name.fistname+'","' +
+            name.lastname+'","'+name.fistkananame+'","'+name.lastkananame+'",'+age+','+false+',"'+password+'");';
+        //データベースへの登録処理
+
+        connection.query(sql,function (err,rows){
+          //データ加工を行う
+          var rowsdata= rows;
+          if(err){
+            result = {
+              result: 'err',
+              message: err
+            }
+          }else{
+            result = {
+              result: 'success',
+              password: password
+            }
+          }
+          return res.json(result);
+        });
+      }
+    });
+
+  }catch (e){
+    result = {
+      result: 'err',
+      message: 'catcherr',
+        errmessages:e
+    }
+      return res.json(result);
+  }
 });
 
 

@@ -31,6 +31,7 @@ export class AddclientComponent implements OnInit {
     }
   }
   submitclick() {
+    console.log(this.userprofile);
    this.httpservice.httppost('/users/clientuseradd', this.userprofile).subscribe(resdata => {
      console.log(resdata);
    }, err =>  {
