@@ -1,7 +1,7 @@
 # 管理者＆教員用テーブル
-create table adminuser(userid varchar(255) not null primary key, firstname varchar(255)not null, lastname varchar(255)not null, firstkananame varchar(255) not null,lastkananame varchar(255) not null,
+create table adminuser(email varchar(255) not null primary key, firstname varchar(255)not null, lastname varchar(255)not null, firstkananame varchar(255) not null,lastkananame varchar(255) not null,
  age int not null, deflg boolean not null,password varchar(255) not null,
- rolenumber varchar(20) not null ,mail varchar(255) not null, foreign key(rolenumber) references rolenumber(roleid));
+ rolenumber varchar(20) not null , foreign key(rolenumber) references rolenumber(roleid));
 # 教員管理者用アクセス権限
 create table rolenumber(roleid varchar(20) not null primary key,rolenumber int not null,descriptor varchar(255),
 delflg boolean not null);
@@ -11,18 +11,18 @@ create table clientuser(userid varchar(255) primary key not null, firstname varc
 # APIセッションテーブル(client)
 create table clientapisession(userid varchar(255) ,endday date , sessionid varchar(255) not null,foreign key(userid)references clientuser(userid), primary key(userid,endday));
 # APIセッションテーブル(admin)
-create table adminapisession(userid varchar(255) ,endday date , sessionid varchar(255) not null, foreign  key(userid) references adminuser(userid),primary key(userid,endday));
+create table adminapisession(email varchar(255) ,endday date , sessionid varchar(255) not null, foreign  key(email) references adminuser(email),primary key(email,endday));
 # グループ用テーブル
-create table grouptable(groupname varchar(40),adminid varchar(255),qcode varchar(255) not null,endday date not null,foreign key(adminid) references adminuser(userid),primary key(groupname,adminid));
+create table grouptable(groupname varchar(40),adminemail varchar(255),qcode varchar(255) not null,endday date not null,foreign key(adminemail) references adminuser(email),primary key(groupname,adminemail));
 # １グループ内のメンバー
-create table groupmember(adminid varchar(255), groupname varchar(40), clientid varchar(255), foreign key(adminid)references adminuser(userid),foreign key(groupname) references grouptable(groupname), foreign key(clientid) references clientuser(userid),
+create table groupmember(adminemail varchar(255), groupname varchar(40), clientid varchar(255), foreign key(adminemail)references adminuser(email),foreign key(groupname) references grouptable(groupname), foreign key(clientid) references clientuser(userid),
 primary key(groupname,adminid,clientid));
 # クラスノートテーブル
-create table classnote(noteid varchar(255) primary key, clientid varchar(255) not null, releaseflg boolean not null, groupname varchar(50) not null, adminid varchar(255) not null, timeid int, subject int,
- foreign key(clientid) references clientuser(userid), foreign key(groupname) references grouptable(groupname), foreign key(adminid) references adminuser(userid), foreign key(timeid) references time(id),
+create table classnote(noteid varchar(255) primary key, clientid varchar(255) not null, releaseflg boolean not null, groupname varchar(50) not null, adminemail varchar(255) not null, timeid int, subject int,
+ foreign key(clientid) references clientuser(userid), foreign key(groupname) references grouptable(groupname), foreign key(adminemail) references adminuser(email), foreign key(timeid) references time(id),
  foreign key(subject) references  subject(id));
 # 授業計画表
-create table timetable(adminid varchar(255) not null, groupname varchar(255) not null, clientid varchar(255) not null, jpegnumber varchar(255) not null, foreign key(adminid) references adminuser(userid), foreign key(groupname) references grouptable(groupname), foreign key(clientid) references clientuser(userid));
+create table timetable(adminemail varchar(255) not null, groupname varchar(255) not null, clientid varchar(255) not null, jpegnumber varchar(255) not null, foreign key(adminemail) references adminuser(email), foreign key(groupname) references grouptable(groupname), foreign key(clientid) references clientuser(userid));
 # 教科テーブル
 create table subject(id int  not null primary key auto_increment,name varchar(40)not null, color varchar(255) not null, updateday date not null);
 # 時間割テ―ブル

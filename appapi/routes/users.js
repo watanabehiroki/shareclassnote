@@ -32,7 +32,6 @@ router.get('/getallclient', function( req, res){
 
 router.post('/adminuseradd',function(req,res){
   var user = {
-    userid:'',
     name:{
       firstname: req.body.firstname,
       lastname: req.body.lastname,
@@ -46,44 +45,43 @@ router.post('/adminuseradd',function(req,res){
   var sql;
   var result;
   try{
+    sql = 'count(*) as numberr from adminuser';
     //userid生成検索
-    sql = "select userid from adminuser;";
-    var sqlresdata;
     connection.query(sql,function(err,rows){
-      sqlresdata = resdata;
-      var whileflg = true;
-      while (whileflg){
-        user.userid =randommodule.getrandomstring();
-        for(i = 0; i < sqlresdata.length; i++){
-          if(i ==(sqlresdata.length-1) && sqlresdata[i] !== user.userid){
-            whileflg = false;
-          }
+      var data = rows;
+      if(data[0].number >0){
+
+        result = {
+          result:'success',
+          message: 'knowuser'
         }
-      }
-      //password自動生成
-      if(user.password !== null|| user.password != undefined
-          || user.password != ''){
-        user.password = randommodule.getrandomstring();
-      }
-      //データベースに登録
-      sql = 'insert into adminuser( userid, firstname, lastname, firstkananame, lastkananame,' +
-          ' age, delflg, password, rolenumber,mail) values ( "'+user.userid+'","'+user.name.firstname+
-          '","'+user.name.lastname+'","'+user.name.firstkananame+'","'+user.name.lastkananame+'",'+user.age+','
-          +false+',"'+user.password+'","1","'+user.email+'");';
-      connection.query(sq,function(err,rows){
-        if(err){
-          result={
-            result:'err',
-            messagge:'sqlerr'
-          }
-        }else{
-          result={
-            result:'success',
-            password: user.password,
-            message: '登録しました。'
-          }
+
+      }else {
+        //password自動生成
+        if (user.password !== null || user.password != undefined
+            || user.password != '') {
+          user.password = randommodule.getrandomstring();
         }
-      })
+        //データベースに登録
+        sql = 'insert into adminuser(firstname, lastname, firstkananame, lastkananame,' +
+            ' age, delflg, password, rolenumber,mail) values ( "' + user.userid + '","' + user.name.firstname +
+            '","' + user.name.lastname + '","' + user.name.firstkananame + '","' + user.name.lastkananame + '",' + user.age + ','
+            + false + ',"' + user.password + '","1","' + user.email + '");';
+        connection.query(sq, function (err, rows) {
+          if (err) {
+            result = {
+              result: 'err',
+              messagge: 'sqlerr'
+            }
+          } else {
+            result = {
+              result: 'success',
+              password: user.password,
+              message: '登録しました。'
+            }
+          }
+        });
+      }
     });
   }catch (e){
     result = {
