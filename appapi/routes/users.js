@@ -116,15 +116,16 @@ router.post('/clientuseradd', function(req,res){
           result:'err',
           message:'sqlerr'
         }
-
       }else{
         var whileflg= true;
         userid = randommodule.getrandomstring(4);
-        while(whileflg){
-          for(var i=0;i<result.length;i++){
-            if(i==(result.length-1) && result[result.length-1].userid != userid){
-              whileflg=false;
-              break;
+        if(result.length > 0) {
+          while (whileflg) {
+            for (var i = 0; i < result.length; i++) {
+              if (i == (result.length - 1) && result[result.length - 1].userid != userid) {
+                whileflg = false;
+                break;
+              }
             }
           }
         }
@@ -139,6 +140,7 @@ router.post('/clientuseradd', function(req,res){
 
         connection.query(sql,function (err,rows){
           //データ加工を行う
+
           var rowsdata= rows;
           if(err){
             result = {
@@ -155,15 +157,15 @@ router.post('/clientuseradd', function(req,res){
         });
       }
     });
-
   }catch (e){
     result = {
       result: 'err',
       message: 'catcherr',
         errmessages:e
     }
-      return res.json(result);
+    return res.json("*"+result);
   }
+
 });
 
 

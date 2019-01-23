@@ -108,7 +108,6 @@ router.post('/addsubject',function(req,res){
     var result = "";
     var sql;
     try{
-
         var sql = 'insert into subject(name,color,updateday)'
             +' values ("'+name+'","'+color+'",now());';
         connection.query(sql,function(err,rows){

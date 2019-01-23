@@ -25,11 +25,12 @@ export class SetsubjectComponent implements OnInit {
       name: this.subname,
       color: this.color
     }
+    console.log('成功');
     this.httpservice.httppost('/subject/addsubject', httpbodyobj).subscribe(resdata => {
        data = resdata;
       if (data.result == 'success') {
         this.responsevalue = '登録しました';
-      } else if (data.result === 'err'|| resdata[0].result === undefined) {
+      } else if (data.result === 'err' ||  resdata[0].result === undefined) {
         this.responsevalue = '登録することが出来ませんでした';
       } else {
         this.responsevalue = 'エラー発生';
