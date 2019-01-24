@@ -6,19 +6,19 @@ create table adminuser(email varchar(255) not null primary key, firstname varcha
  age int not null, deflg boolean not null,password varchar(255) not null,
  rolenumber varchar(20) not null , foreign key(rolenumber) references rolenumber(roleid));
 # APIセッションテーブル(admin)
-create table adminapisession(email varchar(255) ,endday date , sessionid varchar(255) not null, foreign  key(email) references adminuser(email),primary key(email,endday));
+create table adminapisession(email varchar(255) ,endday date , sessionid varchar(255) not null, foreign  key(email) references adminuser(email),primary key(email));
 #Refressionテーブル(admin)
 create table adminrefression(email varchar(255) not null, endday date not null, refressionid varchar(255) not null,
- foreign key(email) references adminuser(email), primary key(email, endday));
+ foreign key(email) references adminuser(email), primary key(email));
 
 # 生徒テーブル
 create table clientuser(userid varchar(255) primary key not null, firstname varchar(255)not null, lastname varchar(255)not null, firstkananame varchar(255) not null,lastkananame varchar(255) not null,
  profilepicture varchar(255),mailflg boolean,age int not null,delflg boolean not null,password varchar(20) not null);
 # APIセッションテーブル(client)
-create table clientapisession(userid varchar(255) ,endday date , sessionid varchar(255) not null,foreign key(userid) references clientuser(userid), primary key(userid,endday));
+create table clientapisession(userid varchar(255) ,endday date , sessionid varchar(255) not null,foreign key(userid) references clientuser(userid), primary key(userid));
 #Refression テーブル(client)
 create table clientrefression(userid varchar(255) not null, endday date not null, refressionid varchar(255) not null,
- foreign  key(userid) references clientuser(userid), primary  key(userid, endday));
+ foreign  key(userid) references clientuser(userid), primary  key(userid));
 
 # グループ用テーブル
 create table grouptable(groupname varchar(40),adminemail varchar(255),qcode varchar(255) not null,endday date not null,foreign key(adminemail) references adminuser(email),primary key(groupname,adminemail));

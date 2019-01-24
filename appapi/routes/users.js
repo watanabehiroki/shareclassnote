@@ -48,42 +48,53 @@ router.post('/adminuseradd',function(req,res){
   var sql;
   var result;
   try{
-    sql = 'count(*) as numberr from adminuser';
+    sql = 'select email as number from adminuser' +
+        ' where email = "'+user.email+'";';
     //userid生成検索
     connection.query(sql,function(err,rows){
       var data = rows;
-      if(data[0].number >0){
-
-        result = {
-          result:'success',
-          message: 'knowuser'
-        }
-
-      }else {
-        //password自動生成
-        if (user.password !== null || user.password != undefined
-            || user.password != '') {
-          user.password = randommodule.getrandomstring();
-        }
-        //データベースに登録
-        sql = 'insert into adminuser(firstname, lastname, firstkananame, lastkananame,' +
-            ' age, delflg, password, rolenumber,mail) values ( "' + user.userid + '","' + user.name.firstname +
-            '","' + user.name.lastname + '","' + user.name.firstkananame + '","' + user.name.lastkananame + '",' + user.age + ','
-            + false + ',"' + user.password + '","1","' + user.email + '");';
-        connection.query(sq, function (err, rows) {
-          if (err) {
-            result = {
-              result: 'err',
-              messagge: 'sqlerr'
-            }
-          } else {
-            result = {
-              result: 'success',
-              password: user.password,
-              message: '登録しました。'
-            }
-          }
+      if(err){
+        return res.json({
+          result:'err',
+          messasge:'sqlfirsterr',
+          errconf: err
         });
+      }else{
+        if(data.length > 0 ){
+
+          result = {
+            result:'success',
+            message: 'knowuser'
+          }
+
+        }else {
+          //password自動生成
+          if (user.password !== null || user.password != undefined
+              || user.password != '') {
+            user.password = randommodule.getrandomstring(5);
+          }
+          //データベースに登録
+          sql = 'insert into adminuser(firstname, lastname, firstkananame, lastkananame,' +
+              ' age, deflg, password, rolenumber,email) values ( "' + user.name.firstname +
+              '","' + user.name.lastname + '","' + user.name.firstkananame + '","' + user.name.lastkananame + '",' + user.age + ','
+              + false + ',"' + user.password + '","1","' + user.email + '");';
+          connection.query(sql, function (err, rows) {
+            if (err) {
+              result = {
+                result: 'err',
+                messagge: 'sqlerr',
+                errmessage: err
+              }
+            } else {
+              result = {
+                result: 'success',
+                password: user.password,
+                message: '登録しました。'
+              }
+            }
+            return res.json(result);
+          });
+        }
       }
     });
   }catch (e){
@@ -91,8 +102,8 @@ router.post('/adminuseradd',function(req,res){
       result : err,
       message: tryerr
     }
+    return res.json(result);
   }
-  res.json(result);
 });
 
 

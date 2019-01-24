@@ -15,7 +15,7 @@ router.post('/clientlogin',function(req,res){
    };//返却値
     var sql;
    try{
-       sql = 'select user.userid, session.endday as sessionday, session.sessionid from clientuser as user' +
+       sql = 'select user.userid, session.endday , session.sessionid from clientuser as user' +
            ' left outer join clientapisession as session on session.userid = user.userid where user.userid ="'+userid
            +' "and user.password="'+password+'"and user.delflg = false;';
        connection.query(sql,function(err,rows){
@@ -103,12 +103,30 @@ router.post('/adminlogin',function(req,res){
                    resultdata = {
                        result:'success',
                        login:'success',
-                       logindata:sqldata[0]
+                       sessionid:'',
+                   }
+                   if(sqlrespodata.sessionid !== undefined || sqlrespodata.sessionid !== null || sqlrespodata.sessionid !== ''){
+                       resultdata.sessionid = sqlrespodata.sessionid;
+                   }else {
+                       resultdata.sessionid = uniquvalue(sqlrespodata);
+                       sql = 'insert into adminapisession(email,endday,sessionid)' +
+                           ' values("' + sqlrespodata.email + '",DATE_ADD(now(),INTERVAL 120 DAY),"'+ resultdata.sessionid + '");';
+                       connection.query(sql,function (err,rows) {
+                           if(err){
+                               resultdata={
+                                   result:'err',
+                                   login:'err',
+                                   sessionid:'',
+                               }
+                           }
+                           return res.json(resultdata);
+                       });
                    }
                }
+               return res.json(resultdata);
            }
 
-            return res.json(resultdata);
+
         });
     }catch(e){
         resultdata = {

@@ -7,27 +7,27 @@
     <table class=" table card-body">
       <tr>
         <th>姓:</th>
-        <td><input type="text" [(ngModel)]="userprofile.firstname"/></td>
+        <td><input type="text" [(ngModel)]="userprofile.firstname" name="firstname"/></td>
       </tr>
       <tr>
         <th>名:</th>
-        <td><input type="text" [(ngModel)]="userprofile.lastname"/></td>
+        <td><input type="text" [(ngModel)]="userprofile.lastname" name="lastname"/></td>
       </tr>
       <tr>
         <th>姓(よみがな)</th>
-        <td><input type="text" [(ngModel)]="userprofile.firstkananame"/></td>
+        <td><input type="text" [(ngModel)]="userprofile.firstkananame" name="firstkananame"/></td>
       </tr>
       <tr>
         <th>名(よみがな)</th>
-        <td><input type="text" [(ngModel)]="userprofile.lastkananame"/></td>
+        <td><input type="text" [(ngModel)]="userprofile.lastkananame" name="lastkananame"/></td>
       </tr>
       <tr>
         <th>年齢:</th>
-        <td><input type="number" [(ngModel)]="userprofile.age"/></td>
+        <td><input type="number" [(ngModel)]="userprofile.age" name="age"/></td>
       </tr>
       <tr>
         <th>メールアドレス</th>
-        <td><input type="email" [(ngModel)]="userprofile.password" /></td>
+        <td><input type="email" [(ngModel)]="userprofile.email" name="email"/></td>
       </tr>
       <tr>
         <th>パスワード:</th>
@@ -37,8 +37,8 @@
           <input type="radio" name="passradio" [(ngModel)]="autopasswordflg"
                  [value]=true />手動入力
           <br/><br/>
-          <div *ngIf="!autopasswordflg">
-            <input type="password" [(ngModel)]="userprofile.password"/>
+          <div *ngIf="autopasswordflg">
+            <input type="password" [(ngModel)]="userprofile.password" name="password"/>
           </div>
         </td>
       </tr>

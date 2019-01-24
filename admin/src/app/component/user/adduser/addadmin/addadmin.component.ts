@@ -23,9 +23,10 @@ export class AddadminComponent implements OnInit {
   }
   click() {
     let responcedata;
-    this.http.httppost('/', this.userprofile).subscribe(resdata =>{
+    this.http.httppost('/users/adminuseradd', this.userprofile).subscribe(resdata =>{
       responcedata = resdata;
-      if (responcedata[0].result == 'success') {
+      console.log(resdata);
+      if (responcedata.result == 'success') {
         this.responceresult = '登録完了しました';
       } else {
         this.responceresult = '登録出来ません';

@@ -1,3 +1,24 @@
-<p>
-  login works!
-</p>
+<form class="card ">
+  <div class="card-header">
+    管理者用ログイン画面
+  </div>
+  <table class="card-body">
+    <tr>
+      <th>メールアドレス</th>
+      <td>
+        <input type="email" [(ngModel)]="userlogin.email"
+                 name="email"/>
+      </td>
+    </tr>
+    <tr>
+      <th>パスワード</th>
+      <td>
+        <input type="password" [(ngModel)]="userlogin.password"
+                 name="password"/>
+      </td>
+    </tr>
+  </table>
+  <div class="card-footer">
+    <input type="submit" class="btn btn-primary" value="送信" />
+  </div>
+</form>
