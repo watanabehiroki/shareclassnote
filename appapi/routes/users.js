@@ -30,6 +30,9 @@ router.get('/getallclient', function( req, res){
   }
 });
 
+
+
+
 router.post('/adminuseradd',function(req,res){
   var user = {
     name:{
@@ -87,11 +90,13 @@ router.post('/adminuseradd',function(req,res){
     result = {
       result : err,
       message: tryerr
-
     }
   }
   res.json(result);
 });
+
+
+
 
 router.post('/clientuseradd', function(req,res){
   var name ={
@@ -163,7 +168,7 @@ router.post('/clientuseradd', function(req,res){
       message: 'catcherr',
         errmessages:e
     }
-    return res.json("*"+result);
+    return res.json(result);
   }
 
 });
