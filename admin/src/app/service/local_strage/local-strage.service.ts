@@ -10,7 +10,10 @@ export class LocalStrageService {
   constructor() { }
   // 処理内容
   setsessionjson(sessionid) {
-    this.loginjsonvalue.sessionid = sessionid;
+    this.setLocalStrage(sessionid);
+  }
+  getsesionid() {this.getLocalStrage();
+    return this.loginjsonvalue.sessionid;
   }
   removelocalStrage() {
     localStorage.removeItem('sessionidjsonadmin');

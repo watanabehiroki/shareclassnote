@@ -82,8 +82,8 @@ router.post('/adminlogin',function(req,res){
     var sql;
     try{
         sql = 'select user.email, session.sessionid, session.endday from adminuser as user left outer join '+
-            'adminapisession as session on user.userid = ' +
-            'session.userid where adminuser.mail = "'+email+'";';
+            'adminapisession as session on user.email = ' +
+            'session.email where user.email = "'+email+'" and password="'+password+'";';
         connection.query(sql,function(err,rows){
            if(err){
                resultdata = {
@@ -92,7 +92,7 @@ router.post('/adminlogin',function(req,res){
                }
            } else{
                sqlrespodata = rows;
-               if(sqlrespodata !== undefined){
+               if(sqlrespodata[0].email === undefined ){
                    //ログイン失敗
                    resultdata={
                        result:'success',
@@ -105,12 +105,15 @@ router.post('/adminlogin',function(req,res){
                        login:'success',
                        sessionid:'',
                    }
-                   if(sqlrespodata.sessionid !== undefined || sqlrespodata.sessionid !== null || sqlrespodata.sessionid !== ''){
-                       resultdata.sessionid = sqlrespodata.sessionid;
-                   }else {
-                       resultdata.sessionid = uniquvalue(sqlrespodata);
+
+                   if( sqlrespodata[0].sessionid !== null ){
+                       resultdata.sessionid = sqlrespodata[0].sessionid;
+                   } else {
+                       resultdata.sessionid = uniquvalue.findsessionid(sqlrespodata);
+                       console.log(resultdata.sessionid);
                        sql = 'insert into adminapisession(email,endday,sessionid)' +
-                           ' values("' + sqlrespodata.email + '",DATE_ADD(now(),INTERVAL 120 DAY),"'+ resultdata.sessionid + '");';
+                           ' values("' + sqlrespodata[0].email + '",DATE_ADD(now(),INTERVAL 120 DAY),"'+ resultdata.sessionid + '");';
+                       console.log(sql);
                        connection.query(sql,function (err,rows) {
                            if(err){
                                resultdata={
@@ -119,14 +122,11 @@ router.post('/adminlogin',function(req,res){
                                    sessionid:'',
                                }
                            }
-                           return res.json(resultdata);
                        });
                    }
                }
                return res.json(resultdata);
            }
-
-
         });
     }catch(e){
         resultdata = {

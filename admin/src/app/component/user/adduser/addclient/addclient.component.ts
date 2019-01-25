@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../../../../service/httpservice/http.service';
+import { LocalStrageService } from '../../../../service/local_strage/local-strage.service';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-addclient',
   templateUrl: './addclient.component.html',
@@ -21,9 +24,13 @@ export class AddclientComponent implements OnInit {
   };
   passwordflg = false;
   buttonword = '手動入力';
-  constructor(private httpservice : HttpService) { }
+  constructor(private httpservice: HttpService, private router: Router,
+              private localstrage: LocalStrageService) { }
 
   ngOnInit() {
+    if (this.localstrage.getlocalstragevalue()) {
+      this.router.navigate(['/login']);
+    }
   }
   passwordbuttonclick() {
     this.passwordflg = !this.passwordflg;

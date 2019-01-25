@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpService} from '../../../../service/httpservice/http.service';
+import {LocalStrageService} from '../../../../service/local_strage/local-strage.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-addadmin',
@@ -18,8 +20,12 @@ export class AddadminComponent implements OnInit {
   };
   responceresult = '';
   autopasswordflg = false;
-  constructor(private http: HttpService ) { }
+  constructor(private http: HttpService, private localstrage: LocalStrageService,
+              private router: Router ) { }
   ngOnInit() {
+    if (this.localstrage.getlocalstragevalue()) {
+      this.router.navigate(['/login']);
+    }
   }
   click() {
     let responcedata;
