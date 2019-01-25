@@ -1,3 +1,23 @@
-<p>
-  login works!
-</p>
+<div class="card">
+
+    <h4 class="card-header">shrenoteloginpage</h4>
+    <table class="card-body">
+      <tr>
+        <th>ID:</th>
+        <td>
+          <input   type="text" placeholder="IDを入力してください" [(ngModel)]="loginobj.userid" name="userid" required="required"/>
+        </td>
+      </tr>
+      <tr>
+        <th>パスワード:</th>
+        <td>
+          <input type="text" placeholder="パスワードを入力してください" [(ngModel)]="loginobj.password" name="password" required="required"/>
+        </td>
+      </tr>
+    </table>
+    <div  class="card-footer">
+      <span>{{resultdata}}</span>
+      <input type="button" value="login" class="btn btn-primary"
+             (click)="submitclick()" />
+    </div>
+</div>

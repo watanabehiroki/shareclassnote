@@ -74,7 +74,7 @@ router.post('/updatesubject',function (req,res) {
    try{
        sql = "update subject set  name = "+ name+", color ="+ color +
            ", updateday = now() where id = "+id+";";
-       connection.query(sql,function(errrows){
+       connection.query(sql,function(err,rows){
            if(err){
                result = {
                    result:'err',
@@ -108,7 +108,6 @@ router.post('/addsubject',function(req,res){
     var result = "";
     var sql;
     try{
-
         var sql = 'insert into subject(name,color,updateday)'
             +' values ("'+name+'","'+color+'",now());';
         connection.query(sql,function(err,rows){

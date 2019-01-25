@@ -12,9 +12,8 @@ export class ListsubjectComponent implements OnInit {
   ngOnInit() {
     this.httpservice.httpget('/subject/getallsubject').subscribe( resdata =>{
       this.listsubject = resdata;
-      console.log(this.listsubject);
     },
-        err => {console.log(err);} );
+        err => {console.log(err); } );
   }
 
 }

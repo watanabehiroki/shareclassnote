@@ -3,20 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="444a9397-a04d-42a6-ab20-98d89e7cfbc5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../admin/src/app/component/headerfooter/menu/menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/headerfooter/menu/menu.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/user/adduser/addclient/addclient.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/user/adduser/addclient/addclient.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/headerfooter/menu/menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/headerfooter/menu/menu.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/user/adduser/addadmin/addadmin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/user/adduser/addadmin/addadmin.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../admin/src/app/component/user/adduser/addclient/addclient.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/user/adduser/addclient/addclient.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/app/service/local_strage/local-strage.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/service/local_strage/local-strage.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/headerfooter/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/headerfooter/footer/footer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/pubnotelist/pubnotelist.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/pubnotelist/pubnotelist.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/pubnotelist/pubnotelist.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/pubnotelist/pubnotelist.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/selectnoteoperation/selectnoteoperation.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/selectnoteoperation/selectnoteoperation.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/submitnote/submitnote.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/submitnote/submitnote.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/submitnote/submitnote.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/submitnote/submitnote.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/userlogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/userlogin.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,10 +22,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/users.js">
+        <entry file="file://$PROJECT_DIR$/routes/userlogin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+            <state relative-caret-position="74">
+              <caret line="124" selection-start-line="124" selection-end-line="124" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -56,20 +59,23 @@
         <option value="$PROJECT_DIR$/routes/module/connectsql.js" />
         <option value="$PROJECT_DIR$/../README.md" />
         <option value="$PROJECT_DIR$/routes/module/fomatdatetosql.js" />
-        <option value="$PROJECT_DIR$/routes/subject.js" />
         <option value="$PROJECT_DIR$/routes/login.js" />
         <option value="$PROJECT_DIR$/routes/module/random.js" />
-        <option value="$PROJECT_DIR$/config/sqlconfig.js" />
-        <option value="$PROJECT_DIR$/routes/userlogin.js" />
-        <option value="$PROJECT_DIR$/routes/users.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/../database/sql/initialdatabase.sql" />
+        <option value="$PROJECT_DIR$/routes/subject.js" />
+        <option value="$PROJECT_DIR$/routes/module/uniquvalue.js" />
+        <option value="$PROJECT_DIR$/config/sqlconfig.js" />
+        <option value="$PROJECT_DIR$/routes/users.js" />
+        <option value="$PROJECT_DIR$/routes/userlogin.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-11" />
-    <option name="width" value="1235" />
-    <option name="height" value="1091" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="666" />
+    <option name="y" value="352" />
+    <option name="width" value="565" />
+    <option name="height" value="652" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -77,7 +83,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -105,13 +110,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547784892781" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548313258576" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -150,14 +156,25 @@
       <workItem from="1547770331916" duration="168000" />
       <workItem from="1547770689482" duration="10957000" />
       <workItem from="1547940207575" duration="2385000" />
+      <workItem from="1547958241904" duration="4003000" />
+      <workItem from="1547967270624" duration="1640000" />
+      <workItem from="1547992525849" duration="2541000" />
+      <workItem from="1548028587579" duration="9906000" />
+      <workItem from="1548138827674" duration="3429000" />
+      <workItem from="1548201457843" duration="19689000" />
+      <workItem from="1548288167947" duration="4691000" />
+      <workItem from="1548293068886" duration="1569000" />
+      <workItem from="1548297500413" duration="699000" />
+      <workItem from="1548301919636" duration="5583000" />
+      <workItem from="1548374616219" duration="3591000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43971000" />
+    <option name="totallyTimeSpent" value="101312000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="823" height="727" extended-state="1" />
+    <frame x="666" y="352" width="565" height="652" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -165,10 +182,10 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.2293578" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.39009902" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.3210084" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.477842" />
       <window_info anchor="bottom" id="Database Changes" order="2" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
@@ -189,15 +206,42 @@
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="0" />
+      <window_info id="UI Designer" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.15695792" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.3472988" />
+      <window_info anchor="bottom" id="Database Changes" order="2" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="bottom" id="Run" order="7" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="right" id="Theme Preview" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Palette&#9;" order="2" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/conf/databaseconf.js" />
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -218,24 +262,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/module/connectsql.js" />
     <entry file="file://$PROJECT_DIR$/routes/login.js" />
+    <entry file="file://$PROJECT_DIR$/../database/sql/initialdatabase.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" selection-start-line="20" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/subject.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/sqlconfig.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/userlogin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        <state relative-caret-position="1887">
+          <caret line="111" column="55" selection-start-line="111" selection-start-column="55" selection-end-line="111" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -246,17 +286,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/routes/module/uniquvalue.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        <state relative-caret-position="408">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+        <state>
+          <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/sqlconfig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/userlogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="124" selection-start-line="124" selection-end-line="124" />
         </state>
       </provider>
     </entry>

@@ -1,3 +1,29 @@
-<p>
-  grouplist works!
-</p>
+<div class="header">
+  <app-menu></app-menu>
+</div>
+<div class="middle card">
+  <div class="card-header">
+    グループ一覧
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <tr>
+        <th>グループ名</th>
+        <th>存続期間</th>
+        <th>操作</th>
+      </tr>
+      <tr>
+        <td>○○○</td>
+        <td>○○年</td>
+        <td>
+          <input type="button" class="btn btn-primary" value="編集" />
+          <input type="button" class="btn btn-danger" value="削除" />
+          <input type="button" class="btn btn-light" value="qr" />
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>
