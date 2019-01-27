@@ -20,6 +20,7 @@ import { EditsubjectComponent } from './component/subject/editsubject/editsubjec
 import {  HttpService }　from  './service/httpservice/http.service';
 import { LocalStrageService} from './service/local_strage/local-strage.service';
 import { MenuComponent } from './component/headerfooter/menu/menu.component';
+import { GroupaddSuccessComponent } from './component/group/groupadd-success/groupadd-success.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MenuComponent } from './component/headerfooter/menu/menu.component';
     DetailuserComponent,
     ListsubjectComponent,
     EditsubjectComponent,
-    MenuComponent
+    MenuComponent,
+    GroupaddSuccessComponent
   ],
   imports: [
     HttpClientModule,

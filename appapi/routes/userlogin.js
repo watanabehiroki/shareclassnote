@@ -83,7 +83,7 @@ router.post('/adminlogin',function(req,res){
     try{
         sql = 'select user.email, session.sessionid, session.endday from adminuser as user left outer join '+
             'adminapisession as session on user.email = ' +
-            'session.email where user.email = "'+email+'" and password="'+password+'";';
+            'session.email where user.email = "'+email+'" and password="'+ password+'";';
         connection.query(sql,function(err,rows){
            if(err){
                resultdata = {
@@ -92,7 +92,7 @@ router.post('/adminlogin',function(req,res){
                }
            } else{
                sqlrespodata = rows;
-               if(sqlrespodata[0].email === undefined ){
+               if(sqlrespodata.length <1 ){
                    //ログイン失敗
                    resultdata={
                        result:'success',
@@ -110,10 +110,8 @@ router.post('/adminlogin',function(req,res){
                        resultdata.sessionid = sqlrespodata[0].sessionid;
                    } else {
                        resultdata.sessionid = uniquvalue.findsessionid(sqlrespodata);
-                       console.log(resultdata.sessionid);
                        sql = 'insert into adminapisession(email,endday,sessionid)' +
                            ' values("' + sqlrespodata[0].email + '",DATE_ADD(now(),INTERVAL 120 DAY),"'+ resultdata.sessionid + '");';
-                       console.log(sql);
                        connection.query(sql,function (err,rows) {
                            if(err){
                                resultdata={

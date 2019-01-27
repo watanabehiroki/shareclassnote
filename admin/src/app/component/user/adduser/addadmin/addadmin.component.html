@@ -54,10 +54,11 @@
         <th>メールアドレス</th>
         <td>
           <input type="email" [(ngModel)]="userprofile.email"
-                   name="email" required minlength="3" #email="ngModel"/>
+                   name="email" required minlength="3" email #email="ngModel"/>
           <br/>
           <span [hidden]="!email.errors?.required">入力必須です。</span>
           <span [hidden]="!email.errors?.minlength">３文字以上入力してください。</span>
+          <span [hidden]="!email.errors?.email">メールエラーメッセージ</span>
         </td>
       </tr>
       <tr>

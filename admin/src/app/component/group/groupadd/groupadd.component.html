@@ -9,7 +9,7 @@
           <th>グループ名</th>
           <td>
             <input type="text" [(ngModel)]="groupprofile.groupname"
-              required minlength="4"  #groupname="ngModel"/>
+              required minlength="4"  #groupname="ngModel" name="groupname"/>
             <br/>
             <span [hidden]="!groupname.errors?.required">グループ名前は必須です。</span>
             <span [hidden]="!groupname.errors?.minlength">4文字以上入力してください。</span>
@@ -18,7 +18,8 @@
         <tr>
           <th>パスフレーズ</th>
           <td>
-            <input type="text" [(ngModel)]="groupprofile.passphrase" required minlength="5" #passphrase="ngModel" />
+            <input type="text" [(ngModel)]="groupprofile.passphrase"
+                   required minlength="5" #passphrase="ngModel"  name="passphrase"/>
             <br/>
             <span [hidden]="!passphrase.errors?.required">パスフレーズは必須です。</span>
             <span [hidden]="!passphrase.errors?.minlength">5文字以上を入力してください。</span>
@@ -28,7 +29,7 @@
           <th>存続期間</th>
           <td>
             <select [(ngModel)]="groupprofile.year" name="year">
-              <option [value]=1  disabled="disabled">1</option>
+              <option [value]=1  disabled>1</option>
               <option [value]=2 >2</option>
               <option [value]=3 >3</option>
               <option [value]=4 >4</option>
@@ -42,6 +43,7 @@
         </tr>
       </table>
       <div class="card-footer">
+        {{responcereuslt}}
         <input type="submit" value="作成" class="btn btn-primary" />
       </div>
     </form>

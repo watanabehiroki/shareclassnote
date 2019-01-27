@@ -3,7 +3,6 @@ var router = express.Router();
 let mysql = require('mysql');
 let mysqlconf = require('../config/sqlconfig');
 let connection = mysql.createConnection(mysqlconf.mysql);
-let qrcode = require('qrcode');
 //作成したすべてのグループを取り出す
 router.get('/getallgrouplist',function (req,res) {
    let sessionid = req.query.sessionid;
@@ -55,7 +54,7 @@ router.get('/getallgrouplist',function (req,res) {
        });
    }catch(e){
        return res.json({
-           result:'err'
+           result:'err' 
        })
    }
 });
@@ -73,7 +72,7 @@ router.get('/getgrouphrase', function(req,res){
        //sessionid認証
        connection.query('sql', function (err,rows) {
            sqldata = rows ;
-           if(sqldata=== null || sqldata === undefined ){
+           if(sqldata.length < 1 ){
            }else{
                adminemail = sqldata[0].email;
                sql = 'select  qcode, endday from grouptable  ' +
@@ -113,7 +112,8 @@ router.post('/updategroup', function (req,res) {
 
 })
 router.post('/addgroup',function(req,res){
-    let sessionid = req.query.sessionid;
+    console.log(req.body);
+    let sessionid = req.body.sessionid;
     let requestbody = {
         groupname: req.body.groupname,
         passfrese: req.body.passphrase,
@@ -131,16 +131,17 @@ router.post('/addgroup',function(req,res){
             'where sessionid ="'+sessionid+'";';
         connection.query(sql,function (err,rows) {
             var sqlresult = rows;
-            if(sqlresult === null || sqlresult === undefined) {
+            if(sqlresult.length  < 1) {
                 //sessionidが存在しない場合:
                 respoceresult.result = 'err';
-                respoceresult.message = '';
+                respoceresult.message = 'sessionid';
+                return res.json(respoceresult);
             }else{
                 requestbody.adminemail  = sqlresult[0].email;
                 sql = 'insert into grouptable(groupname,adminemail,qcode,endday)' +
                     ' values( "'+requestbody.groupname+'", "'+requestbody.adminemail
-                    +'", "'+requestbody.passfrese+'",DATE_ADD(now(),INTERVAL'+requestbody.year+'YEAR));';
-                connection.query(sql,function(err,row){
+                    +'", "'+requestbody.passfrese+'",DATE_ADD(now(),INTERVAL '+requestbody.year+' YEAR));';
+                 connection.query(sql,function(err,row){
                     if(err){
                         respoceresult = {
                             result: 'err',
@@ -149,9 +150,10 @@ router.post('/addgroup',function(req,res){
                     }else{
                         respoceresult.result = 'success';
                     }
+                     return res.json(respoceresult);
                 });
             }
-            return res.json(respoceresult);
+
         });
     }catch (e){
         return res.json({
