@@ -7,22 +7,27 @@
     <table class="card-body table">
       <tr>
         <th><span>科目</span></th>
-        <td><input  type='text'  [(ngModel)]='subname' name="subname" required/></td>
+        <td>
+          <input  type='text'  [(ngModel)]='subname'
+                    name="subname"/>
+          <br/>
+        </td>
       </tr>
-      <tr>
-        <th><span>必要事項</span></th>
-        <td><input type="textarea" [(ngModel)]="other" name="other" value="" required="false" /></td>
-      </tr>
+
       <tr>
         <th><span>色選択</span></th>
-        <td><input  type="color" [(ngModel)]="color" name="color" required /></td>
+        <td>
+          <input  type="color" [(ngModel)]='color'
+                    name="color" />
+        </td>
       </tr>
     </table>
     <div class="card-footer">
       <span>{{responsevalue}}</span>
-      <input type="button" value="登録" class=" btn btn-primary" (click)="submitclick()"/>
+      <input type="submit" value="登録" class=" btn btn-primary" />
     </div>
   </form>
+
   <div class="subjectmenu card">
     <div class="card-header">
       <span>サンプル</span>

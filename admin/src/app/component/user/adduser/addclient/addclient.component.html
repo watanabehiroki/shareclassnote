@@ -2,24 +2,45 @@
   <app-menu></app-menu>
 </div>
 <div class="middle">
-  <form class="card ">
+  <form class="card " (ngSubmit)="submitclick()">
     <div class="card-header"><span>説明文導入</span></div>
     <table class=" table card-body">
       <tr>
         <th>姓:</th>
-        <td><input type="text"  [(ngModel)]="userprofile.firstname"  name="first"/></td>
+        <td>
+          <input type="text"  [(ngModel)]="userprofile.firstname"
+                   name="first" required minlength="1" #firstname="ngModel"/>
+          <span [hidden]="!firstname.errors?.required">入力必須です。</span>
+          <span [hidden]="!firstname.errors?.minlength">１文字以上入力してください。</span>
+        </td>
       </tr>
       <tr>
         <th>名:</th>
-        <td><input type="text" [(ngModel)]="userprofile.lastname" name="last"/></td>
+        <td>
+          <input type="text" [(ngModel)]="userprofile.lastname"
+                 name="last" required minlength="1" #lastname="ngModel"/>
+          <span [hidden]="!lastname.errors?.required">入力必須です。</span>
+          <span [hidden]="!lastname.errors?.minlength">１文字以上入力して下さい。</span>
+        </td>
       </tr>
       <tr>
         <th>よみがな(姓):</th>
-        <td><input type="text" [(ngModel)]="userprofile.firstkananame" name="firstkana"/></td>
+        <td>
+          <input type="text" [(ngModel)]="userprofile.firstkananame"
+                 name="firstkana" required minlength="1" #firstname="ngModel"/>
+          <span [hidden]="!firstname.errors?.required">入力必須です。</span>
+          <span [hidden]="!firstname.errors?.minlength">１文字以上入力して下さい。</span>
+        </td>
       </tr>
       <tr>
         <th>よみがな(名):</th>
-        <td><input type="text" [(ngModel)]="userprofile.lastkananame" name="lastkana" /></td>
+        <td>
+          <input type="text" [(ngModel)]="userprofile.lastkananame"
+                 name="lastkana" required minlength="1" #lastkananame="ngModel"/>
+          <br/>
+          <span [hidden]="!firstname.errors?.required">入力必須です。</span>
+          <span [hidden]="!firstname.errors?.minlength">1文字以上入力して下さい。</span>
+        </td>
       </tr>
       <tr>
         <th>年齢:</th>
@@ -28,7 +49,7 @@
       <tr>
         <th>性別:</th>
         <td>
-          <input type="radio" name="sex"  [(ngModel)]="userprofile.sex" [value]="true" /> 男性
+          <input type="radio" name="sex"  [(ngModel)]="userprofile.sex" [value]="true"  disabled/> 男性
           <input type="radio" name="sex"  [(ngModel)]="userprofile.sex" [value]="false" />女性
         </td>
       </tr>
@@ -47,7 +68,7 @@
     </table>
     <div class="card-footer">
       <span>{{result.data}} {{result.password}}</span>
-      <input type="submit" value="登録" class="btn btn-primary" (click)="submitclick()"/>
+      <input type="submit" value="登録" class="btn btn-primary" />
     </div>
   </form>
 </div>

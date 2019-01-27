@@ -2,40 +2,49 @@
   <app-menu></app-menu>
 </div>
 <div class="middle">
-  <div class="card">
-    <div class="card-header">グループ作成画面 あと説明など</div>
-    <table class="table card-body">
-      <tr>
-        <th>グループ名</th>
-        <td>
-          <input type="text"  />
-        </td>
-      </tr>
-      <tr>
-        <th>パスフレーズ</th>
-        <td><input type="text" /></td>
-      </tr>
-      <tr>
-        <th>存続期間</th>
-        <td>
-          <select name="year">
-            <option value=1 >1</option>
-            <option value=2 >2</option>
-            <option value=3 >3</option>
-            <option value=4 >4</option>
-            <option value=5 >5</option>
-            <option value=6 >6</option>
-            <option value=7 >7</option>
-            <option value=8 >8</option>
-            <option value=9 >9</option>
-          </select>
-        </td>
-      </tr>
-    </table>
-    <div class="card-footer">
-      <input type="button" value="作成" class="btn btn-primary" />
-    </div>
-  </div>
+    <form class="card" (ngSubmit)="clicksubmit()">
+      <div class="card-header">グループ作成画面 あと説明など</div>
+      <table class="table card-body">
+        <tr>
+          <th>グループ名</th>
+          <td>
+            <input type="text" [(ngModel)]="groupprofile.groupname"
+              required minlength="4"  #groupname="ngModel"/>
+            <br/>
+            <span [hidden]="!groupname.errors?.required">グループ名前は必須です。</span>
+            <span [hidden]="!groupname.errors?.minlength">4文字以上入力してください。</span>
+          </td>
+        </tr>
+        <tr>
+          <th>パスフレーズ</th>
+          <td>
+            <input type="text" [(ngModel)]="groupprofile.passphrase" required minlength="5" #passphrase="ngModel" />
+            <br/>
+            <span [hidden]="!passphrase.errors?.required">パスフレーズは必須です。</span>
+            <span [hidden]="!passphrase.errors?.minlength">5文字以上を入力してください。</span>
+          </td>
+        </tr>
+        <tr>
+          <th>存続期間</th>
+          <td>
+            <select [(ngModel)]="groupprofile.year" name="year">
+              <option [value]=1  disabled="disabled">1</option>
+              <option [value]=2 >2</option>
+              <option [value]=3 >3</option>
+              <option [value]=4 >4</option>
+              <option [value]=5 >5</option>
+              <option [value]=6 >6</option>
+              <option [value]=7 >7</option>
+              <option [value]=8 >8</option>
+              <option [value]=9 >9</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+      <div class="card-footer">
+        <input type="submit" value="作成" class="btn btn-primary" />
+      </div>
+    </form>
 </div>
 <div class="footer">
   <app-footer></app-footer>

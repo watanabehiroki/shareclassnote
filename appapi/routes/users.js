@@ -177,7 +177,7 @@ router.post('/clientuseradd', function(req,res){
     result = {
       result: 'err',
       message: 'catcherr',
-        errmessages:e
+      errmessages:e
     }
     return res.json(result);
   }
