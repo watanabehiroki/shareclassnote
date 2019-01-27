@@ -12,6 +12,8 @@ import { GroupaddComponent } from './component/group/groupadd/groupadd.component
 import { GrouplistComponent } from './component/group/grouplist/grouplist.component';
 import { DetailgroupComponent } from './component/group/detailgroup/detailgroup.component';
 import { EditsubjectComponent } from './component/subject/editsubject/editsubject.component';
+import { GroupaddSuccessComponent } from './component/group/groupadd-success/groupadd-success.component';
+import { GroupaddqrcodeComponent} from './component/group/groupaddqrcode/groupaddqrcode.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/addclient', pathMatch: 'full'},
@@ -23,7 +25,9 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'groupadd', component: GroupaddComponent},
   {path: 'grouplist', component: GrouplistComponent},
-  {path: 'detailgroup', component: DetailgroupComponent}
+  {path: 'detailgroup', component: DetailgroupComponent},
+  {path: 'groupaddsuccess', component: GroupaddSuccessComponent},
+  {path: 'groupaddqr', component: GroupaddqrcodeComponent},
 ];
 
 @NgModule({

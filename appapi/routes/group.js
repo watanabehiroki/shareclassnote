@@ -15,8 +15,8 @@ router.get('/getallgrouplist',function (req,res) {
    try{
        var sqldata;
        //sessionid認証
-       sql = 'seelct email,endday from adminapisession ' +
-           'where sessionid="'+sessionid+'";';
+       sql = 'select email,endday from adminapisession ' +
+           'where sessionid = "'+sessionid+'";';
        connection.query(sql,function(err,rows){
            sqldata = rows;
            if(err){
@@ -24,6 +24,8 @@ router.get('/getallgrouplist',function (req,res) {
                    result:'err',
                    message:''
                }
+
+               return res.json(result);
            }else{
                if(sqldata == null || sqldata == undefined){
                   //sessionidが存在しない場合
@@ -31,9 +33,11 @@ router.get('/getallgrouplist',function (req,res) {
                        result:'err',
                        message: 'sessionerr'
                    }
+                   return res.json(result);
                }else{
+                   adminemail = sqldata[0].email;
                    sql = 'select * from grouptable ' +
-                       'where adminemail="'+adminemail+'";';
+                       'where adminemail = "'+adminemail+'";';
                    connection.query(sql,function (err,rows) {
                        sqldata = rows;
                        if(err){
@@ -47,10 +51,10 @@ router.get('/getallgrouplist',function (req,res) {
                                datas: sqldata
                            }
                        }
+                       return res.json(result);
                    });
                }
            }
-           return res.json(result);
        });
    }catch(e){
        return res.json({

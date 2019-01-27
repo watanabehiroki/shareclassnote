@@ -17,11 +17,13 @@ import { UserlistComponent } from './component/user/userlist/userlist.component'
 import { DetailuserComponent } from './component/user/detailuser/detailuser.component';
 import { ListsubjectComponent } from './component/subject/listsubject/listsubject.component';
 import { EditsubjectComponent } from './component/subject/editsubject/editsubject.component';
-import {  HttpService }　from  './service/httpservice/http.service';
+import {  HttpService } from  './service/httpservice/http.service';
 import { LocalStrageService} from './service/local_strage/local-strage.service';
 import { MenuComponent } from './component/headerfooter/menu/menu.component';
 import { GroupaddSuccessComponent } from './component/group/groupadd-success/groupadd-success.component';
-
+import { GroupaddqrcodeComponent } from './component/group/groupaddqrcode/groupaddqrcode.component';
+import { RemovegroupComponent } from './component/group/removegroup/removegroup.component';
+// import { NgxKjuaModule } from 'ngx-kjua';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,13 +40,16 @@ import { GroupaddSuccessComponent } from './component/group/groupadd-success/gro
     ListsubjectComponent,
     EditsubjectComponent,
     MenuComponent,
-    GroupaddSuccessComponent
+    GroupaddSuccessComponent,
+    GroupaddqrcodeComponent,
+    RemovegroupComponent
   ],
   imports: [
     HttpClientModule,
     FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    //NgxKjuaModule,
   ],
   providers: [HttpService, LocalStrageService],
   bootstrap: [AppComponent]

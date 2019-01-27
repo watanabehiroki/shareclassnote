@@ -17,8 +17,12 @@ export class GrouplistComponent implements OnInit {
     if (this.localStrage.getlocalstragevalue()) {
       this.router.navigate(['/login']);
     } else {
-      this.httpservice.httpget('/group/getallgrouplist?sessionid='+this.localStrage.getsesionid()).subscribe(datas => {
+      this.httpservice.httpget('/group/getallgrouplist?sessionid=' + this.localStrage.getsesionid()).subscribe(datas => {
         this.grouplist = datas;
+        console.log(this.grouplist);
+        if (true) {
+
+        }
       });
     }
   }
