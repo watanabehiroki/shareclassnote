@@ -10,6 +10,7 @@ import {Router} from '@angular/router';
 })
 export class GrouplistComponent implements OnInit {
   grouplist;
+  showdatalist;
   constructor(private router: Router, private httpservice: HttpService,
               private localStrage: LocalStrageService) { }
 
@@ -19,7 +20,7 @@ export class GrouplistComponent implements OnInit {
     } else {
       this.httpservice.httpget('/group/getallgrouplist?sessionid=' + this.localStrage.getsesionid()).subscribe(datas => {
         this.grouplist = datas;
-        console.log(this.grouplist);
+        this.showdatalist = this.grouplist.datas;
         if (true) {
 
         }
