@@ -10,19 +10,27 @@ export class StragedataService {
     groupname: '',
   }
   constructor() { }
-  setsqldata(adminemail, passphase, groupname) {
+  confirmqrdataflg() {
+    var  resultflg = false;
+    if (this.qrcodedata.adminemail !== undefined || this.qrcodedata.adminemail !== null
+      || this.qrcodedata.adminemail !== '') {
+      resultflg = true;
+    }
+    return resultflg
+  }
+  setqrdata(adminemail, passphase, groupname) {
     this.qrcodedata.adminemail = adminemail;
     this.qrcodedata.passphase = passphase;
     this.qrcodedata.groupname = groupname;
   }
-  removesqldata() {
+  removeqrdata() {
     this.qrcodedata = {
       adminemail: '',
       passphase: '',
       groupname: '',
     };
   }
-  getsqldata() {
+  getqrdata() {
     return this.qrcodedata;
   }
 }

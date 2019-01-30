@@ -1,23 +1,31 @@
 <div class="card">
-
+  <form (ngSubmit)="submitclick()">
     <h4 class="card-header">shrenoteloginpage</h4>
-    <table class="card-body">
+    <table class="card-body table">
       <tr>
         <th>ID:</th>
         <td>
-          <input   type="text" placeholder="IDを入力してください" [(ngModel)]="loginobj.userid" name="userid" required="required"/>
+          <input   type="text" placeholder="IDを入力してください"
+                   [(ngModel)]="loginobj.userid" name="userid" required minlength="1" #insertid="ngModel"/>
+          <br/>
+          <span [hidden]="!insertid.errors?.required">入力必須です。</span>
+          <span [hidden]="!insertid.errors?.minlength">1文字以上入力してください。</span>
         </td>
       </tr>
       <tr>
         <th>パスワード:</th>
         <td>
-          <input type="text" placeholder="パスワードを入力してください" [(ngModel)]="loginobj.password" name="password" required="required"/>
+          <input type="password" placeholder="パスワードを入力してください"
+                 [(ngModel)]="loginobj.password" name="password" required minlength="1" #password="ngModel"/>
+          <br />
+          <span [hidden]="!password.errors?.required">入力必須です。</span>
+          <span [hidden]="!password.errors?.minlength">1文字以上入力してださい。</span>
         </td>
       </tr>
     </table>
     <div  class="card-footer">
       <span>{{resultdata}}</span>
-      <input type="button" value="login" class="btn btn-primary"
-             (click)="submitclick()" />
+      <input type="submit" value="login" class="btn btn-primary"/>
     </div>
+  </form>
 </div>

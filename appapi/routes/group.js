@@ -104,6 +104,50 @@ router.get('/getgrouphrase', function(req,res){
        });
    }
 });
+router.post('/findgroupclient', function (req,res) {
+    let sessionid = req.body.clientsession;
+    let groupname = req.body.groupname;
+    let adminemail = req.body.adminemail;
+    let passphrase = req.body.passphrase;
+    //client sessionかくにん
+    var sql;
+    var resultdata = {
+        result:'err',
+        datas:'',
+    }
+    sql = 'select * from clientapisession ' +
+        'where sessionid = "'+sessionid+'";';
+    console.log(sql);
+    connection.query(sql, function (err,rows){
+        var sqlresultdata;
+
+       if(err){
+           return res.json(resultdata);
+       } else {
+           sqlresultdata = rows;
+           if(sqlresultdata.length >0){
+               //session存在する
+               sql = 'select * from grouptable left join adminuser on adminuser.email = grouptable.adminemail ' +
+                   'where grouptable.adminemail = "'+adminemail+'" and grouptable.groupname = "'+groupname+'" and grouptable.qcode = "'+passphrase+'";';
+               console.log(sql);
+               connection.query(sql,function (err,rows) {
+                  if(err){
+                  } else {
+                      sqlresultdata = rows;
+                      if(sqlresultdata.length > 0) {
+                          resultdata.result='success';
+                        resultdata.datas = sqlresultdata[0];
+                      }
+                  }
+                  return res.json(resultdata);
+               });
+           }else{
+               return res.json(resultdata);
+           }
+       }
+    });
+});
+
 
 router.post('/updategroup', function (req,res) {
     let sessionid = req.query.sessionid;
