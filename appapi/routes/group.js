@@ -3,6 +3,37 @@ var router = express.Router();
 let mysql = require('mysql');
 let mysqlconf = require('../config/sqlconfig');
 let connection = mysql.createConnection(mysqlconf.mysql);
+
+//クライントユーザが登録したグループを取り出す.
+router.get('/getclientallgroup',function (req,res) {
+    let sessionid = req.query.sessionid;
+    var sql;
+    var userid;
+    var resultdata = {
+        result:'err',
+        groupdatas:'',
+    }
+    sql ='select * from clientapisession ' +
+        'where sessionid = "'+sessionid+'";';
+    connection.query(sql,function(err,rows){
+        if(!err){
+            let sqldata = rows;
+            if(sqldata.length > 0){
+                userid = sqldata[0].userid;
+                sql = 'select * from groupmember left outer join grouptable on groupmember.adminemail = grouptable.adminemail and grouptable.groupname = groupmember.groupname ' +
+                    'left outer join adminuser on grouptable.email = adminuser.email where groupmember.clientid = "'+userid+'";';
+                connection.query(sql,function(err,rows){
+                   if(!err){
+                       resultdata.result = "success";
+                       resultdata.groupdatas = rows;
+                   }
+                })
+            }
+
+        }
+        return res.json(resultdata);
+    });
+});
 //作成したすべてのグループを取り出す
 router.get('/getallgrouplist',function (req,res) {
    let sessionid = req.query.sessionid;
@@ -147,7 +178,57 @@ router.post('/findgroupclient', function (req,res) {
        }
     });
 });
+router.post('/qraddgroupclient',function (req,res) {
+    let clientsessionid = req.body.clientsessionid;
+    let groupname = req.body.groupname;
+    let adminemail = req.body.adminemail;
+    let passphrase = req.body.passphrase;
+    let clientid;
+    //sessionid confirm
+    var sql;
+    var result = {
+        result:'err',
+        addresult: false,
+    }
+    sql = 'select * from clientapisession ' +
+        'where sessionid= "'+clientsessionid+'";';
+    connection.query(sql, function (err,rows) {
+        var sqldata;
+        if(err){
+        }else{
+            sqldata = rows;
+            if(rows.length > 0){
+                clientid = rows[0].userid;
+                sql = 'select * from grouptable ' +
+                    'where groupname="'+groupname+'" and adminemail = "'+adminemail+'" and qcode = "'+passphrase+'";';
+                connection.query(sql,function (err, rows) {
+                    if(!err){
+                        sqldata = rows;
+                        if(sqldata.length > 0 ){
+                            sql = 'insert into groupmember(adminemail,groupname,clientid,delflg)' +
+                                'values ("'+adminemail+'","'+groupname+'","'+clientid+'",false)';
+                            connection.query(sql,function (err,rows) {
+                                if(!err){
+                                    result.result = 'success';
+                                    result.addresult = true;
+                                }else{
+                                    result.result = 'success';
+                                    result.addresult = false;
+                                }
+                                return res.json(result);
+                            })
+                        }
+                    }
 
+                })
+
+            }else{
+                return res.json(result);
+            }
+
+        }
+    });
+});
 
 router.post('/updategroup', function (req,res) {
     let sessionid = req.query.sessionid;
@@ -199,7 +280,7 @@ router.post('/addgroup',function(req,res){
                         respoceresult.result = 'success';
                     }
                      return res.json(respoceresult);
-                });
+                })
             }
 
         });

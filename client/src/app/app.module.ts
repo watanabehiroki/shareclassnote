@@ -25,6 +25,7 @@ import { GroupoperationComponent } from './component/group/groupoperation/groupo
 import { HttpclientService } from './service/http/httpclient.service';
 import { LocalStrageService} from "./service/local_strage/local-strage.service";
 import {StragedataService} from "./service/stragedata/stragedata.service";
+import { GroupaddlistComponent } from './component/group/groupaddlist/groupaddlist.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {StragedataService} from "./service/stragedata/stragedata.service";
     PubnotelistComponent,
     UserprofileComponent,
     GroupreadqrcodeComponent,
-    GroupoperationComponent
+    GroupoperationComponent,
+    GroupaddlistComponent
   ],
   imports: [
     BrowserModule,

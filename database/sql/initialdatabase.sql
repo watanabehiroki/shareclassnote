@@ -23,8 +23,8 @@ create table clientrefression(userid varchar(255) not null, endday date not null
 # グループ用テーブル
 create table grouptable(groupname varchar(40),adminemail varchar(255),qcode varchar(255) not null,endday date not null,foreign key(adminemail) references adminuser(email),primary key(groupname,adminemail));
 # １グループ内のメンバー
-create table groupmember(adminemail varchar(255), groupname varchar(40), clientid varchar(255), foreign key(adminemail)references adminuser(email),foreign key(groupname) references grouptable(groupname), foreign key(clientid) references clientuser(userid),
-primary key(groupname,adminid,clientid));
+create table groupmember(adminemail varchar(255), groupname varchar(40), clientid varchar(255), delflg boolean, foreign key(adminemail)references adminuser(email),foreign key(groupname) references grouptable(groupname), foreign key(clientid) references clientuser(userid),
+primary key(groupname,adminemail,clientid));
 # 授業計画表
 create table timetable(adminemail varchar(255) not null, groupname varchar(255) not null, clientid varchar(255) not null, jpegnumber varchar(255) not null, foreign key(adminemail) references adminuser(email), foreign key(groupname) references grouptable(groupname), foreign key(clientid) references clientuser(userid));
 # 教科テーブル

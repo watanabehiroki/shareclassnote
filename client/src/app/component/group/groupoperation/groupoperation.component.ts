@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class GroupoperationComponent implements OnInit {
   groupopelist = [
     {name:'QRコード読み取り',color:'#F00',path:'/groupadqrcode'},
-    {name:'参加グループ一覧',color:'#0FF',path:'#'},
+    {name:'参加グループ一覧',color:'#0FF',path:'/groupaddlist'},
   ]
   constructor() { }
 

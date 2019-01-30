@@ -2,28 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="444a9397-a04d-42a6-ab20-98d89e7cfbc5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../client/src/app/component/group/addgroup/addgroup.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/group/groupadd-success/groupadd-success.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/group/groupadd-success/groupadd-success.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/group/groupaddqrcode/groupaddqrcode.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/group/groupaddqrcode/groupaddqrcode.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/group/groupaddqrcode/groupaddqrcode.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/group/groupaddqrcode/groupaddqrcode.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/group/grouplist/grouplist.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/group/grouplist/grouplist.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/group/grouplist/grouplist.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/group/grouplist/grouplist.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/service/stragedata/stragedata.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/service/stragedata/stragedata.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/group.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/group.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/addgroup/addgroup.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/addgroup/addgroup.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/group/addgroup/addgroup.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/addgroup/addgroup.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/group/addgroup/addgroup.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/addgroup/addgroup.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/group/addgroup/addgroup.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/headerfooter/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/headerfooter/footer/footer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/config/urlconfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/config/urlconfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/component/group/addgroup/addgroup.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/group/addgroup/addgroup.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/component/group/addgroup/addgroup.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/group/addgroup/addgroup.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/component/group/groupoperation/groupoperation.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/group/groupoperation/groupoperation.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../database/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/sql/initialdatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../database/sql/initialdatabase.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/group.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="142" column="18" lean-forward="true" selection-start-line="142" selection-start-column="18" selection-end-line="142" selection-end-column="18" />
+            <state relative-caret-position="139">
+              <caret line="213" column="60" selection-start-line="213" selection-start-column="60" selection-end-line="213" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -95,11 +82,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="100" />
-    <option name="y" value="997" />
-    <option name="width" value="987" />
-    <option name="height" value="786" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="91" />
+    <option name="width" value="864" />
+    <option name="height" value="1091" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -141,8 +127,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548819165924" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../admin" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548827545420" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../database" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -197,15 +183,15 @@
       <workItem from="1548685785624" duration="1987000" />
       <workItem from="1548721405375" duration="2528000" />
       <workItem from="1548741610801" duration="1419000" />
-      <workItem from="1548806786759" duration="4559000" />
+      <workItem from="1548806786759" duration="9977000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130486000" />
+    <option name="totallyTimeSpent" value="135904000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="665" width="658" height="524" extended-state="0" />
+    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -213,10 +199,10 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49444443" visible="true" weight="0.39297658" />
-      <window_info id="Structure" order="6" sideWeight="0.50555557" side_tool="true" visible="true" weight="0.39297658" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49872124" visible="true" weight="0.05668016" />
+      <window_info id="Structure" order="6" sideWeight="0.50127876" side_tool="true" visible="true" weight="0.05668016" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.5408163" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.35157546" />
       <window_info anchor="bottom" id="Database Changes" order="2" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
@@ -361,8 +347,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/group.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="142" column="18" lean-forward="true" selection-start-line="142" selection-start-column="18" selection-end-line="142" selection-end-column="18" />
+        <state relative-caret-position="139">
+          <caret line="213" column="60" selection-start-line="213" selection-start-column="60" selection-end-line="213" selection-end-column="60" />
         </state>
       </provider>
     </entry>

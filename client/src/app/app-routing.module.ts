@@ -8,9 +8,11 @@ import { SelectsubjectComponent } from './component/note/selectsubject/selectsub
 import { DetailnoteComponent } from './component/note/detailnote/detailnote.component';
 import { PubnotelistComponent } from './component/note/pubnotelist/pubnotelist.component';
 import { UserprofileComponent } from "./component/userprofile/userprofile.component";
+
 import { GroupreadqrcodeComponent } from "./component/group/groupreadqrcode/groupreadqrcode.component";
 import { GroupoperationComponent } from "./component/group/groupoperation/groupoperation.component";
 import { AddgroupComponent} from "./component/group/addgroup/addgroup.component";
+import { GroupaddlistComponent} from "./component/group/groupaddlist/groupaddlist.component";
 
 const routes: Routes = [
   {path: '', redirectTo:'/home',pathMatch:'full'},
@@ -25,7 +27,7 @@ const routes: Routes = [
   {path: 'groupadqrcode', component: GroupreadqrcodeComponent},
   {path: 'groupoperation', component: GroupoperationComponent},
   {path: 'groupadd',component: AddgroupComponent},
-
+  {path: 'groupaddlist',component: GroupaddlistComponent},
   ];
 
 @NgModule({

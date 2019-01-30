@@ -11,6 +11,7 @@ import {HttpclientService} from "../../../service/http/httpclient.service";
 })
 export class AddgroupComponent implements OnInit {
   groupdata;
+  httpreqresponce='';
   constructor(private router:Router,private localStrage:LocalStrageService,
                private stragedata: StragedataService, private httpservice:HttpclientService) { }
 
@@ -30,7 +31,6 @@ export class AddgroupComponent implements OnInit {
       passphrase: qrcodedata.passphrase
     }
     var resultdata;
-    console.log(httpjson);
     this.httpservice.httppost('/group/findgroupclient',httpjson).subscribe(datas =>{
       console.log(datas);
        resultdata = datas;
@@ -38,6 +38,36 @@ export class AddgroupComponent implements OnInit {
         this.groupdata = resultdata.datas;
       }
     });
+  }
+  returnpage(){
+    this.router.navigate(['/groupoperation']);
+  }
+  registretionclick(){
+    let bodyobj ={
+      clientsessionid:this.localStrage.getsessionid(),
+      groupname: this.groupdata.groupname,
+      adminemail: this.groupdata.adminemail,
+      passphrase: this.groupdata.qcode,
+    }
+    this.httpservice.httppost('/group/qraddgroupclient',bodyobj).subscribe(data=>{
+      let httpresponce;
+      httpresponce = data;
+      console.log(httpresponce);
+      if(httpresponce.result === 'success' && httpresponce.addresult === true){
+        this.router.navigate(['/']);
+      }else if(httpresponce.result === 'success' && httpresponce.addresult === false){
+        this.httpreqresponce = '既に登録されています.';
+      }
+    });
+  }
+  dateformat(dateline){//YY-MM-DDThhとする 年月日とする
+    var result = "";
+    var  preformat = dateline.split('T');
+    var preformatlist;
+    preformat = preformat[0];
+    preformatlist = preformat.split('-');
+    result = preformatlist[0]+'年'+preformatlist[1]+'月'+preformatlist[2]+'日';
+    return result;
   }
 
 }
