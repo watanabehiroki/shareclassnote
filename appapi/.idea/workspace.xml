@@ -4,11 +4,9 @@
     <list default="true" id="444a9397-a04d-42a6-ab20-98d89e7cfbc5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/group.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/group.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/group/addgroup/addgroup.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/group/addgroup/addgroup.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/group/addgroup/addgroup.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/group/addgroup/addgroup.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/group/groupoperation/groupoperation.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/group/groupoperation/groupoperation.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/component/group/groupaddlist/groupaddlist.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/group/groupaddlist/groupaddlist.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/component/group/groupaddlist/groupaddlist.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/group/groupaddlist/groupaddlist.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/config/urlconfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/config/urlconfig.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../database/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../database/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../database/sql/initialdatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../database/sql/initialdatabase.sql" afterDir="false" />
     </list>
@@ -24,8 +22,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/group.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="213" column="60" selection-start-line="213" selection-start-column="60" selection-end-line="213" selection-end-column="60" />
+            <state relative-caret-position="33">
+              <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+              <folding>
+                <element signature="e#270#1988#0" />
+                <element signature="e#2064#3330#0" />
+                <element signature="e#3385#3690#0" />
+                <element signature="e#4899#4907#0" />
+                <element signature="e#3381#3585#0" />
+                <element signature="e#3628#5278#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,10 +88,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="91" />
-    <option name="width" value="864" />
-    <option name="height" value="1091" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="691" />
+    <option name="y" value="159" />
+    <option name="width" value="987" />
+    <option name="height" value="786" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -127,7 +134,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548827545420" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548830119199" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../database" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -183,15 +190,15 @@
       <workItem from="1548685785624" duration="1987000" />
       <workItem from="1548721405375" duration="2528000" />
       <workItem from="1548741610801" duration="1419000" />
-      <workItem from="1548806786759" duration="9977000" />
+      <workItem from="1548806786759" duration="11465000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135904000" />
+    <option name="totallyTimeSpent" value="137392000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
+    <frame x="461" y="106" width="658" height="524" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -199,10 +206,10 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49872124" visible="true" weight="0.05668016" />
-      <window_info id="Structure" order="6" sideWeight="0.50127876" side_tool="true" visible="true" weight="0.05668016" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49659863" visible="true" weight="0.117056854" />
+      <window_info id="Structure" order="6" sideWeight="0.50340134" side_tool="true" visible="true" weight="0.117056854" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.35157546" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.625" />
       <window_info anchor="bottom" id="Database Changes" order="2" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
@@ -347,8 +354,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/group.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="213" column="60" selection-start-line="213" selection-start-column="60" selection-end-line="213" selection-end-column="60" />
+        <state relative-caret-position="33">
+          <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+          <folding>
+            <element signature="e#270#1988#0" />
+            <element signature="e#2064#3330#0" />
+            <element signature="e#3385#3690#0" />
+            <element signature="e#4899#4907#0" />
+            <element signature="e#3381#3585#0" />
+            <element signature="e#3628#5278#0" />
+          </folding>
         </state>
       </provider>
     </entry>

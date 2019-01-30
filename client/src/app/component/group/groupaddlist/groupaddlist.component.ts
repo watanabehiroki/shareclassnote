@@ -17,8 +17,12 @@ export class GroupaddlistComponent implements OnInit {
       this.router.navigate(['/login']);
 
     }
-    this.httpservice.httpget('/group/getclientallgroup?sessionid'+this.locastrage.getsessionid()).subscribe(datas=>{
-      console.log(datas);
+    this.httpservice.httpget('/group/getclientallgroup?sessionid='+this.locastrage.getsessionid()).subscribe(datas=>{
+      var httpreqdata;
+      httpreqdata = datas;
+      if(httpreqdata.result =='success'){
+        this.listgroupdata = httpreqdata.groupdatas;
+      }
     });
   }
 

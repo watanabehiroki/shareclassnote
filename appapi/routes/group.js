@@ -15,23 +15,28 @@ router.get('/getclientallgroup',function (req,res) {
     }
     sql ='select * from clientapisession ' +
         'where sessionid = "'+sessionid+'";';
+    console.log(sql);
     connection.query(sql,function(err,rows){
         if(!err){
             let sqldata = rows;
             if(sqldata.length > 0){
                 userid = sqldata[0].userid;
                 sql = 'select * from groupmember left outer join grouptable on groupmember.adminemail = grouptable.adminemail and grouptable.groupname = groupmember.groupname ' +
-                    'left outer join adminuser on grouptable.email = adminuser.email where groupmember.clientid = "'+userid+'";';
+                    'left outer join adminuser on grouptable.adminemail = adminuser.email where groupmember.clientid = "'+userid+'";';
+                console.log(sql);
                 connection.query(sql,function(err,rows){
                    if(!err){
                        resultdata.result = "success";
                        resultdata.groupdatas = rows;
                    }
+                    return res.json(resultdata);
                 })
+            }else{
+                return res.json(resultdata);
             }
 
         }
-        return res.json(resultdata);
+
     });
 });
 //作成したすべてのグループを取り出す

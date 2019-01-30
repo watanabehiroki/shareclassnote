@@ -6,14 +6,16 @@
     <div class="card-header">
       サンプル
     </div>
-    <table class="card-body">
+    <table class="card-body table">
       <tr>
         <th>グループ名</th>
         <th>名前</th>
         <th>操作</th>
       </tr>
-      <tr>
-
+      <tr *ngFor="let groupobj of listgroupdata">
+        <td>{{groupobj.groupname}}</td>
+        <td>{{groupobj.firstname}}{{groupobj.lastname}}</td>
+        <td></td>
       </tr>
     </table>
   </div>
