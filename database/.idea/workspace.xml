@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="dcd6bc51-e898-483c-aa9f-beab8e276c55" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../appapi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../appapi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appapi/routes/group.js" beforeDir="false" afterPath="$PROJECT_DIR$/../appapi/routes/group.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/group/groupaddlist/groupaddlist.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/group/groupaddlist/groupaddlist.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/group/groupaddlist/groupaddlist.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/group/groupaddlist/groupaddlist.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/config/urlconfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/config/urlconfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql/initialdatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/initialdatabase.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,7 +18,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sql/initialdatabase.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
+            <state relative-caret-position="426">
               <caret line="38" selection-start-line="38" selection-end-line="39" />
             </state>
           </provider>
@@ -38,11 +36,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1288" />
-    <option name="y" value="57" />
-    <option name="width" value="1296" />
-    <option name="height" value="1040" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="351" />
+    <option name="y" value="727" />
+    <option name="width" value="1169" />
+    <option name="height" value="987" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -50,6 +48,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -67,7 +66,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -102,18 +100,19 @@
       <workItem from="1548211819548" duration="1465000" />
       <workItem from="1548297171379" duration="326000" />
       <workItem from="1548821845884" duration="1403000" />
-      <workItem from="1548829765292" duration="251000" />
+      <workItem from="1548829765292" duration="830000" />
+      <workItem from="1548894130912" duration="336000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3445000" />
+    <option name="totallyTimeSpent" value="4360000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1288" y="57" width="1296" height="1040" extended-state="6" />
+    <frame x="234" y="485" width="779" height="658" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10436893" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1821975" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -149,7 +148,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/sql/initialdatabase.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
+        <state relative-caret-position="426">
           <caret line="38" selection-start-line="38" selection-end-line="39" />
         </state>
       </provider>

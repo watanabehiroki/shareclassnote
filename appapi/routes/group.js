@@ -1,5 +1,5 @@
 let express = require('express');
-var router = express.Router();
+let router = express.Router();
 let mysql = require('mysql');
 let mysqlconf = require('../config/sqlconfig');
 let connection = mysql.createConnection(mysqlconf.mysql);
@@ -15,7 +15,6 @@ router.get('/getclientallgroup',function (req,res) {
     }
     sql ='select * from clientapisession ' +
         'where sessionid = "'+sessionid+'";';
-    console.log(sql);
     connection.query(sql,function(err,rows){
         if(!err){
             let sqldata = rows;
@@ -246,7 +245,6 @@ router.post('/updategroup', function (req,res) {
 
 })
 router.post('/addgroup',function(req,res){
-    console.log(req.body);
     let sessionid = req.body.sessionid;
     let requestbody = {
         groupname: req.body.groupname,

@@ -26,6 +26,7 @@ import { HttpclientService } from './service/http/httpclient.service';
 import { LocalStrageService} from "./service/local_strage/local-strage.service";
 import {StragedataService} from "./service/stragedata/stragedata.service";
 import { GroupaddlistComponent } from './component/group/groupaddlist/groupaddlist.component';
+import { Changebase64Service } from "./service/base64/changebase64.service";
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { GroupaddlistComponent } from './component/group/groupaddlist/groupaddli
     HttpclientService,
     LocalStrageService,
     StragedataService,
+    Changebase64Service,
   ],
   bootstrap: [AppComponent]
 })
