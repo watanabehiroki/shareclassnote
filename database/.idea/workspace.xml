@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dcd6bc51-e898-483c-aa9f-beab8e276c55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../appapi/routes/note.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../appapi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../appapi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appapi/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../appapi/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appapi/routes/module/uniquvalue.js" beforeDir="false" afterPath="$PROJECT_DIR$/../appapi/routes/module/uniquvalue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appapi/routes/userlogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../appapi/routes/userlogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appapi/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/../appapi/routes/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/submitnote/submitnote.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/submitnote/submitnote.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/userprofile/userprofile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/userprofile/userprofile.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/service/local_strage/local-strage.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/service/local_strage/local-strage.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/config/urlconfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/config/urlconfig.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/initialdatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/initialdatabase.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

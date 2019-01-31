@@ -4,7 +4,15 @@ const bodyParser = require('body-parser');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+/* expressをhttps化する場合に使用する
+var https = require('https');
+var fs = require('fs');
+var options = {
+  key:fs.readFileSync('/etc/letsencrypt/live/domainname/privkey.pem'),
+  cert:fs.readFileSync('/etc/letsencrypt/live/domainname/cert.pem')
+};
+var server = https.createServer(options,app);
+*/
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var subjectRouter = require('./routes/subject');
@@ -12,12 +20,6 @@ var userloginRouter = require('./routes/userlogin');
 var groupRouter = require('./routes/group');
 var timeRouter = require('./routes/time');
 var noteRouter = require('./router/note');
-/*httpsを利用する場合に必要
-var fs =  require('fs')
-var https = require('https');
-
-var
-*/
 var app = express();
 
 // view engine setup
@@ -64,5 +66,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 app.listen(4001);
 module.exports = app;
