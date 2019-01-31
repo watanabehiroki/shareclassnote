@@ -15,8 +15,9 @@ export class SubmitnoteComponent implements OnInit {
     releaseflg:false,
     group:'',
     year: '',
-    picture:undefined,
-    time:'',
+    base64picture:undefined,
+    timeid:'',
+    sessionid: this.localstrage.getsessionid(),
   }
   listsubject;
   grouplist;
@@ -53,7 +54,9 @@ export class SubmitnoteComponent implements OnInit {
     });
   }
   clicksubmitnote(){
-    console.log(this.bodyobj.picture);
+    this.httpclient.httppost('/note/clientusbmitnote',this.bodyobj).subscribe(data => {
+
+    });
   }
   changeListener($event) : void {
     this.readThis($event.target);
@@ -64,7 +67,7 @@ export class SubmitnoteComponent implements OnInit {
     var myReader:FileReader = new FileReader();
 
     myReader.onloadend = (e) => {
-      this.bodyobj.picture = myReader.result;
+      this.bodyobj.base64picture = myReader.result;
     }
     myReader.readAsDataURL(file);
   }

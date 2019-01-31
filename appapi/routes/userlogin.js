@@ -21,11 +21,10 @@ router.post('/clientlogin',function(req,res){
        connection.query(sql,function(err,rows){
           var sqldata = rows;
           //login判定
-
           if(sqldata !== undefined){
               responcedata.login = 'success';
               var sessionlist;
-               if(sqldata[0].sessionid == undefined || sqldata[0].sessionid == null|| sqldata[0].sessionid == ''){
+               if(sqldata.length < 1 || sqldata[0].sessionid == null|| sqldata[0].sessionid == ''){
                   connection.query('select sessionid from clientapisession;',function(err,rows){
 
                      if(err){

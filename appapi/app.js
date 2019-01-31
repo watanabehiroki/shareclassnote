@@ -11,7 +11,13 @@ var subjectRouter = require('./routes/subject');
 var userloginRouter = require('./routes/userlogin');
 var groupRouter = require('./routes/group');
 var timeRouter = require('./routes/time');
+var noteRouter = require('./router/note');
+/*httpsを利用する場合に必要
+var fs =  require('fs')
+var https = require('https');
 
+var
+*/
 var app = express();
 
 // view engine setup
@@ -42,6 +48,7 @@ app.use('/subject',subjectRouter);
 app.use('/login', userloginRouter);
 app.use('/group', groupRouter);
 app.use('/time', timeRouter);
+app.use('/', noteRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

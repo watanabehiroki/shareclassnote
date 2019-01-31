@@ -32,8 +32,8 @@ create table subject(id int  not null primary key auto_increment,name varchar(40
 # 時間割テ―ブル
 create table time(id int not  null primary key auto_increment, name varchar(40)not null);
 # クラスノートテーブル
-create table classnote(noteid varchar(255) primary key, clientid varchar(255) not null, releaseflg boolean not null, delflg boolean not null, groupname varchar(50) not null, adminemail varchar(255) not null, timeid int, subject int,
+create table classnote(noteid varchar(255) primary key, clientid varchar(255) not null, releaseflg boolean not null, delflg boolean not null, groupname varchar(50) not null,lessonday date not null, updateday date not null , adminemail varchar(255) not null, timeid int, subject int,
  foreign key(clientid) references clientuser(userid), foreign key(groupname) references grouptable(groupname), foreign key(adminemail) references adminuser(email), foreign key(timeid) references time(id),
  foreign key(subject) references  subject(id));
 # ファイルアップロードテーブル
-create table uploadtable(noteid varchar(255), clientid varchar(255) not null, directorypath varchar(255),primary key(noteid,directorypath), foreign  key(noteid) references classnote(noteid));
+create table uploadtable(noteid varchar(255), clientid varchar(255) not null, directorypath varchar(255),primary key(noteid,clientid), foreign  key(noteid) references classnote(noteid));

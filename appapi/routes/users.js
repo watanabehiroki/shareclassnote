@@ -29,7 +29,30 @@ router.get('/getallclient', function( req, res){
     }
   }
 });
+router.get('/getmyprofile',function(req,res){
+  let sessionid = req.query.sessoionid;
+  var sql ;
+  var responcedata = {
+    result: 'err',
+    message:'',
+    datas:'',
+  }
 
+  try{
+    sql = 'select * from clientuse left outer join clientapisession on clientuser.userid = clientapisession.userid where ' +
+        'clientapisession.sessionid="'+sessionid+'";';
+    connection.query(sql,function(err,rows){
+      let sqldata = rows;
+      if(!err && sqldata.length >0){
+        responcedata.datas = sqldata;
+        responcedata.result = 'success';
+      }
+      return res.json(responcedata);
+    });
+  }catch(e){
+    return responcedata;
+  }
+});
 
 
 
