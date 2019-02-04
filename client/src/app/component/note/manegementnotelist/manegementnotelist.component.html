@@ -2,24 +2,42 @@
   <app-header></app-header>
 </div>
 <div class="middle ">
-  <div class="card">
-    <div class="card-header">
-      sample
+  <div>
+    <div class="card" *ngFor="let noteobj of listnotedata">
+      <div class="card-header">{{noteobj.subjectname}}</div>
+      <div class="card-body row">
+        <div class="col-sm-4" id="imageobj"><img [src]="noteobj.base64picture"/></div>
+        <div class="col-sm-8">
+          <table class="table">
+            <tr>
+              <th>日付</th>
+              <td>{{changedate(noteobj.lessonday)}}</td>
+            </tr>
+            <tr>
+              <th>コマ数</th>
+              <td>{{noteobj.timename}}</td>
+            </tr>
+            <tr>
+              <th>グループ名</th>
+              <td>{{noteobj.groupname}}</td>
+            </tr>
+            <tr>
+              <th>教科名</th>
+              <td>{{noteobj.subjectname}}</td>
+            </tr>
+            <tr>
+              <th>公開情報</th>
+              <td *ngIf="noteobj.releaseflg === 0">非公開</td>
+              <td *ngIf="noteobj.releaseflg === 1">公開中</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="card-footer">
+        <input type="button" value="詳細" class="btn btn-primary" />
+        <input type="button" value="削除" class="btn btn-danger" />
+      </div>
     </div>
-    <table class="card-body table">
-      <tr>
-        <th>画像</th>
-        <th>授業日</th>
-        <th>教科</th>
-        <th>コマ</th>
-        <th>グループ名</th>
-        <th>公開情報</th>
-        <th>操作</th>
-      </tr>
-      <tr *ngFor="let noteobj of listnotedata">
-        <td><img [src]="noteobj.base64picture"/></td>
-      </tr>
-    </table>
   </div>
 </div>
 <div class="footer">
