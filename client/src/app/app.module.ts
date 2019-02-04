@@ -27,6 +27,8 @@ import { LocalStrageService} from "./service/local_strage/local-strage.service";
 import {StragedataService} from "./service/stragedata/stragedata.service";
 import { GroupaddlistComponent } from './component/group/groupaddlist/groupaddlist.component';
 import { Changebase64Service } from "./service/base64/changebase64.service";
+import { ManegementnoteComponent } from './component/note/manegementnote/manegementnote.component';
+import { ManegementnotelistComponent } from './component/note/manegementnotelist/manegementnotelist.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { Changebase64Service } from "./service/base64/changebase64.service";
     UserprofileComponent,
     GroupreadqrcodeComponent,
     GroupoperationComponent,
-    GroupaddlistComponent
+    GroupaddlistComponent,
+    ManegementnoteComponent,
+    ManegementnotelistComponent
   ],
   imports: [
     BrowserModule,

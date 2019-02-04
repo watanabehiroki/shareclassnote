@@ -6,11 +6,12 @@ import {HttpService} from '../../../service/httpservice/http.service';
   styleUrls: ['./setsubject.component.css']
 })
 export class SetsubjectComponent implements OnInit {
-  color = '';
-  subname = '';
-  other = '';
   listsubjectobj;
   responsevalue = '';
+  httpbody = {
+    name: '',
+    color: '',
+  }
   constructor(private httpservice: HttpService) { }
   ngOnInit() {
     this.httpservice.httpget('/subject/getallsubject').subscribe(resdata => {
@@ -21,15 +22,12 @@ export class SetsubjectComponent implements OnInit {
   }
   submitclick() {
     let data;
-    const httpbodyobj = {
-      name: this.subname,
-      color: this.color
-    }
-    console.log('成功');
-    this.httpservice.httppost('/subject/addsubject', httpbodyobj).subscribe(resdata => {
+
+    this.httpservice.httppost('/subject/addsubject', this.httpbody).subscribe(resdata => {
        data = resdata;
       if (data.result == 'success') {
         this.responsevalue = '登録しました';
+        this.httpbody.name = '';
       } else if (data.result === 'err' ||  resdata[0].result === undefined) {
         this.responsevalue = '登録することが出来ませんでした';
       } else {

@@ -1,0 +1,27 @@
+<div class="header">
+  <app-header></app-header>
+</div>
+<div class="middle ">
+  <div class="card">
+    <div class="card-header">
+      sample
+    </div>
+    <table class="card-body table">
+      <tr>
+        <th>画像</th>
+        <th>授業日</th>
+        <th>教科</th>
+        <th>コマ</th>
+        <th>グループ名</th>
+        <th>公開情報</th>
+        <th>操作</th>
+      </tr>
+      <tr *ngFor="let noteobj of listnotedata">
+        <td><img [src]="noteobj.base64picture"/></td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>

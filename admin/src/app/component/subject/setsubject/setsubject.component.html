@@ -2,13 +2,13 @@
   <app-menu ></app-menu>
 </div>
 <div class="middle">
-  <form class="card">
+  <form class="card" (ngSubmit)="submitclick()">
     <div class="card-header">科目入力ページ</div>
     <table class="card-body table">
       <tr>
         <th><span>科目</span></th>
         <td>
-          <input  type='text'  [(ngModel)]='subname'
+          <input  type='text'  [(ngModel)]='httpbody.name'
                     name="subname"/>
           <br/>
         </td>
@@ -17,7 +17,7 @@
       <tr>
         <th><span>色選択</span></th>
         <td>
-          <input  type="color" [(ngModel)]='color'
+          <input  type="color" [(ngModel)]='httpbody.color'
                     name="color" />
         </td>
       </tr>

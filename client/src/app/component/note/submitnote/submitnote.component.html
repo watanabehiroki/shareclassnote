@@ -8,7 +8,7 @@
       <tr>
         <th>科目選択:</th>
         <td>
-          <select [(ngModel)]="bodyobj.subject"  name="subjectlist" required #subjectvalidation="ngModel" >
+          <select [(ngModel)]="bodyobj.subjectid"  name="subjectlist" required #subjectvalidation="ngModel" >
             <option *ngFor="let subjectobj of listsubject" value="{{subjectobj.id}}">{{subjectobj.name}}</option>
           </select>
           <br/>
@@ -30,7 +30,7 @@
         <th>グループ選択:</th>
         <td>
           <select [(ngModel)]="bodyobj.group" name="grouplist" required #groupvalidation="ngModel" >
-            <option *ngFor="let groupobj of grouplist" value="{{groupobj}}" >{{groupobj.groupname}}</option>
+            <option *ngFor="let groupobj of grouplist" value="{{groupobj.groupname}}|{{groupobj.adminemail}}" >{{groupobj.groupname}}</option>
           </select>
           <br/>
           <span [hidden]="!groupvalidation.errors?.required">選択してください。</span>
@@ -47,7 +47,7 @@
       <tr>
         <th>時間割</th>
         <td>
-          <select name="timelist" [(ngModel)]="bodyobj.time" name="timelist" #timevalidation="ngModel" required>
+          <select name="timelist" [(ngModel)]="bodyobj.timeid" name="timelist" #timevalidation="ngModel" required>
             <option *ngFor="let timeobj of timelist" value={{timeobj.id}}>{{timeobj.name}}</option>
           </select>
           <br/>
@@ -58,8 +58,8 @@
         <th>画像選択:</th>
         <td>
           <input type="file" accept="image/*; capture=camera" (change)="changeListener($event)" name="picture"/>
-          <div *ngIf="bodyobj.picture !== undefined">
-            <img style="height: 100px" [src]="bodyobj.picture" title="ノート画像"/>
+          <div *ngIf="bodyobj.base64picture !== undefined">
+            <img style="height: 100px" [src]="bodyobj.base64picture" title="ノート画像"/>
           </div>
           <br/>
         </td>

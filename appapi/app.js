@@ -3,6 +3,7 @@ var express = require('express');
 const bodyParser = require('body-parser');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+var multer = require('multer');
 var logger = require('morgan');
 /* expressをhttps化する場合に使用する
 var https = require('https');
@@ -19,8 +20,11 @@ var subjectRouter = require('./routes/subject');
 var userloginRouter = require('./routes/userlogin');
 var groupRouter = require('./routes/group');
 var timeRouter = require('./routes/time');
-var noteRouter = require('./router/note');
+var noteRouter = require('./routes/note');
+
+
 var app = express();
+
 
 // view engine setup
 // cros問題対策
@@ -37,12 +41,15 @@ app.set('view engine', 'jade');
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-app.use(bodyParser.json());
+app.use(multer({dest:'./datas'}).any());
+app.use(bodyParser.json({limit: '2000mb'}));
+app.use(bodyParser.urlencoded({limit: '2000mb', extended:true}));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname,'datas')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -50,7 +57,7 @@ app.use('/subject',subjectRouter);
 app.use('/login', userloginRouter);
 app.use('/group', groupRouter);
 app.use('/time', timeRouter);
-app.use('/', noteRouter);
+app.use('/note', noteRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -66,6 +73,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 app.listen(4001);
 module.exports = app;

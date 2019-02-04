@@ -3,7 +3,6 @@ import { LocalStrageService } from "../../../service/local_strage/local-strage.s
 import { HttpclientService } from "../../../service/http/httpclient.service";
 import { Changebase64Service } from "../../../service/base64/changebase64.service";
 import { Router } from "@angular/router";
-
 @Component({
   selector: 'app-submitnote',
   templateUrl: './submitnote.component.html',
@@ -11,7 +10,9 @@ import { Router } from "@angular/router";
 })
 export class SubmitnoteComponent implements OnInit {
   bodyobj = {
-    subject:'',
+    adminemail:'',
+    groupname:'',
+    subjectid:'',
     releaseflg:false,
     group:'',
     year: '',
@@ -54,9 +55,34 @@ export class SubmitnoteComponent implements OnInit {
     });
   }
   clicksubmitnote(){
-    this.httpclient.httppost('/note/clientusbmitnote',this.bodyobj).subscribe(data => {
+    const grouplist = this.bodyobj.group.split('|');
+   if(grouplist.length == 2){
+     this.bodyobj.groupname = grouplist[0];
+     this.bodyobj.adminemail = grouplist[1];
+   }
+     this.httpclient.httppost('/note/clientsubmitnote',this.bodyobj).subscribe(data => {
+       let httpdata:any = data;
+       if(httpdata.result == 'success'){
 
-    });
+         this.registrationdata = '登録完了しました。';
+         this.resetreqdata();
+       }else{
+         this.registrationdata = '登録することができませんでした';
+       }
+     });
+  }
+  private resetreqdata (){
+    this.bodyobj = {
+      adminemail:'',
+      groupname:'',
+      subjectid:'',
+      releaseflg:false,
+      group:'',
+      year: '',
+      base64picture:undefined,
+      timeid:'',
+      sessionid: this.localstrage.getsessionid(),
+    }
   }
   changeListener($event) : void {
     this.readThis($event.target);
@@ -64,11 +90,13 @@ export class SubmitnoteComponent implements OnInit {
 
   readThis(inputValue: any): void {
     var file:File = inputValue.files[0];
-    var myReader:FileReader = new FileReader();
-
-    myReader.onloadend = (e) => {
-      this.bodyobj.base64picture = myReader.result;
+    if(file.type == 'image/jpeg'|| file.type == 'image/png') {
+      var myReader: FileReader = new FileReader();
+      //リサイズ処理を記述する
+      myReader.onloadend = (e) => {
+        this.bodyobj.base64picture = myReader.result;
+      }
+      myReader.readAsDataURL(file);
     }
-    myReader.readAsDataURL(file);
   }
 }
