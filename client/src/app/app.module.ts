@@ -20,7 +20,7 @@ import { UserprofileComponent } from './component/userprofile/userprofile.compon
 import { GroupreadqrcodeComponent } from './component/group/groupreadqrcode/groupreadqrcode.component';
 import { GroupoperationComponent } from './component/group/groupoperation/groupoperation.component';
 
-
+import {ChangemysqldateService} from "./service/changedate/changemysqldate.service";
 
 import { HttpclientService } from './service/http/httpclient.service';
 import { LocalStrageService} from "./service/local_strage/local-strage.service";
@@ -29,6 +29,7 @@ import { GroupaddlistComponent } from './component/group/groupaddlist/groupaddli
 import { Changebase64Service } from "./service/base64/changebase64.service";
 import { ManegementnoteComponent } from './component/note/manegementnote/manegementnote.component';
 import { ManegementnotelistComponent } from './component/note/manegementnotelist/manegementnotelist.component';
+import { GraphComponent } from './component/graph/graph.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ManegementnotelistComponent } from './component/note/manegementnotelist
     GroupoperationComponent,
     GroupaddlistComponent,
     ManegementnoteComponent,
-    ManegementnotelistComponent
+    ManegementnotelistComponent,
+    GraphComponent
   ],
   imports: [
     BrowserModule,
@@ -62,6 +64,7 @@ import { ManegementnotelistComponent } from './component/note/manegementnotelist
     LocalStrageService,
     StragedataService,
     Changebase64Service,
+    ChangemysqldateService,
   ],
   bootstrap: [AppComponent]
 })

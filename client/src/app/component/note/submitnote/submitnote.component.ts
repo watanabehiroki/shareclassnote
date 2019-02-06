@@ -13,7 +13,7 @@ export class SubmitnoteComponent implements OnInit {
     adminemail:'',
     groupname:'',
     subjectid:'',
-    releaseflg:false,
+    releaseflg: false,
     group:'',
     year: '',
     base64picture:undefined,
@@ -60,7 +60,7 @@ export class SubmitnoteComponent implements OnInit {
      this.bodyobj.groupname = grouplist[0];
      this.bodyobj.adminemail = grouplist[1];
    }
-     this.httpclient.httppost('/note/clientsubmitnote',this.bodyobj).subscribe(data => {
+   this.httpclient.httppost('/note/clientsubmitnote',this.bodyobj).subscribe(data => {
        let httpdata:any = data;
        if(httpdata.result == 'success'){
 
@@ -69,7 +69,7 @@ export class SubmitnoteComponent implements OnInit {
        }else{
          this.registrationdata = '登録することができませんでした';
        }
-     });
+   });
   }
   private resetreqdata (){
     this.bodyobj = {

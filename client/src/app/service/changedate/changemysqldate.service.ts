@@ -10,8 +10,12 @@ export class ChangemysqldateService {
     var listdate = date.split('T');
     var resultdata = "";
     listdate = listdate[0];
-    listdate = listdate.split('-')
+    listdate = listdate.split('-');
     resultdata = listdate[0]+'年'+listdate[1]+'月'+listdate[2]+'日';
     return resultdata;
+  }
+  inputtodate(date){
+    var listdate = date.split('T');
+    return listdate[0];
   }
 }

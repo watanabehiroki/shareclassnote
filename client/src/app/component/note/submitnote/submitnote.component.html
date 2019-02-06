@@ -17,13 +17,9 @@
       </tr>
       <tr>
         <th>公開選択</th>
-        <td class="btn-group" data-toggle="buttons">
-          <label class="btn btn-primary active">
-            <input type="radio" autocomplete="off" [(ngModel)]="bodyobj.releaseflg" name=releaseflg [value]=false  > 非公開
-          </label>
-          <label class="btn btn-primary">
-            <input type="radio" autocomplete="off" [(ngModel)]="bodyobj.releaseflg" name=releaseflg [value]=true > 公開
-          </label>
+        <td >
+          <input type="radio" name="releaeseRadio" [(ngModel)]="bodyobj.releaseflg" value=false />非公開
+          <input type="radio" name="releaseRadio" [(ngModel)]="bodyobj.releaseflg" value=true />公開
         </td>
       </tr>
       <tr>

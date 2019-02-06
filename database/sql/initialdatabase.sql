@@ -37,3 +37,5 @@ create table classnote(noteid varchar(255) primary key, clientid varchar(255) no
  foreign key(subject) references  subject(id));
 # ファイルアップロードテーブル
 create table uploadtable(noteid varchar(255), clientid varchar(255) not null, directorypath varchar(255),primary key(noteid,clientid), foreign  key(noteid) references classnote(noteid));
+insert into rolenumber(roleid,rolenumber,descriptor,delflg) values ('sample',111,'initializing data',false);
+insert into adminuser(email,firstname,lastname,firstkananame,lastkananame,age,deflg,password,rolenumber) values ('admin@admin.com','管理者','ユーザ','admin','user',100,false,'sharenotepassword','sample');

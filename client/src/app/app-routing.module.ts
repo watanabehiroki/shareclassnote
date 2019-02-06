@@ -11,6 +11,7 @@ import { SubmitnoteComponent } from './component/note/submitnote/submitnote.comp
 import { DetailnoteComponent } from './component/note/detailnote/detailnote.component';
 import { PubnotelistComponent } from './component/note/pubnotelist/pubnotelist.component';
 import { ManegementnotelistComponent } from "./component/note/manegementnotelist/manegementnotelist.component";
+import { ManegementnoteComponent} from "./component/note/manegementnote/manegementnote.component";
 //グループに関するcomponent
 import { GroupreadqrcodeComponent } from "./component/group/groupreadqrcode/groupreadqrcode.component";
 import { GroupoperationComponent } from "./component/group/groupoperation/groupoperation.component";
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'detailnote',  component: DetailnoteComponent},
   {path: 'pubnotelist/:subjectid',component: PubnotelistComponent},
   {path: 'managenotelist',component: ManegementnotelistComponent},
+  {path: 'manegementnote',component: ManegementnoteComponent},
   {path: 'userprofile', component: UserprofileComponent},
   {path: 'groupadqrcode', component: GroupreadqrcodeComponent},
   {path: 'groupoperation', component: GroupoperationComponent},

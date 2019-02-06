@@ -1,0 +1,16 @@
+.header{
+  height: 10%;
+}
+.middle{
+  height:78%;
+  overflow: scroll;
+}
+.footer{
+  height: 12%;
+}
+img{
+  width: 100%;
+}
+td#imageobj{
+  width: 30%;
+}

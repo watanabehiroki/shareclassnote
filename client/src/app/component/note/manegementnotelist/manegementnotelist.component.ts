@@ -4,6 +4,7 @@ import { LocalStrageService } from "../../../service/local_strage/local-strage.s
 import { HttpclientService} from "../../../service/http/httpclient.service";
 import { Changebase64Service } from "../../../service/base64/changebase64.service";
 import { ChangemysqldateService } from "../../../service/changedate/changemysqldate.service";
+import { StragedataService } from "../../../service/stragedata/stragedata.service";
 
 @Component({
   selector: 'app-manegementnotelist',
@@ -14,7 +15,8 @@ export class ManegementnotelistComponent implements OnInit {
   listnotedata;
   constructor(private localStrage:LocalStrageService,
               private router:Router,private httpservice:HttpclientService
-              ,private changebase64:Changebase64Service, private changemysql: ChangemysqldateService) { }
+              ,private changebase64:Changebase64Service, private changemysql: ChangemysqldateService,
+              private stragedata:StragedataService) { }
 
   ngOnInit() {
     if (this.localStrage.getlocalstragevalue()) {
@@ -29,6 +31,10 @@ export class ManegementnotelistComponent implements OnInit {
       });
   }
 
+  clickdetail(Noteobject){
+    this.stragedata.setnoteobj(Noteobject);
+    this.router.navigate(['/manegementnote']);
+  }
   changedate(date){//dateはjsonで受け取った文字列
     return this.changemysql.tostringdate(date);
   }

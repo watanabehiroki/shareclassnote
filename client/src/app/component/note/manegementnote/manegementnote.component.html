@@ -1,3 +1,60 @@
-<p>
-  manegementnote works!
-</p>
+<div class="header">
+  <app-header></app-header>
+</div>
+<div class="middle card">
+  <form (ngSubmit)="clickedit()">
+    <div class="card-header ">
+      <span>編集画面</span>
+    </div>
+    <div class="row card-body">
+      <div class="col-sm-4">
+        <img [src]="noteobj.base64picture">
+        <br/>
+        画像変更:
+        <input type="file" accept="image/*; capture=camera" (change)="changeListener($event)" name="picture"/>
+      </div>
+      <div class="col-sm-8">
+        <table class="table">
+          <tr>
+            <th>グループ名</th>
+            <td>{{noteobj.groupname}}</td>
+          </tr>
+          <tr>
+            <th>教科</th>
+            <td>
+              <select [(ngModel)]="noteobj.subjectid" name="subjectlist">
+                <option *ngFor="let subjectobj of subjectlist" [value]="subjectobj.id">{{subjectobj.name}}</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>時間帯</th>
+            <td>
+              <select [(ngModel)]="noteobj.timeid" name="notelist">
+                <option *ngFor="let timeobj of timelist" [value]="timeobj.id" >{{timeobj.name}}</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th> 授業日</th>
+            <td><input type="date" [(ngModel)]="noteobj.lessonday" name="picturefile"/></td>
+          </tr>
+          <tr>
+            <th>公開状態</th>
+            <td>
+              公開中<input type="radio" value=true name="release" [(ngModel)]="noteobj.releaseflg"/>
+              非公開<input type="radio" value=false name="release" [(ngModel)]="noteobj.releaseflg"/>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="card-footer">
+      <input type="submit" value="完了" class="btn btn-primary" />
+      <input type="button" value="キャンセル" class="btn btn-danger" (click)="clickreturn()" />
+    </div>
+  </form>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>

@@ -30,7 +30,7 @@ router.get('/getallclient', function( req, res){
   }
 });
 router.get('/getmyprofile',function(req,res){
-  let sessionid = req.query.sessoionid;
+  let sessionid = req.query.sessionid;
   var sql ;
   var responcedata = {
     result: 'err',
@@ -39,8 +39,9 @@ router.get('/getmyprofile',function(req,res){
   }
 
   try{
-    sql = 'select * from clientuse left outer join clientapisession on clientuser.userid = clientapisession.userid where ' +
+    sql = 'select * from clientuser left outer join clientapisession on clientuser.userid = clientapisession.userid where ' +
         'clientapisession.sessionid="'+sessionid+'";';
+    console.log(sql);
     connection.query(sql,function(err,rows){
       let sqldata = rows;
       if(!err && sqldata.length >0){

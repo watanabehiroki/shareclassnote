@@ -2,33 +2,60 @@
   <app-header></app-header>
 </div>
 <div class="middle">
-  <form class="card ">
+  <div [hidden]="!editflg">
+    <form (click)="editendflg()">
+      <table class="table">
+        <tr>
+          <th>姓:</th>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <th>名:</th>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <th>姓(よみがな)</th>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <th>名(よみがな)</th>
+          <td><input type="text" /></td>
+        </tr>
+      </table>
+
+    </form>
+  </div>
+  <div class="card " [hidden]="editflg">
     <div class="card-header">
       <span>ユーザプロフィール</span>
       <div>
         画像挿入予定
       </div>
     </div>
-    <div class="card-body">
-      <table class="table">
+    <div class="card-body" >
+      <table class="table" *ngFor="let userobj of userprofile">
         <tr>
           <th>名前:</th>
-          <td></td>
+          <td>{{userobj.firstname}} {{userobj.lastname}}</td>
+        </tr>
+        <tr>
+          <th>よみがな:</th>
+          <td>{{userobj.firstkananame}} {{userobj.lastkananame}}</td>
         </tr>
         <tr>
           <th>年齢</th>
-          <td></td>
+          <td>{{userobj.age}}</td>
         </tr>
         <tr>
           <th>ノート投稿数</th>
-          <td></td>
+          <td><app-graph></app-graph></td>
         </tr>
       </table>
     </div>
     <div class="card-footer">
-      <input type="submit" class="btn btn-default"  value="編集"/>
+      <input type="button" class="btn btn-default"  (click)="editclick()" value="編集"/>
     </div>
-  </form>
+  </div>
 </div>
 <div class="footer">
   <app-footer></app-footer>

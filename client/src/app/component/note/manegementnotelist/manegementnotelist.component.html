@@ -27,14 +27,14 @@
             </tr>
             <tr>
               <th>公開情報</th>
-              <td *ngIf="noteobj.releaseflg === 0">非公開</td>
-              <td *ngIf="noteobj.releaseflg === 1">公開中</td>
+              <td *ngIf="noteobj.releaseflg === false">非公開</td>
+              <td *ngIf="noteobj.releaseflg === true">公開中</td>
             </tr>
           </table>
         </div>
       </div>
       <div class="card-footer">
-        <input type="button" value="詳細" class="btn btn-primary" />
+        <input type="button" value="詳細" class="btn btn-primary" (click)="clickdetail(noteobj)"/>
         <input type="button" value="削除" class="btn btn-danger" />
       </div>
     </div>

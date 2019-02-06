@@ -4,12 +4,29 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class StragedataService {
+  noteobj: any = undefined;
   groupqrcodedata = {
     adminemail:'',
     passphrase:'',
     groupname: ''
   }
   constructor() { }
+  removenoteobj(){
+    this.noteobj = undefined;
+  }
+  noteobjflg(){
+    var result = false;
+    if(this.noteobj !== undefined) {
+      result = true;
+    }
+    return result;
+  }
+  setnoteobj(noteobj){
+    this.noteobj　= noteobj;
+  }
+  getnoteobj(){
+    return this.noteobj
+  }
   qrdataconfirmflg() {
     var result = false;
     if (this.groupqrcodedata.adminemail.length > 0 || this.groupqrcodedata.adminemail !== "") {
