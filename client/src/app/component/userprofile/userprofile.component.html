@@ -51,32 +51,38 @@
     </form>
   </div>
 
-  <div class="card " *ngIf="!editflg">
+  <div class="card" *ngIf="!editflg">
     <div class="card-header">
-      <span>ユーザプロフィール</span>
-      <div>
-        画像挿入予定
-      </div>
     </div>
-    <div class="card-body" >
-      <table class="table" *ngFor="let userobj of userprofile">
-        <tr>
-          <th>名前:</th>
-          <td>{{userobj.firstname}} {{userobj.lastname}}</td>
-        </tr>
-        <tr>
-          <th>よみがな:</th>
-          <td>{{userobj.firstkananame}} {{userobj.lastkananame}}</td>
-        </tr>
-        <tr>
-          <th>年齢</th>
-          <td>{{userobj.age}}</td>
-        </tr>
-        <tr>
-          <th>ノート投稿数</th>
-          <td><app-graph></app-graph></td>
-        </tr>
-      </table>
+    <div class="card-body row" *ngFor="let userobj of userprofile">
+      <div class="col-sm-4">
+        <div *ngIf="userobj.base64profile === ''">
+          <img src="../../../assets/icon/userprofile.png" />
+        </div>
+        <div *ngIf="userobj.base64profile !== ''">
+          <img class="profileimg" [src]="userobj.base64profile" />
+        </div>
+      </div>
+      <div class=" col-sm-8" >
+        <table class="table">
+          <tr>
+            <th>名前:</th>
+            <td>{{userobj.firstname}} {{userobj.lastname}}</td>
+          </tr>
+          <tr>
+            <th>よみがな:</th>
+            <td>{{userobj.firstkananame}} {{userobj.lastkananame}}</td>
+          </tr>
+          <tr>
+            <th>年齢</th>
+            <td>{{userobj.age}}</td>
+          </tr>
+          <tr>
+            <th>ノート投稿数</th>
+            <td><app-graph></app-graph></td>
+          </tr>
+        </table>
+      </div>
     </div>
     <div class="card-footer">
       <input type="button" class="btn btn-default"  (click)="editclick()" value="編集"/>

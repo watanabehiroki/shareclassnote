@@ -11,3 +11,9 @@
 img{
   width: 100%;
 }
+.row{
+  padding: 0px;
+}
+img.profileimg{
+  border-radius: 20%;
+}
