@@ -3,7 +3,11 @@
 }
 .middle{
   height: 80%;
+  overflow: scroll;
 }
 .footer{
   height: 10%;
+}
+img{
+  width: 100%;
 }

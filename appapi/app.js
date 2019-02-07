@@ -5,8 +5,6 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var multer = require('multer');
 var logger = require('morgan');
-let subdirectorypath = require('./config/subdirectorypath');
-
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -34,7 +32,6 @@ app.set('view engine', 'jade');
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-app.use(subdirectorypath.directorypath, require('./routes'));
 app.use(multer({dest:'./datas'}).any());
 app.use(bodyParser.json({limit: '2000mb'}));
 app.use(bodyParser.urlencoded({limit: '2000mb', extended:true}));

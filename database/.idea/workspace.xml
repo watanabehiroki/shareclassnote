@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dcd6bc51-e898-483c-aa9f-beab8e276c55" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../admin/src/confing/urlconfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/confing/urlconfig.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../appapi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../appapi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appapi/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../appapi/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appapi/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../appapi/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/manegementnote/manegementnote.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/manegementnote/manegementnote.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/manegementnote/manegementnote.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/manegementnote/manegementnote.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/manegementnote/manegementnote.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/manegementnote/manegementnote.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/manegementnotelist/manegementnotelist.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/manegementnotelist/manegementnotelist.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/manegementnotelist/manegementnotelist.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/manegementnotelist/manegementnotelist.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/service/changedate/changemysqldate.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/service/changedate/changemysqldate.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/service/stragedata/stragedata.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/service/stragedata/stragedata.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/config/urlconfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/config/urlconfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/component/userprofile/userprofile.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/userprofile/userprofile.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/component/userprofile/userprofile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/userprofile/userprofile.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/component/userprofile/userprofile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/userprofile/userprofile.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql/initialdatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/initialdatabase.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,7 +20,7 @@
         <entry file="file://$PROJECT_DIR$/sql/initialdatabase.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="680">
-              <caret line="40" column="80" lean-forward="true" selection-start-line="40" selection-start-column="80" selection-end-line="40" selection-end-column="80" />
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
@@ -47,8 +38,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1288" />
-    <option name="y" value="57" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1296" />
     <option name="height" value="1040" />
   </component>
@@ -59,7 +50,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -76,6 +66,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -114,16 +105,18 @@
       <workItem from="1548894130912" duration="336000" />
       <workItem from="1548917104410" duration="943000" />
       <workItem from="1549339864535" duration="1108000" />
+      <workItem from="1549452669301" duration="162000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6411000" />
+    <option name="totallyTimeSpent" value="6573000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1288" y="57" width="1296" height="1040" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="1040" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16909385" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17152104" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -160,7 +153,7 @@
     <entry file="file://$PROJECT_DIR$/sql/initialdatabase.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
-          <caret line="40" column="80" lean-forward="true" selection-start-line="40" selection-start-column="80" selection-end-line="40" selection-end-column="80" />
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>

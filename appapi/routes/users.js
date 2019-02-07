@@ -1,10 +1,10 @@
-var express = require('express');
-var router = express.Router();
-const mysql = require('mysql');
-const sqlconf = require('../config/sqlconfig');
-const connection = mysql.createConnection(sqlconf.mysql);
+let express = require('express');
+let router = express.Router();
+let mysql = require('mysql');
+let sqlconf = require('../config/sqlconfig');
+let connection = mysql.createConnection(sqlconf.mysql);
 var  randommodule = require('./module/random');
-
+let filemodule = require('./module/File');
 
 /* GET users listing. */
 router.get('/getallclient', function( req, res){
@@ -29,32 +29,6 @@ router.get('/getallclient', function( req, res){
     }
   }
 });
-router.get('/getmyprofile',function(req,res){
-  let sessionid = req.query.sessionid;
-  var sql ;
-  var responcedata = {
-    result: 'err',
-    message:'',
-    datas:'',
-  }
-
-  try{
-    sql = 'select * from clientuser left outer join clientapisession on clientuser.userid = clientapisession.userid where ' +
-        'clientapisession.sessionid="'+sessionid+'";';
-    console.log(sql);
-    connection.query(sql,function(err,rows){
-      let sqldata = rows;
-      if(!err && sqldata.length >0){
-        responcedata.datas = sqldata;
-        responcedata.result = 'success';
-      }
-      return res.json(responcedata);
-    });
-  }catch(e){
-    return responcedata;
-  }
-});
-
 
 
 router.post('/adminuseradd',function(req,res){
@@ -131,8 +105,90 @@ router.post('/adminuseradd',function(req,res){
 });
 
 
+router.get('/getmyprofile',function(req,res){
+  let sessionid = req.query.sessionid;
+  var sql ;
+  var responcedata = {
+    result: 'err',
+    message:'',
+    datas:'',
+  }
 
+  try{
+    sql = 'select clientuser.firstname,clientuser.lastname,clientuser.firstkananame,clientuser.lastkananame,' +
+        'clientuser.profilepicture,clientuser.mailflg,clientuser.age from clientuser left outer join clientapisession on clientuser.userid = clientapisession.userid where ' +
+        'clientapisession.sessionid="'+sessionid+'" and delflg = false;';
+    connection.query(sql,function(err,rows){
+      let sqldata = rows;
+      if(!err && sqldata.length >0){
+        sqldata[0].base64profile = '';
+        if(sqldata[0].profilepicture !== '' || sqldata[0].profilepicture !== null){
+          //ファイルの存在確認
+          if(filemodule.clientexistflg(sqldata[0].profilepicture)) {
+            sqldata[0].base64profile = filemodule.clientprofileRead(sqldata[0].profilepicture);
+          }
+        }
+        responcedata.datas = sqldata;
+        responcedata.result = 'success';
+      }
+      return res.json(responcedata);
+    });
+  }catch(e){
+    return responcedata;
+  }
+});
 
+//自分自身の
+router.post('/clienteditprofile',function (req,res) {
+  var httprequest = {
+    sessionid: req.body.sessionid,
+    firstname: req.body.firstname,
+    lastname: req.body.lastname,
+    firstkananame: req.body.firstkananame,
+    lastkananame: req.body.lastkananame,
+    mailflg: req.body.mailflg,
+    age: req.body.age,
+    base64profile: req.body.base64profile,
+    clientid:'',
+    profiliepicture:'',
+  }
+  var responcedata ={
+    message:'',
+    result:'err',
+
+  }
+  var sql = '';
+  sql = 'select userid from clientapisession  ' +
+      'where sessionid = "'+httprequest.sessionid+'";';
+  connection.query(sql,function(err,rows){
+    var sqldata = rows;
+    if(!err && sqldata.length > 0){
+      httprequest.clientid = sqldata[0].userid;
+      if(!(httprequest.base64profile == '' || httprequest.base64profile == null|| httprequest.base64profile == undefined)) {
+        httprequest.profiliepicture = httprequest.clientid;
+        filemodule.clientprofileWrite(httprequest.profiliepicture, httprequest.base64profile);
+      }
+      sql = 'update clientuser set ' +
+          'firstname="'+httprequest.firstname+'",lastname="'+httprequest.lastname+'",' +
+          'firstkananame="'+httprequest.firstkananame+'",lastkananame="'+httprequest.lastkananame+'",mailflg='+httprequest.mailflg+
+          ',age='+httprequest.age+',profilepicture="'+httprequest.profiliepicture+'" where userid = "'+httprequest.clientid+'";';
+      connection.query(sql,function(err,rows){
+        if(!err){
+          responcedata.result = 'success';
+          responcedata.message = 'editprofile';
+        }else{
+          responcedata.result = 'err';
+          responcedata.result = 'editfail';
+        }
+        return res.json(responcedata);
+      });
+    }else{
+      responcedata.message='sessionid';
+      return res.json(responcedata);
+    }
+
+  });
+});
 router.post('/clientuseradd', function(req,res){
   var name ={
     fistname: req.body.firstname,

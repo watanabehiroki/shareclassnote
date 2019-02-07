@@ -2,30 +2,56 @@
   <app-header></app-header>
 </div>
 <div class="middle">
-  <div [hidden]="!editflg">
-    <form (click)="editendflg()">
-      <table class="table">
-        <tr>
-          <th>姓:</th>
-          <td><input type="text" /></td>
-        </tr>
-        <tr>
-          <th>名:</th>
-          <td><input type="text" /></td>
-        </tr>
-        <tr>
-          <th>姓(よみがな)</th>
-          <td><input type="text" /></td>
-        </tr>
-        <tr>
-          <th>名(よみがな)</th>
-          <td><input type="text" /></td>
-        </tr>
-      </table>
-
+  <div *ngIf="editflg" class="card">
+    <form   (ngSubmit)="editendflg()">
+      <div class="card-header">
+        プロフィール編集
+      </div>
+      <div class="row"  *ngFor="let edituser of editprofile">
+        <div class="col-sm-4">
+          <div *ngIf="!(edituser.base64profile == ''||edituser.base64profile == null)">
+            <img [src]="edituser.base64profile"/>
+          </div>
+          <input type="file" accept="image/*; capture=camera" (change)="changeListener($event)" name="picture"/>
+        </div>
+        <table class="col-sm-8 table card-body">
+          <tr>
+            <th>姓:</th>
+            <td><input type="text" name="sei" [(ngModel)]="edituser.firstname"/></td>
+          </tr>
+          <tr>
+            <th>名:</th>
+            <td><input type="text" name="mei" [(ngModel)]="edituser.lastname"/></td>
+          </tr>
+          <tr>
+            <th>姓(よみがな)</th>
+            <td><input type="text" name="yomisei" [(ngModel)]="edituser.firstkananame"/></td>
+          </tr>
+          <tr>
+            <th>名(よみがな)</th>
+            <td><input type="text" name="yomimei" [(ngModel)]="edituser.lastkananame" /></td>
+          </tr>
+          <tr>
+            <th>年齢</th>
+            <td><input type="number" name="age" [(ngModel)]="edituser.age"/></td>
+          </tr>
+          <tr>
+            <th>性別</th>
+            <td>
+              <input type="radio" name="sex" [value]="true" [(ngModel)]="edituser.mailflg" />男性
+              <input type="radio" name="sex" [value]="false"  [(ngModel)]="edituser.mailflg"/> 女性
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="card-footer">
+        <input type="submit" class="btn btn-primary" value="保存" />
+        <input type="button" value="キャンセル" class="btn btn-danger" (click)="editcancel()"/>
+      </div>
     </form>
   </div>
-  <div class="card " [hidden]="editflg">
+
+  <div class="card " *ngIf="!editflg">
     <div class="card-header">
       <span>ユーザプロフィール</span>
       <div>

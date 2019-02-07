@@ -2,32 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="444a9397-a04d-42a6-ab20-98d89e7cfbc5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../admin/src/confing/urlconfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/confing/urlconfig.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datas/note/2edb44b5b15dd6.5c08f096.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datas/note/2edb44b5b15dd6.5c08f096.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datas/note/6eebc13a77cdc5.5c08f096.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datas/note/6eebc13a77cdc5.5c08f096.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/note.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/note.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/module/File.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/module/File.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/manegementnote/manegementnote.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/manegementnote/manegementnote.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/manegementnote/manegementnote.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/manegementnote/manegementnote.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/manegementnote/manegementnote.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/manegementnote/manegementnote.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/manegementnotelist/manegementnotelist.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/manegementnotelist/manegementnotelist.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/manegementnotelist/manegementnotelist.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/manegementnotelist/manegementnotelist.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/pubnotelist/pubnotelist.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/pubnotelist/pubnotelist.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/pubnotelist/pubnotelist.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/pubnotelist/pubnotelist.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/submitnote/submitnote.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/submitnote/submitnote.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/note/submitnote/submitnote.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/note/submitnote/submitnote.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/component/userprofile/userprofile.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/userprofile/userprofile.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/app/component/userprofile/userprofile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/userprofile/userprofile.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/app/component/userprofile/userprofile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/userprofile/userprofile.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/service/changedate/changemysqldate.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/service/changedate/changemysqldate.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/service/stragedata/stragedata.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/service/stragedata/stragedata.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/config/urlconfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/config/urlconfig.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../database/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../database/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../database/sql/initialdatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../database/sql/initialdatabase.sql" afterDir="false" />
     </list>
@@ -43,8 +25,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+            <state relative-caret-position="221">
+              <caret line="125" column="21" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/module/File.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -82,21 +73,21 @@
         <option value="$PROJECT_DIR$/routes/data.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/config/subdirectorypath.js" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/config/sqlconfig.js" />
         <option value="$PROJECT_DIR$/datas/note/6eebc13a77cdc5.5c08f096.txt" />
         <option value="$PROJECT_DIR$/datas/note/18e47a178c52de.5c08f096.txt" />
-        <option value="$PROJECT_DIR$/routes/module/File.js" />
         <option value="$PROJECT_DIR$/routes/note.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/config/sqlconfig.js" />
+        <option value="$PROJECT_DIR$/routes/module/File.js" />
         <option value="$PROJECT_DIR$/routes/users.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1195" />
-    <option name="y" value="119" />
-    <option name="width" value="864" />
-    <option name="height" value="698" />
+    <option name="x" value="-823" />
+    <option name="y" value="231" />
+    <option name="width" value="632" />
+    <option name="height" value="548" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -104,6 +95,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -114,18 +106,20 @@
             <path>
               <item name="appapi" type="b2602c69:ProjectViewProjectNode" />
               <item name="appapi" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="appapi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appapi" type="462c0819:PsiDirectoryNode" />
               <item name="datas" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="appapi" type="b2602c69:ProjectViewProjectNode" />
               <item name="appapi" type="462c0819:PsiDirectoryNode" />
               <item name="datas" type="462c0819:PsiDirectoryNode" />
-              <item name="note" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appapi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appapi" type="462c0819:PsiDirectoryNode" />
+              <item name="datas" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="appapi" type="b2602c69:ProjectViewProjectNode" />
@@ -142,15 +136,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549429492555" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549506816665" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../client" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -219,12 +212,13 @@
       <workItem from="1549239145705" duration="11594000" />
       <workItem from="1549325942489" duration="1644000" />
       <workItem from="1549413972783" duration="10448000" />
-      <workItem from="1549429630062" duration="3898000" />
+      <workItem from="1549429630062" duration="4911000" />
+      <workItem from="1549498191497" duration="8085000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205545000" />
+    <option name="totallyTimeSpent" value="214643000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="57" width="1296" height="1040" extended-state="6" />
@@ -235,15 +229,15 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4941957" visible="true" weight="0.27508092" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.4941957" visible="true" weight="0.27993527" />
       <window_info id="Structure" order="6" sideWeight="0.5058043" side_tool="true" weight="0.30040485" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.2734289" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.39029768" />
       <window_info anchor="bottom" id="Database Changes" order="2" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.3296582" />
       <window_info anchor="bottom" id="Run" order="7" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
@@ -370,13 +364,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/subdirectorypath.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" selection-start-column="36" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/time.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -435,16 +422,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/module/File.js">
+    <entry file="file://$PROJECT_DIR$/config/subdirectorypath.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        <state>
+          <caret column="36" selection-start-column="36" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/note.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1154">
+        <state relative-caret-position="1581">
           <caret line="93" column="72" selection-start-line="93" selection-start-column="72" selection-end-line="93" selection-end-column="72" />
         </state>
       </provider>
@@ -452,21 +439,31 @@
     <entry file="file://$PROJECT_DIR$/config/sqlconfig.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/datas/user/client/.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-442">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="561">
+          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/module/File.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+        <state relative-caret-position="221">
+          <caret line="125" column="21" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
         </state>
       </provider>
     </entry>
