@@ -2,5 +2,5 @@
 /.idea
 /config
 #base64data
-/data/note/*
-/data/usr/*
+data/note/*
+data/usr/*
