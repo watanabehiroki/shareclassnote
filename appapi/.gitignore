@@ -3,4 +3,5 @@
 /config
 #base64data
 data/note/*
-data/usr/*
+data/user/client/*.txt
+data/user/admin/*.txt
