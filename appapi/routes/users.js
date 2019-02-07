@@ -201,7 +201,8 @@ router.post('/clientuseradd', function(req,res){
   var password = req.body.password;
   var sql ;
   var result;
-  var userid ='';
+  var userid = req.body.id;
+  console.log(req.body);
   try{
     //userid 生成
     sql ='select userid from clientuser;';
@@ -214,43 +215,58 @@ router.post('/clientuseradd', function(req,res){
         }
       }else{
         var whileflg= true;
-        userid = randommodule.getrandomstring(4);
-        if(result.length > 0) {
-          while (whileflg) {
-            for (var i = 0; i < result.length; i++) {
-              if (i == (result.length - 1) && result[result.length - 1].userid != userid) {
-                whileflg = false;
-                break;
+        if(userid !== ''){
+          result.forEach(function(idobj){
+            if(userid == idobj.userid){
+              userid = null;
+              return res.json({
+                result:'err',
+                message:'sameid',
+              });
+            }
+          });
+        }else {
+          userid = randommodule.getrandomstring(4);
+          if (result.length > 0) {
+            while (whileflg) {
+              for (var i = 0; i < result.length; i++) {
+                if (i == (result.length - 1) && result[result.length - 1].userid != userid) {
+                  whileflg = false;
+                  break;
+                }
               }
             }
           }
         }
-        if(password === undefined || password === null || password == ""){
-          //パスワード自動生成を行う。
-          password = randommodule.getrandomstring(5);
-        }
-        sql = 'insert into clientuser(userid,firstname,lastname,firstkananame,lastkananame' +
-            ',age,delflg,password) values ("'+userid+'","'+name.fistname+'","' +
-            name.lastname+'","'+name.fistkananame+'","'+name.lastkananame+'",'+age+','+false+',"'+password+'");';
-        //データベースへの登録処理
-
-        connection.query(sql,function (err,rows){
-          //データ加工を行う
-
-          var rowsdata= rows;
-          if(err){
-            result = {
-              result: 'err',
-              message: err
-            }
-          }else{
-            result = {
-              result: 'success',
-              password: password
-            }
+        if(userid !== null) {
+          if (password === undefined || password === null || password == "") {
+            //パスワード自動生成を行う。
+            password = randommodule.getrandomstring(5);
           }
-          return res.json(result);
-        });
+          sql = 'insert into clientuser(userid,firstname,lastname,firstkananame,lastkananame' +
+              ',age,delflg,password) values ("' + userid + '","' + name.fistname + '","' +
+              name.lastname + '","' + name.fistkananame + '","' + name.lastkananame + '",' + age + ',' + false + ',"' + password + '");';
+          //データベースへの登録処理
+
+          connection.query(sql, function (err, rows) {
+            //データ加工を行う
+
+            var rowsdata = rows;
+            if (err) {
+              result = {
+                result: 'err',
+                message: err
+              }
+            } else {
+              result = {
+                result: 'success',
+                password: password,
+                userid: userid,
+              }
+            }
+            return res.json(result);
+          });
+        }
       }
     });
   }catch (e){
@@ -264,5 +280,8 @@ router.post('/clientuseradd', function(req,res){
 
 });
 
-
+class MyError extends  Error{}
+function idError(){
+  throw  new MyError('IDError');
+}
 module.exports = router;

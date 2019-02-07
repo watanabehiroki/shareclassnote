@@ -6,10 +6,21 @@
     <div class="card-header"><span>説明文導入</span></div>
     <table class=" table card-body">
       <tr>
+        <th>ID</th>
+        <td>
+          <input type="radio" name="idflg" [value]="false" [(ngModel)]="idflg" />自動生成
+          <input type="radio" name="idflg" [value]="true" [(ngModel)]="idflg" />手動生成
+          <div *ngIf="idflg">
+            <input type="text" name="inputid" [(ngModel)]="userprofile.id" />
+          </div>
+        </td>
+      </tr>
+      <tr>
         <th>姓:</th>
         <td>
           <input type="text"  [(ngModel)]="userprofile.firstname"
                    name="first" required minlength="1" #firstname="ngModel"/>
+          <br/>
           <span [hidden]="!firstname.errors?.required">入力必須です。</span>
           <span [hidden]="!firstname.errors?.minlength">１文字以上入力してください。</span>
         </td>
@@ -19,6 +30,7 @@
         <td>
           <input type="text" [(ngModel)]="userprofile.lastname"
                  name="last" required minlength="1" #lastname="ngModel"/>
+          <br/>
           <span [hidden]="!lastname.errors?.required">入力必須です。</span>
           <span [hidden]="!lastname.errors?.minlength">１文字以上入力して下さい。</span>
         </td>
@@ -28,6 +40,7 @@
         <td>
           <input type="text" [(ngModel)]="userprofile.firstkananame"
                  name="firstkana" required minlength="1" #firstname="ngModel"/>
+          <br/>
           <span [hidden]="!firstname.errors?.required">入力必須です。</span>
           <span [hidden]="!firstname.errors?.minlength">１文字以上入力して下さい。</span>
         </td>
@@ -49,7 +62,7 @@
       <tr>
         <th>性別:</th>
         <td>
-          <input type="radio" name="sex"  [(ngModel)]="userprofile.sex" [value]="true"  disabled/> 男性
+          <input type="radio" name="sex"  [(ngModel)]="userprofile.sex" [value]="true"  /> 男性
           <input type="radio" name="sex"  [(ngModel)]="userprofile.sex" [value]="false" />女性
         </td>
       </tr>
@@ -67,7 +80,7 @@
 
     </table>
     <div class="card-footer">
-      <span>{{result.data}} {{result.password}}</span>
+      <span>{{result.data}}</span>
       <input type="submit" value="登録" class="btn btn-primary" />
     </div>
   </form>
