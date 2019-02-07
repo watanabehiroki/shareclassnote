@@ -10,7 +10,8 @@ export class LocalStrageService {
   constructor() { }
   //処理内容
   setsessionjson(sessionid) {
-    this.loginjsonvalue.sessionid = sessionid;
+    this.loginjsonvalue={sessionid: sessionid};
+    console.log(this.loginjsonvalue);
     this.setLocalStorage(this.loginjsonvalue);
   }
   removelocalstrage(){
@@ -22,15 +23,17 @@ export class LocalStrageService {
   }
   getlocalstragevalue(){
     var novalueflg = false;
-    if(localStorage.getItem('jsonvalue') === null){
+    this.getLocalStrage();
+    if(this.loginjsonvalue === null||this.loginjsonvalue.sessionid === '' || this.loginjsonvalue.sessionid === null ||
+      this.loginjsonvalue.sessionid === undefined  ){
       novalueflg =true;
     }else {
       novalueflg = false;
     }
     return novalueflg;
   }
- private setLocalStorage(jsonvalue){
-    localStorage.setItem('jsonvalue',JSON.stringify(jsonvalue));
+ private setLocalStorage(jsonobj){
+    localStorage.setItem('jsonvalue',JSON.stringify(jsonobj));
   }
  private getLocalStrage(){
     this.loginjsonvalue = JSON.parse(localStorage.getItem('jsonvalue'));

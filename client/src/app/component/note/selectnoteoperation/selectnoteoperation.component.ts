@@ -24,5 +24,7 @@ export class SelectnoteoperationComponent implements OnInit {
   submitnoteclick(){
     this.router.navigate(['submitnote']);
   }
-
+  manegementnoteclick(){
+    this.router.navigate(['managenotelist']);
+  }
 }

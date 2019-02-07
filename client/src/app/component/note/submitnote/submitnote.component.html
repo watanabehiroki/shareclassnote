@@ -2,67 +2,67 @@
   <app-header></app-header>
 </div>
 <div class="middle">
-  <form class="card">
+  <form class="card" (ngSubmit)="clicksubmitnote()">
     <div class="card-header">説明文挿入</div>
-    <table class="card-body">
+    <table class="card-body table">
       <tr>
         <th>科目選択:</th>
         <td>
-          <select name="subjectlist">
-            <option value="id">数学</option>
-            <option value="id">英語</option>
-            <option value="id">科学</option>
+          <select [(ngModel)]="bodyobj.subjectid"  name="subjectlist" required #subjectvalidation="ngModel" >
+            <option *ngFor="let subjectobj of listsubject" value="{{subjectobj.id}}">{{subjectobj.name}}</option>
           </select>
+          <br/>
+          <span [hidden]="!subjectvalidation.errors?.required">選択してください。</span>
         </td>
       </tr>
       <tr>
         <th>公開選択</th>
-        <td>
-        <input type="radio" name=releaseflg [value]=false  > 非公開
-        <input type="radio" name=releaseflg [value]=true > 公開
+        <td >
+          <input type="radio" name="releaeseRadio" [(ngModel)]="bodyobj.releaseflg" value=false />非公開
+          <input type="radio" name="releaseRadio" [(ngModel)]="bodyobj.releaseflg" value=true />公開
         </td>
       </tr>
       <tr>
         <th>グループ選択:</th>
         <td>
-          <select name="grouplist">
-            <option value="id" >○○○○</option>
-            <option value="id" >○○○○</option>
-            <option value="id" >○○○○</option>
+          <select [(ngModel)]="bodyobj.group" name="grouplist" required #groupvalidation="ngModel" >
+            <option *ngFor="let groupobj of grouplist" value="{{groupobj.groupname}}|{{groupobj.adminemail}}" >{{groupobj.groupname}}</option>
           </select>
+          <br/>
+          <span [hidden]="!groupvalidation.errors?.required">選択してください。</span>
         </td>
       </tr>
       <tr>
         <th>授業日</th>
-        <td><input type="date" /></td>
+        <td>
+          <input type="date" [(ngModel)]="bodyobj.year" required name="datetime" #datevalidation="ngModel"/>
+          <br/>
+          <span [hidden]="!datevalidation.errors?.required">選択してください。</span>
+        </td>
       </tr>
       <tr>
         <th>時間割</th>
         <td>
-          <select name="timelist">
-            <option value="id">○○時限目</option>
-            <option value="id">○○時限目</option>
-            <option value="id">○○時限目</option>
+          <select name="timelist" [(ngModel)]="bodyobj.timeid" name="timelist" #timevalidation="ngModel" required>
+            <option *ngFor="let timeobj of timelist" value={{timeobj.id}}>{{timeobj.name}}</option>
           </select>
+          <br/>
+          <span [hidden]="!timevalidation.errors?.required" >選択してください。</span>
         </td>
       </tr>
       <tr>
         <th>画像選択:</th>
         <td>
-          <input type="radio" name="radiofile"  [(ngModel)]="cameraflg" [value]="true"/>ファイル選択
-          <input type="radio" name="radioflg"  [(ngModel)]="cameraflg" [value]="false"/>カメラ起動
-          <div *ngIf="cameraflg == true">
-            <input type="file" >
-            サンプル
+          <input type="file" accept="image/*; capture=camera" (change)="changeListener($event)" name="picture"/>
+          <div *ngIf="bodyobj.base64picture !== undefined">
+            <img style="height: 100px" [src]="bodyobj.base64picture" title="ノート画像"/>
           </div>
-          <div *ngIf="cameraflg == false">
-            <input type="file" accept="image/*; capture=camera" />
-          </div>
+          <br/>
         </td>
       </tr>
     </table>
     <div class="card-footer">
-      <span>結果を表示する</span>
+      <span>{{registrationdata}}</span>
       <input type="submit" value="投稿" class="btn btn-primary"/>
 
     </div>

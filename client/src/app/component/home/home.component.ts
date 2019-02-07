@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     //sessionidが登録されているか確認する
-   if(this.localstrageService.getsessionid() === undefined){
+   if(this.localstrageService.getlocalstragevalue()){
       //sessionidが存在しない時
       this.router.navigate(['/login']);
     }

@@ -27,7 +27,7 @@ export class AddadminComponent implements OnInit {
       this.router.navigate(['/login']);
     }
   }
-  click() {
+  adminaddclick() {
     let responcedata;
     this.http.httppost('/users/adminuseradd', this.userprofile).subscribe(resdata =>{
       responcedata = resdata;

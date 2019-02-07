@@ -1,0 +1,15 @@
+<div class="header">
+  <app-menu></app-menu>
+</div>
+<div class="middle">
+  <div class="card">
+    <div class="card-header">qrcodeサンプル</div>
+    <qrcode id="qrcode" [qrdata]="qrcodedata" [size]="256" [level]="'L'"></qrcode>
+    <div class="card-footer">
+      <input type="button" class="btn btn-primary" value="一覧に戻る" (click)="removeqrcode()" />
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>

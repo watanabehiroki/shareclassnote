@@ -3,6 +3,7 @@
 }
 .middle{
   height:80%;
+  overflow: scroll;
 }
 .footer{
   height: 12%;

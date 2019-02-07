@@ -17,7 +17,7 @@ export class EditsubjectComponent implements OnInit {
 
   ngOnInit() {
     this.paramid = this.route.snapshot.params['subjectid'];
-    this.httpservice.httpget('/subject/findsubject?subjectid=' + this.paramid).subscribe( resdata =>{
+    this.httpservice.httpget('/subject/findsubject?subjectid=' + this.paramid).subscribe( resdata => {
       this.subjectobj = resdata;
       this.subjectcolor = this.subjectobj[0].color;
       this.subjectname = this.subjectobj[0].name;

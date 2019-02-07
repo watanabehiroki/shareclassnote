@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {LocalStrageService } from '../../../service/local_strage/local-strage.service';
+import {HttpService} from '../../../service/httpservice/http.service';
+import {Router} from '@angular/router';
+import {StragedataService} from '../../../service/stragedata/stragedata.service';
 
 @Component({
   selector: 'app-grouplist',
@@ -6,10 +10,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grouplist.component.css']
 })
 export class GrouplistComponent implements OnInit {
-
-  constructor() { }
+  grouplist;
+  showdatalist;
+  constructor(private router: Router, private httpservice: HttpService,
+              private localStrage: LocalStrageService, private strage: StragedataService) { }
 
   ngOnInit() {
-  }
+    if (this.localStrage.getlocalstragevalue()) {
+      this.router.navigate(['/login']);
+    } else {
+      this.httpservice.httpget('/group/getallgrouplist?sessionid=' + this.localStrage.getsesionid()).subscribe(datas => {
+        this.grouplist = datas;
+        this.showdatalist = this.grouplist.datas;
+        if (true) {
 
+        }
+      });
+    }
+  }
+  accessqrcode(groupobj) {
+    this.strage.setqrdata(groupobj.adminemail, groupobj.qcode, groupobj.groupname);
+    this.router.navigate(['/groupaddqr']);
+  }
 }

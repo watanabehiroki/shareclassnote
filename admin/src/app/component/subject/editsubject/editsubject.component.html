@@ -2,14 +2,18 @@
   <app-menu ></app-menu>
 </div>
 <div class="middle">
-  <div class="card">
+  <form class="card" (ngSubmit)="editclick()">
     <div class="card-header">
       説明文導入
     </div>
     <table class="table">
       <tr>
         <th>名前</th>
-        <td><input type="text"  name="name" [(ngModel)]="subjectname" /></td>
+        <td>
+          <input type="text" [(ngModel)]="subjectname"
+                 name="subjectname"  />
+          <br/>
+        </td>
       </tr>
       <tr>
         <th>色</th>
@@ -20,7 +24,7 @@
       <input type="submit" value="完了" class="btn btn-primary" />
       <a href="/listsubject" class="btn btn-danger">キャンセル</a>
     </div>
-  </div>
+  </form>
 </div>
 <div class="footer">
   <app-footer></app-footer>

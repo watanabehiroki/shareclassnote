@@ -23,8 +23,8 @@ create table clientrefression(userid varchar(255) not null, endday date not null
 # グループ用テーブル
 create table grouptable(groupname varchar(40),adminemail varchar(255),qcode varchar(255) not null,endday date not null,foreign key(adminemail) references adminuser(email),primary key(groupname,adminemail));
 # １グループ内のメンバー
-create table groupmember(adminemail varchar(255), groupname varchar(40), clientid varchar(255), foreign key(adminemail)references adminuser(email),foreign key(groupname) references grouptable(groupname), foreign key(clientid) references clientuser(userid),
-primary key(groupname,adminid,clientid));
+create table groupmember(adminemail varchar(255), groupname varchar(40), clientid varchar(255), delflg boolean, foreign key(adminemail)references adminuser(email),foreign key(groupname) references grouptable(groupname), foreign key(clientid) references clientuser(userid),
+primary key(groupname,adminemail,clientid));
 # 授業計画表
 create table timetable(adminemail varchar(255) not null, groupname varchar(255) not null, clientid varchar(255) not null, jpegnumber varchar(255) not null, foreign key(adminemail) references adminuser(email), foreign key(groupname) references grouptable(groupname), foreign key(clientid) references clientuser(userid));
 # 教科テーブル
@@ -32,6 +32,11 @@ create table subject(id int  not null primary key auto_increment,name varchar(40
 # 時間割テ―ブル
 create table time(id int not  null primary key auto_increment, name varchar(40)not null);
 # クラスノートテーブル
-create table classnote(noteid varchar(255) primary key, clientid varchar(255) not null, releaseflg boolean not null, groupname varchar(50) not null, adminemail varchar(255) not null, timeid int, subject int,
+create table classnote(noteid varchar(255) primary key, clientid varchar(255) not null, releaseflg boolean not null, delflg boolean not null, groupname varchar(50) not null,lessonday date not null, updateday date not null , adminemail varchar(255) not null, timeid int, subject int,
  foreign key(clientid) references clientuser(userid), foreign key(groupname) references grouptable(groupname), foreign key(adminemail) references adminuser(email), foreign key(timeid) references time(id),
  foreign key(subject) references  subject(id));
+# ファイルアップロードテーブル
+create table uploadtable(noteid varchar(255), clientid varchar(255) not null, directorypath varchar(255),primary key(noteid,clientid), foreign  key(noteid) references classnote(noteid));
+
+insert into rolenumber(roleid,rolenumber,descriptor,delflg) values ('sample',111,'initializing data',false);
+insert into adminuser(email,firstname,lastname,firstkananame,lastkananame,age,deflg,password,rolenumber) values ('admin@admin.com','管理者','ユーザ','admin','user',100,false,'sharenotepassword','sample');

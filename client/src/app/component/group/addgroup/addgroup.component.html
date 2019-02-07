@@ -1,0 +1,28 @@
+<div class="header">
+  <app-header></app-header>
+</div>
+<div class="middle">
+  <div class="card">
+    <div class="card-header">グル―プ追加確認</div>
+    <table class="table card-body">
+      <tr>
+        <th>グループ名</th>
+        <th>存続期間</th>
+        <th>教員名・管理者名</th>
+      </tr>
+      <tr>
+        <td>{{groupdata.groupname}}</td>
+        <td>{{dateformat(groupdata.endday)}}</td>
+        <td>{{groupdata.firstname}}{{groupdata.lastname}}</td>
+      </tr>
+    </table>
+    <div class="card-footer" >
+      {{httpreqresponce}}
+      <input type="button" value="登録"  class="btn btn-primary"  (click)="registretionclick()"/>
+      <input type="button" value="キャンセル" class="btn btn-danger" (click)="returnpage()" />
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>

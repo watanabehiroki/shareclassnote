@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dcd6bc51-e898-483c-aa9f-beab8e276c55" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/user/adduser/addadmin/addadmin.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/user/adduser/addadmin/addadmin.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../appapi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../appapi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/component/userprofile/userprofile.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/userprofile/userprofile.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/component/userprofile/userprofile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/userprofile/userprofile.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/component/userprofile/userprofile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/userprofile/userprofile.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql/initialdatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/initialdatabase.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sql/initialdatabase.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" selection-start-line="19" selection-end-line="21" />
+            <state relative-caret-position="680">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
@@ -36,11 +37,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="100" />
-    <option name="y" value="296" />
-    <option name="width" value="782" />
-    <option name="height" value="785" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1296" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -71,7 +72,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../appapi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -99,16 +100,23 @@
       <updated>1548211818128</updated>
       <workItem from="1548211819548" duration="1465000" />
       <workItem from="1548297171379" duration="326000" />
+      <workItem from="1548821845884" duration="1403000" />
+      <workItem from="1548829765292" duration="830000" />
+      <workItem from="1548894130912" duration="336000" />
+      <workItem from="1548917104410" duration="943000" />
+      <workItem from="1549339864535" duration="1108000" />
+      <workItem from="1549452669301" duration="162000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1791000" />
+    <option name="totallyTimeSpent" value="6573000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="100" y="296" width="782" height="785" extended-state="0" />
+    <frame x="-8" y="-8" width="1296" height="1040" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25623268" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17152104" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -144,8 +152,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/sql/initialdatabase.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" selection-start-line="19" selection-end-line="21" />
+        <state relative-caret-position="680">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>
