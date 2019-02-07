@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="444a9397-a04d-42a6-ab20-98d89e7cfbc5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/user/adduser/addclient/addclient.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/user/adduser/addclient/addclient.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/assets/icon/noteicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/assets/icon/えんぴつ付きのノートアイコン.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/assets/icon/カレンダーのフリーアイコン3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/assets/icon/カレンダーのフリーアイコン33.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/assets/icon/コメントのアイコン素材 その2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/assets/icon/ノートのアイコン素材.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/assets/icon/ビジネスマン風のヒューマンアイコン素材.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/assets/icon/人物のアイコン素材 その2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/assets/icon/人物アイコン　チーム.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/headerfooter/menu/menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/headerfooter/menu/menu.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../admin/src/app/component/user/adduser/addclient/addclient.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/user/adduser/addclient/addclient.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/confing/urlconfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/confing/urlconfig.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/config/urlconfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/config/urlconfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/component/headerfooter/footer/footer.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/headerfooter/footer/footer.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/component/headerfooter/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/headerfooter/footer/footer.component.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,11 +26,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
+            <state relative-caret-position="3689">
               <caret line="217" column="24" selection-start-line="217" selection-start-column="24" selection-end-line="217" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/subject.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4">
+              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -72,10 +88,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="1943" />
-    <option name="height" value="1103" />
+    <option name="x" value="577" />
+    <option name="width" value="1142" />
+    <option name="height" value="1091" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -83,8 +98,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -92,25 +105,12 @@
               <item name="appapi" type="b2602c69:ProjectViewProjectNode" />
               <item name="appapi" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="appapi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appapi" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="appapi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appapi" type="462c0819:PsiDirectoryNode" />
-              <item name="datas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="appapi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appapi" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -194,12 +194,13 @@
       <workItem from="1549429630062" duration="4911000" />
       <workItem from="1549498191497" duration="8085000" />
       <workItem from="1549509267774" duration="623000" />
-      <workItem from="1549512867873" duration="3741000" />
+      <workItem from="1549512867873" duration="4838000" />
+      <workItem from="1549518806439" duration="716000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219483000" />
+    <option name="totallyTimeSpent" value="221296000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -219,7 +220,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4941957" visible="true" weight="0.28987855" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4941957" visible="true" weight="0.3020243" />
       <window_info id="Structure" order="6" sideWeight="0.5058043" side_tool="true" weight="0.30040485" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.38308457" />
@@ -353,13 +354,6 @@
     <entry file="file://$PROJECT_DIR$/datas/note/3a4309b68bb896.5c08f096.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/subject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/datas/note/274ae787728d52.5c08f096.txt" />
     <entry file="file://$PROJECT_DIR$/datas/note/19bafae0219aaa.5c08f096.txt" />
     <entry file="file://$PROJECT_DIR$/datas/note/588c9f5e7c3196.5c08f096.txt">
@@ -426,8 +420,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
+        <state relative-caret-position="3689">
           <caret line="217" column="24" selection-start-line="217" selection-start-column="24" selection-end-line="217" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/subject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
         </state>
       </provider>
     </entry>
