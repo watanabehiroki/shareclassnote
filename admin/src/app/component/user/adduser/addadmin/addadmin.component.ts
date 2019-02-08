@@ -33,7 +33,7 @@ export class AddadminComponent implements OnInit {
       responcedata = resdata;
       console.log(resdata);
       if (responcedata.result == 'success') {
-        this.responceresult = '登録完了しました';
+        this.responceresult = '登録完了しました。パスワードは' + responcedata.password + 'です。';
       } else {
         this.responceresult = '登録出来ません';
       }

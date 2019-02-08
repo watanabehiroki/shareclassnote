@@ -1,8 +1,8 @@
-<form class="card " (ngSubmit)="loginclick()">
+<form class="card"  #form="ngForm" (ngSubmit)="loginclick()">
   <div class="card-header">
     管理者用ログイン画面
   </div>
-  <table class="card-body">
+  <table class="card-body" >
     <tr>
       <th>メールアドレス</th>
       <td>
@@ -26,6 +26,6 @@
   </table>
   <div class="card-footer">
     <span>{{resultresponce}}</span>
-    <input type="submit" class="btn btn-primary" value="送信"  />
+    <input type="submit" [disabled]="form.invalid" class="btn btn-primary" value="ログイン"  />
   </div>
 </form>
