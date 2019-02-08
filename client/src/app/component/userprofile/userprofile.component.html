@@ -3,7 +3,7 @@
 </div>
 <div class="middle">
   <div *ngIf="editflg" class="card">
-    <form   (ngSubmit)="editendflg()">
+    <form  #profileform="ngForm" (ngSubmit)="editendflg()">
       <div class="card-header">
         プロフィール編集
       </div>
@@ -45,7 +45,7 @@
         </table>
       </div>
       <div class="card-footer">
-        <input type="submit" class="btn btn-primary" value="保存" />
+        <input type="submit" class="btn btn-primary" value="保存" [disabled]="profileform.invalid" />
         <input type="button" value="キャンセル" class="btn btn-danger" (click)="editcancel()"/>
       </div>
     </form>

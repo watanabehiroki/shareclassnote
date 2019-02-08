@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HttpclientService} from "../../service/http/httpclient.service";
 import {LocalStrageService} from "../../service/local_strage/local-strage.service";
 import {Router} from "@angular/router";
+import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-login',

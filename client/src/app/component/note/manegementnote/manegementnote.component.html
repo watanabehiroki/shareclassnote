@@ -2,7 +2,7 @@
   <app-header></app-header>
 </div>
 <div class="middle card">
-  <form (ngSubmit)="clickedit()">
+  <form #manageform = "ngForm" (ngSubmit)="clickedit()">
     <div class="card-header ">
       <span>編集画面</span>
     </div>
@@ -50,7 +50,7 @@
       </div>
     </div>
     <div class="card-footer">
-      <input type="submit" value="完了" class="btn btn-primary" />
+      <input type="submit" [disabled]="manageform.invalid" value="完了" class="btn btn-primary" />
       <input type="button" value="キャンセル" class="btn btn-danger" (click)="clickreturn()" />
     </div>
   </form>

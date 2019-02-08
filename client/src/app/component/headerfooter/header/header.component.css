@@ -10,3 +10,9 @@
 .headerlogout{
   text-align:right
 }
+img.headerimg{
+  height: 100%;
+}
+.headerappname{
+  height: 80%;
+}
