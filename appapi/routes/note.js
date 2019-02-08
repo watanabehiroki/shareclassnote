@@ -5,6 +5,64 @@ let mysqlconf = require('../config/sqlconfig');
 let connection = mysql.createConnection(mysqlconf.mysql);
 let randomid = require('./module/uniquvalue');
 var filemodule = require('./module/File');
+
+
+router.get('/clientselectsubjectnote/:item/:sort',function(req,res){
+   let userid = '';
+    let reqdata= {
+       sessionid: req.query.sessionid,
+       subjectid : req.query.subjectid,
+       itemnumber :req.param.item,
+       sort: req.param.sort,
+   }
+   var responcedata = {
+       result: 'err',
+       message: '',
+       datas: '',
+   }
+   var sqloptions = {
+        item:'classnote.lessonday',
+       sort: 'asc',
+   }
+   var sql;
+    if(reqdata.notesort == 1){
+        sqloptions.sort = 'DESC';
+    }else{
+        sqloptions.sort = 'ASC';
+    }
+    if(reqdata.item){
+
+    }
+   //sessionid のかくにん
+    sql = 'select userid from clientapisession ' +
+        'where sessionid = "'+reqdata.sessionid+'";';
+   connection.query(sql,function(err,rows){
+       var sqldata ;
+           sqldata=rows;
+       if(!err && sqldata.length > 0){
+           userid = sqldata[0].userid;
+           sql = 'select classnote.clientid, classnote.lessonday,classnote.groupname,classnote.adminemail,classnote.noteid,subject.name as subjectname,time.name as timename, clientuser.firstname,clientuser.lastname,uploadtable.directorypath from groupmember left outer join classnote on classnote.groupname = groupmember.groupname and classnote.adminemail = groupmember.adminemail ' +
+               'left outer join clientuser on classnote.clientid = clientuser.userid left outer join time on classnote.timeid = time.id left outer join subject on classnote.subject = subject.id ' +
+               'left outer join uploadtable on classnote.noteid = uploadtable.noteid where classnote.delflg= false and classnote.releaseflg=true and clientuser.delflg = false and groupmember.clientid ="'+userid+'" and subject.id = '+reqdata.subjectid+'  order by '+sqloptions.item+ ' '+sqloptions.sort+';';
+           console.log(sql);
+           connection.query(sql,function(err,rows){
+               sqldata = rows;
+               if(!err && sqldata.length > 0){
+                   sqldata.forEach(function(noteobj){
+                      noteobj['base64picture'] = filemodule.NoteFileRead(noteobj.directorypath);
+                   });
+                   responcedata.result = 'success';
+                   responcedata.datas = sqldata;
+               }
+               return res.json(responcedata);
+           });
+       }else{
+           return res.json(responcedata);
+       }
+    });
+});
+
+
 router.get('/clientallsubmitnote',function (req,res) {
     var responcedata= {
         result:'err',
@@ -64,7 +122,6 @@ router.post('/updatenote',function(req,res){
         timeid:req.body.timeid,
         subjectid:req.body.subjectid,
         base64picture : req.body.base64picture,
-
     }
     var responceresult ={
         result:'err',

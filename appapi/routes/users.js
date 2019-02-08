@@ -54,8 +54,7 @@ router.post('/adminuseradd',function(req,res){
       if(err){
         return res.json({
           result:'err',
-          messasge:'sqlfirsterr',
-          errconf: err
+          messasge:'sqlfirsterr'
         });
       }else{
         if(data.length > 0 ){
@@ -67,21 +66,25 @@ router.post('/adminuseradd',function(req,res){
 
         }else {
           //password自動生成
-          if (user.password !== null || user.password != undefined
-              || user.password != '') {
+            console.log(user.password !== '');
+          if (!( user.password !== '' || user.password !== null || user.password != undefined)) {
             user.password = randommodule.getrandomstring(5);
           }
           //データベースに登録
-          sql = 'insert into adminuser(firstname, lastname, firstkananame, lastkananame,' +
+          /*sql = 'insert into adminuser(firstname, lastname, firstkananame, lastkananame,' +
               ' age, deflg, password, rolenumber,email) values ( "' + user.name.firstname +
               '","' + user.name.lastname + '","' + user.name.firstkananame + '","' + user.name.lastkananame + '",' + user.age + ','
-              + false + ',"' + user.password + '","1","' + user.email + '");';
+              + false + ',"' + user.password + '","sample","' + user.email + '");';
+          */
+            sql = 'insert into adminuser(firstname, lastname, firstkananame, lastkananame,' +
+                ' age, deflg, password, rolenumber,email) values ( "' + user.name.firstname +
+                '","' + user.name.lastname + '","' + user.name.firstkananame + '","' + user.name.lastkananame + '",' + user.age + ','
+                + false + ',"' + user.password + '","1","' + user.email + '");';
           connection.query(sql, function (err, rows) {
             if (err) {
               result = {
                 result: 'err',
-                messagge: 'sqlerr',
-                errmessage: err
+                messagge: 'sqlerr'
               }
             } else {
               result = {
@@ -279,9 +282,4 @@ router.post('/clientuseradd', function(req,res){
   }
 
 });
-
-class MyError extends  Error{}
-function idError(){
-  throw  new MyError('IDError');
-}
 module.exports = router;

@@ -3,10 +3,18 @@
 </div>
 <div class="middle ">
   <div class="card">
-    <div class="card-header"> 説明欄</div>
-    <div class="main card-body">
+    <div class="card-header">選択</div>
+    <div class="card-body row" *ngFor="let noteobj of notelist">
+      <div class="col-sm-4">
+        image
+      </div>
+      <div class="col-sm-8">
+        詳細情報
+      </div>
+    </div>
+    <div class="card-footer">
 
-     </div>
+    </div>
   </div>
 </div>
 <div class="footer">
