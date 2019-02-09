@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { ActivatedRoute, ParamMap } from "@angular/router";
 import {HttpclientService} from "../../../service/http/httpclient.service";
 import {LocalStrageService} from "../../../service/local_strage/local-strage.service";
+import {NotedialogComponent} from "../../dialog/notedialog/notedialog.component";
 
 @Component({
   selector: 'app-pubnotelist',
@@ -9,6 +10,7 @@ import {LocalStrageService} from "../../../service/local_strage/local-strage.ser
   styleUrls: ['./pubnotelist.component.css']
 })
 export class PubnotelistComponent implements OnInit {
+  @ViewChild("notedialog") notedialogcomponent: NotedialogComponent;
   notelist;
   subjectid;
   constructor(private activatedRouter: ActivatedRoute,private httpservice:HttpclientService,private localStrage:LocalStrageService) { }
@@ -23,9 +25,9 @@ export class PubnotelistComponent implements OnInit {
         if(sqldata.result = 'success'){
           this.notelist = sqldata.datas;
         }
-        console.log(data);
     });
-    console.log(this.subjectid);
   }
-
+  openNoteDialog(){
+    this.notedialogcomponent.openDialog();
+  }
 }

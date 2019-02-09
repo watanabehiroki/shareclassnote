@@ -28,6 +28,7 @@
     "core-js": "^2.6.3",
     "jimp": "^0.6.0",
     "jquery": "^3.3.1",
+    "ngx-bootstrap": "^3.2.0",
     "popper.js": "^1.14.6",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26"

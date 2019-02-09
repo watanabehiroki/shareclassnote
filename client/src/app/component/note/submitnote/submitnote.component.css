@@ -8,4 +8,16 @@
 .footer{
   height: 10%;
 }
-
+.card{
+  height: 100%;
+}
+.card-footer{
+  height: 10%;
+}
+.card-header{
+  height: 10%;
+}
+.card-body{
+  height: 80%;
+  min-height: 80%;
+}

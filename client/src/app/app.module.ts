@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { NgQrScannerModule} from "angular2-qrscanner";
+import { ModalModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './component/login/login.component';
@@ -30,6 +31,7 @@ import { Changebase64Service } from "./service/base64/changebase64.service";
 import { ManegementnoteComponent } from './component/note/manegementnote/manegementnote.component';
 import { ManegementnotelistComponent } from './component/note/manegementnotelist/manegementnotelist.component';
 import { GraphComponent } from './component/graph/graph.component';
+import { NotedialogComponent } from './component/dialog/notedialog/notedialog.component';
 
 @NgModule({
   declarations: [
@@ -50,14 +52,16 @@ import { GraphComponent } from './component/graph/graph.component';
     GroupaddlistComponent,
     ManegementnoteComponent,
     ManegementnotelistComponent,
-    GraphComponent
+    GraphComponent,
+    NotedialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgQrScannerModule
+    NgQrScannerModule,
+    ModalModule.forRoot(),
   ],
   providers: [
     HttpclientService,
