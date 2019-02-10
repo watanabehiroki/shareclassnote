@@ -176,7 +176,35 @@ router.post('/updatenote',function(req,res){
         }
     });
 });
-
+router.post('/clientnotedel',function(req,res){
+    let httprequest= {
+         sessionid : req.body.sessionid;
+         noteid : req.body.noteid;
+    }
+    var httpresponce = {
+        result:'err',
+        message:'',
+    }
+    var sql = 'select userid from clientapisession ' +
+        'where sessionid = "'+httprequest.sessionid+'";';
+    connection.query(sql,function(err,rows){
+        var sqldata = rows
+       if(!err && sqldata.length >0){
+           sql = 'update classnote set delflg=true' +
+               ' where noteid="'+httprequest.noteid+'";';
+           connection.query(sql,function (err,rows) {
+              if(!err){
+                  httpresponce.result = 'success';
+                  httpresponce.message =  'deletenote';
+              }
+              return res.json(httpresponce);
+           });
+       }else{
+           httpresponce.message = 'sessionid';
+           return res.json(httpresponce);
+       }
+    });
+});
 
 router.post('/clientsubmitnote',function(req,res){
     let sessionid = req.body.sessionid;

@@ -32,6 +32,7 @@ import { ManegementnoteComponent } from './component/note/manegementnote/manegem
 import { ManegementnotelistComponent } from './component/note/manegementnotelist/manegementnotelist.component';
 import { GraphComponent } from './component/graph/graph.component';
 import { NotedialogComponent } from './component/dialog/notedialog/notedialog.component';
+import { ManagenotedeleteComponent } from './component/dialog/managenotedelete/managenotedelete.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { NotedialogComponent } from './component/dialog/notedialog/notedialog.co
     ManegementnoteComponent,
     ManegementnotelistComponent,
     GraphComponent,
-    NotedialogComponent
+    NotedialogComponent,
+    ManagenotedeleteComponent
   ],
   imports: [
     BrowserModule,

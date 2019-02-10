@@ -1,0 +1,16 @@
+<div class="modal fade" bsModal #glModal="bs-modal" id="managenoteModal" tabindex="-1">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content" >
+      <div class="modal-header">
+        削除してもよろしいでしょうか?
+      </div>
+      <div class="modal-body">
+        内容
+      </div>
+      <div class="modal-footer">
+        <input type="button" value="削除" class="btn btn-primary" (click)="clickdel()"/>
+        <input type="button" value="キャンセル" class="btn btn-danger" (click)="lgModal.hide()" />
+      </div>
+    </div>
+  </div>
+</div>
