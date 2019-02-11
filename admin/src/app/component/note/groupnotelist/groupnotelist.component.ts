@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalStrageService } from '../../../service/local_strage/local-strage.service';
-import { Router} from '@angular/router';
+import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {HttpService} from '../../../service/httpservice/http.service';
 
 @Component({
@@ -10,29 +10,80 @@ import {HttpService} from '../../../service/httpservice/http.service';
 })
 export class GroupnotelistComponent implements OnInit {
   calenderlist;
-  constructor(private router: Router, private Http: HttpService, private localStrage: LocalStrageService) { }
-  selectdate ;
-  outputdate = '';
+  constructor(private activeRoute: ActivatedRoute, private router: Router,
+              private http: HttpService, private localStrage: LocalStrageService) { }
+   date = {
+    selectdate: new Date(),
+    outputdate : '',
+    nowdata: new Date(),
+  };
+  groupname;
+  listnote;
   ngOnInit() {
     if (this.localStrage.getlocalstragevalue()) {
       this.router.navigate(['/login']);
     }
-    // this.Http.httpget()
+    this.activeRoute.paramMap.subscribe(
+      (params: ParamMap) => {
+        this.groupname =  params.get('groupname');
+      }
+    );
+    const requestbody = {
+      sessionid: this.localStrage.getsesionid(),
+      groupname: this.groupname,
+      month: this.date.selectdate,
+    };
+     this.http.httppost('/note/groupallnote', requestbody).subscribe((datas: any) => {
+       this.listnote = datas.datas;
+       console.log(datas);
+     });
 
-    this.selectdate = new Date();
+    this.date.selectdate = new Date();
     this.getDateData();
   }
   getDateData() {
-    this.outputdate = this.selectdate.getFullYear() + '年' + (this.selectdate.getMonth() + 1) + '月';
+    this.date.outputdate = this.date.selectdate.getFullYear() + '年' + (this.date.selectdate.getMonth() + 1) + '月';
   }
   clickupday() {
-    this.selectdate.setMonth(this.selectdate.getMonth() + 1 );
+    this.date.selectdate.setMonth(this.date.selectdate.getMonth() + 1 );
+    const requestbody = {
+      sessionid: this.localStrage.getsesionid(),
+      groupname: this.groupname,
+      month: this.date.selectdate,
+    };
+    this.http.httppost('/note/groupallnote', requestbody).subscribe((datas: any) => {
+      this.listnote = datas.datas;
+    });
     this.getDateData();
   }
   clickdownday() {
 
-    this.selectdate.setMonth(this.selectdate.getMonth() - 1 );
+    this.date.selectdate.setMonth(this.date.selectdate.getMonth() - 1 );
+    const requestbody = {
+      sessionid: this.localStrage.getsesionid(),
+      groupname: this.groupname,
+      month: this.date.selectdate,
+    };
+    this.http.httppost('/note/groupallnote', requestbody).subscribe((datas: any) => {
+      this.listnote = datas.datas;
+      console.log(datas);
+    });
     this.getDateData();
   }
-
+  releaseflgTostring(flg) {
+    let result = '';
+    if (flg === 0) {
+      result = '非公開';
+    } else {
+      result = '公開';
+    }
+    return result;
+  }
+  datetostring(date) {
+    let  result: any = '';
+    date = date.split('T');
+    date = date[0].split('-');
+    result = date[0] + '年' + date[1] + '月' + date[2] + '日';
+    return result;
+  }
 }

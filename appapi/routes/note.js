@@ -116,6 +116,8 @@ router.post('/groupallnote',function(req,res){
        groupname:req.body.groupname,
        month:req.body.month,
    }
+   httpreqdata.month = httpreqdata.month.split('T');
+   httpreqdata.month = httpreqdata.month[0];
    var responcedata = {
        result:'err',
        message:'',
@@ -123,16 +125,38 @@ router.post('/groupallnote',function(req,res){
    }
    var sql = 'select email from adminapisession ' +
        'where sessionid ="'+httpreqdata.sessionid+'";';
+   console.log(sql);
    var data = new Date();
    connection.query(sql,function(err,rows){
        var sqldata = rows;
        if(!err && sqldata.length > 0){
            httpreqdata.email = sqldata[0].email;
-           sql = 'select * from groupmember left outer join classnote on groupmember.adminemail=classnote.adminemail ' +
-               'and groupmember.groupname=classnote.groupname and groupmember.clientid=classnote.clientid where groupmember.groupname="'
-               +httpreqdata.groupname+'" and groupmember.adminemail = "'+httpreqdata.groupname+'" and '
-       }else{
+           sql = 'select clientuser.firstname, clientuser.lastname, subject.name as subjectname, time.name as timename, classnote.lessonday, classnote.updateday, classnote.noteid, ' +
+               'classnote.releaseflg, classnote.delflg, uploadtable.directorypath as filepath  from groupmember left outer join classnote on groupmember.adminemail=classnote.adminemail ' +
+               'and groupmember.groupname=classnote.groupname and groupmember.clientid=classnote.clientid ' +
+               'left outer join clientuser on clientuser.userid = classnote.clientid ' +
+               'left outer join uploadtable on classnote.noteid = uploadtable.noteid and classnote.clientid = uploadtable.clientid ' +
+               'left outer join subject on classnote.subject = subject.id  left outer join time on time.id = classnote.timeid ' +
+               ' where groupmember.groupname="' +
+               httpreqdata.groupname+'" and groupmember.adminemail = "'+httpreqdata.email+'" ' +
+               'and classnote.updateday between '+ "date_format('"+httpreqdata.month+"','%Y-%m-01') and last_day('"+httpreqdata.month+"');"
+           console.log(sql);
+           connection.query(sql,function(err, rows){
+              if(!err){
+                  responcedata.datas = rows;
+                  responcedata.datas.forEach(function(noteobj){
+                      if(noteobj.filepath !== ''){
+                          noteobj['base64picture'] = filemodule.NoteFileRead(noteobj.filepath);
+                      }
+                  });
+                  responcedata.result = 'success';
+              } else {
 
+              }
+              return res.json(responcedata);
+           });
+       }else{
+           return res.json(responcedata);
        }
    })
 });

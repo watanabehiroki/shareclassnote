@@ -3,6 +3,7 @@
 }
 .middle{
   height:78%;
+  overflow: auto;
 }
 .footer{
   height: 12%;

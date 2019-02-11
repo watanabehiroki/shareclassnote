@@ -4,7 +4,6 @@ import { QRCodeModule} from 'angularx-qrcode';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './component/headerfooter/footer/footer.component';
@@ -51,7 +50,7 @@ import { GroupnoteoperationComponent } from './component/note/groupnoteoperation
     GroupaddqrcodeComponent,
     RemovegroupComponent,
     GroupnotelistComponent,
-    GroupnoteoperationComponent
+    GroupnoteoperationComponent,
   ],
   imports: [
     HttpClientModule,

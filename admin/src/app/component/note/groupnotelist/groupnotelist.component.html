@@ -4,8 +4,47 @@
 <div class="middle card">
   <div class="card-header">
     <input type="button" class="btn" value="<" (click)="clickdownday()" />
-    <span>{{outputdate}}</span>
-    <input type="button" class="btn" value=">" (click)="clickupday()" />
+    <span>{{date.outputdate}}</span>
+    <input type="button" class="btn" value=">" (click)="clickupday()" *ngIf="date.nowdata > date.selectdate"/>
+  </div>
+  <div class="card-body">
+    <div class="row" *ngFor="let noteobj of listnote">
+      <div class="col-sm-4">
+        <img class="img" [src]="noteobj.base64picture">
+      </div>
+      <table class="table col-sm-8">
+        <tr>
+          <th>投稿日</th>
+          <td>{{datetostring(noteobj.updateday)}}</td>
+        </tr>
+        <tr>
+          <th>公開情報</th>
+          <td>{{releaseflgTostring(noteobj.releaseflg)}}</td>
+        </tr>
+        <tr>
+          <th>投稿者名</th>
+          <td>{{noteobj.firstname}} {{noteobj.lastname}}</td>
+        </tr>
+        <tr>
+          <th>教科名</th>
+          <td>{{noteobj.subjectname}}</td>
+        </tr>
+        <tr>
+          <th>授業日</th>
+          <td>{{datetostring(noteobj.lessonday)}}</td>
+        </tr>
+        <tr>
+          <th>時間</th>
+          <td>{{noteobj.timename}}</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" value="画像拡大" class="btn btn-primary" />
+            <input type="button" value="削除" class="btn btn-danger" />
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
 </div>
 <div class="footer">
