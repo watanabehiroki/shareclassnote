@@ -14,6 +14,8 @@ import { DetailgroupComponent } from './component/group/detailgroup/detailgroup.
 import { EditsubjectComponent } from './component/subject/editsubject/editsubject.component';
 import { GroupaddSuccessComponent } from './component/group/groupadd-success/groupadd-success.component';
 import { GroupaddqrcodeComponent} from './component/group/groupaddqrcode/groupaddqrcode.component';
+import { GroupnotelistComponent} from './component/note/groupnotelist/groupnotelist.component';
+import {GroupnoteoperationComponent} from './component/note/groupnoteoperation/groupnoteoperation.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/addclient', pathMatch: 'full'},
@@ -28,6 +30,8 @@ const routes: Routes = [
   {path: 'detailgroup', component: DetailgroupComponent},
   {path: 'groupaddsuccess', component: GroupaddSuccessComponent},
   {path: 'groupaddqr', component: GroupaddqrcodeComponent},
+  {path: 'groupnoteope', component: GroupnoteoperationComponent},
+  {path: 'groupnotelist/:groupname', component: GroupnotelistComponent},
 ];
 
 @NgModule({

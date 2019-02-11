@@ -7,7 +7,7 @@
       <div class="card-header">
         プロフィール編集
       </div>
-      <div class="row"  *ngFor="let edituser of editprofile">
+      <div class="row card-body"  *ngFor="let edituser of editprofile">
         <div class="col-sm-4">
           <div *ngIf="!(edituser.base64profile == ''||edituser.base64profile == null)">
             <img [src]="edituser.base64profile"/>

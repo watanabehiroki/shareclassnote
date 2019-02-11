@@ -7,6 +7,7 @@ let randomid = require('./module/uniquvalue');
 var filemodule = require('./module/File');
 
 
+
 router.get('/clientselectsubjectnote/:item/:sort',function(req,res){
    let userid = '';
     let reqdata= {
@@ -108,7 +109,33 @@ router.get('/clientallsubmitnote',function (req,res) {
     });
 });
 
+router.post('/groupallnote',function(req,res){
+   var httpreqdata = {
+       sessionid:req.body.sessionid,
+       email:'',
+       groupname:req.body.groupname,
+       month:req.body.month,
+   }
+   var responcedata = {
+       result:'err',
+       message:'',
+       datas:'',
+   }
+   var sql = 'select email from adminapisession ' +
+       'where sessionid ="'+httpreqdata.sessionid+'";';
+   var data = new Date();
+   connection.query(sql,function(err,rows){
+       var sqldata = rows;
+       if(!err && sqldata.length > 0){
+           httpreqdata.email = sqldata[0].email;
+           sql = 'select * from groupmember left outer join classnote on groupmember.adminemail=classnote.adminemail ' +
+               'and groupmember.groupname=classnote.groupname and groupmember.clientid=classnote.clientid where groupmember.groupname="'
+               +httpreqdata.groupname+'" and groupmember.adminemail = "'+httpreqdata.groupname+'" and '
+       }else{
 
+       }
+   })
+});
 router.post('/updatenote',function(req,res){
     let sessionid = req.body.sessionid;
     var sql;
@@ -144,7 +171,7 @@ router.post('/updatenote',function(req,res){
                         sqldata = rows;
                         if(sqldata.length > 0){
                             //ノートが存在する
-                            sql = 'update classnote set releaseflg = '+requestdata.releaseflg+', lessonday=cast("'+requestdata.lessonday+'" as date),updateday = now(),' +
+                            sql = 'update classnote set releaseflg = '+requestdata.releaseflg+', lessonday=cast("'+requestdata.lessonday+'" as date),' +
                                 'timeid ='+requestdata.timeid+',subject = '+requestdata.subjectid+' where noteid = "'+requestdata.noteid+'";';
                             connection.query(sql,function(err,rows){
                                if(!err){
@@ -178,8 +205,8 @@ router.post('/updatenote',function(req,res){
 });
 router.post('/clientnotedel',function(req,res){
     let httprequest= {
-         sessionid : req.body.sessionid;
-         noteid : req.body.noteid;
+         sessionid : req.body.sessionid,
+         noteid : req.body.noteid,
     }
     var httpresponce = {
         result:'err',

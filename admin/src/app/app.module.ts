@@ -28,6 +28,8 @@ import { RemovegroupComponent } from './component/group/removegroup/removegroup.
 import {  HttpService } from './service/httpservice/http.service';
 import { LocalStrageService} from './service/local_strage/local-strage.service';
 import { StragedataService} from './service/stragedata/stragedata.service';
+import { GroupnotelistComponent } from './component/note/groupnotelist/groupnotelist.component';
+import { GroupnoteoperationComponent } from './component/note/groupnoteoperation/groupnoteoperation.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { StragedataService} from './service/stragedata/stragedata.service';
     MenuComponent,
     GroupaddSuccessComponent,
     GroupaddqrcodeComponent,
-    RemovegroupComponent
+    RemovegroupComponent,
+    GroupnotelistComponent,
+    GroupnoteoperationComponent
   ],
   imports: [
     HttpClientModule,
