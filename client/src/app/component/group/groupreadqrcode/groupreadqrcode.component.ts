@@ -10,7 +10,9 @@ import { StragedataService} from "../../../service/stragedata/stragedata.service
   styleUrls: ['./groupreadqrcode.component.css']
 })
 export class GroupreadqrcodeComponent implements OnInit {
-
+  count = 0;
+  listdevaice=[];
+  listcount=0;
   @ViewChild(QrScannerComponent) qrScannerComponent:QrScannerComponent;
   constructor(private localStrage:LocalStrageService,private router: Router,
               private stragedata:StragedataService ) { }
@@ -19,17 +21,21 @@ export class GroupreadqrcodeComponent implements OnInit {
       this.router.navigate(['login']);
     }
     this.qrScannerComponent.getMediaDevices().then(devices =>{
-      console.log(devices);
       const videoDevices:MediaDeviceInfo[] = [];
       for(const device of devices){
         if(device.kind.toString() === 'videoinput'){
           videoDevices.push(device);
+          this.listdevaice.push(device);
+
         }
       }
+      this.listcount = this.listdevaice.length;
       if(videoDevices.length > 0){
+        console.log(videoDevices);
         let choosenDev;
         for(const dev of videoDevices){
           if(dev.label.includes('front')){
+
             choosenDev = dev;
             break;
           }
@@ -38,6 +44,7 @@ export class GroupreadqrcodeComponent implements OnInit {
           this.qrScannerComponent.chooseCamera.next(choosenDev);
         }else{
           this.qrScannerComponent.chooseCamera.next(videoDevices[0]);
+          console.log(videoDevices[0]);
         }
       }
     });
@@ -48,6 +55,16 @@ export class GroupreadqrcodeComponent implements OnInit {
         this.ngOnInit();
       }
     });
+  }
+  changeCamera(){
+    if(this.listdevaice.length > this.count){
+      this.count = this.count+1;
+
+      this.qrScannerComponent.chooseCamera.next(this.listdevaice[this.count]);
+    }else{
+      this.count = 0;
+      this.qrScannerComponent.chooseCamera.next(this.listdevaice[this.count]);
+    }
   }
 
 }

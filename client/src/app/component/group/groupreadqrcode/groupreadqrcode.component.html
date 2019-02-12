@@ -5,12 +5,16 @@
   <div class="card-header">
 
   </div>
-  <div>
+  <div class="card-body">
     <qr-scanner [debug]="false"
-                [canvasWidth]="50" [canvasHeight]="5"
+                [canvasWidth]="1000" [canvasHeight]="300"
                 [stopAfterScan]="true" [updateTime]="500">
 
     </qr-scanner>
+  </div>
+
+  <div clas="card-footer">
+    <input *ngIf="listcount > 1" type="buttton" class="btn btn-default"  value="カメラ切替" (click)="changeCamera()" />
   </div>
 </div>
 <div class="footer">

@@ -7,3 +7,14 @@
 .footer{
   height: 12%;
 }
+.card-header{
+  padding: 0px;
+}
+.card-body{
+  height: 80%;
+  padding: 0px;
+}
+video{
+  height: 100px;
+  width: 100px;
+}
