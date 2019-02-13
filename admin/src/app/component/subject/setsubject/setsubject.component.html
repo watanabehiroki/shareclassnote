@@ -33,7 +33,7 @@
       <span>サンプル</span>
       <button class="btn btn-primary" data-toggle="collapse" data-target="#ListSubject">↓</button>
       <div class="collapse" id="ListSubject">
-        <table class="card-body">
+        <table class="card-body table">
           <tr>
             <th>科目名</th>
             <th>色</th>
@@ -42,7 +42,7 @@
           <tr *ngFor="let subjeobj of listsubjectobj  ">
             <td>{{subjeobj.name}}</td>
             <td><input type="color" value={{subjeobj.color}} disabled="disabled" /></td>
-            <td>{{subjeobj.updateday}}</td>
+            <td>{{datetoString(subjeobj.updateday)}}</td>
           </tr>
         </table>
       </div>

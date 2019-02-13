@@ -9,6 +9,7 @@ import {LocalStrageService} from '../../../service/local_strage/local-strage.ser
 })
 export class GroupaddqrcodeComponent implements OnInit {
   qrcodedata;
+  size = 350;
   constructor(private router: Router,
               private strageservice: StragedataService,
               private localstrage: LocalStrageService) { }

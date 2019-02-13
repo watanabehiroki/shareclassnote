@@ -37,5 +37,11 @@ export class SetsubjectComponent implements OnInit {
       this.responsevalue = 'エラー発生';
       });
   }
-
+  datetoString(datetext) {
+    let result = '';
+    let datelist = datetext.split('T');
+    datelist = datelist[0].split('-');
+    result = datelist[0] + '年' + datelist[1] + '月' + datelist[2] + '日';
+    return result;
+  }
 }
