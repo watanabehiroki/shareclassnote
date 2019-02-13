@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="444a9397-a04d-42a6-ab20-98d89e7cfbc5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/group/groupaddqrcode/groupaddqrcode.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/group/groupaddqrcode/groupaddqrcode.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/group/groupaddqrcode/groupaddqrcode.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/group/groupaddqrcode/groupaddqrcode.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/group/groupaddqrcode/groupaddqrcode.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/group/groupaddqrcode/groupaddqrcode.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/group/grouplist/grouplist.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/group/grouplist/grouplist.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/group/grouplist/grouplist.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/group/grouplist/grouplist.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/group/grouplist/grouplist.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/group/grouplist/grouplist.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/subject/listsubject/listsubject.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/subject/listsubject/listsubject.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/subject/listsubject/listsubject.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/subject/listsubject/listsubject.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/subject/listsubject/listsubject.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/subject/listsubject/listsubject.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/subject/setsubject/setsubject.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/subject/setsubject/setsubject.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/subject/setsubject/setsubject.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/subject/setsubject/setsubject.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../admin/src/app/component/subject/setsubject/setsubject.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/subject/setsubject/setsubject.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/confing/urlconfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/confing/urlconfig.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/group.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/group.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/group/groupreadqrcode/groupreadqrcode.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/group/groupreadqrcode/groupreadqrcode.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/app/component/group/groupreadqrcode/groupreadqrcode.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/group/groupreadqrcode/groupreadqrcode.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/app/component/group/groupreadqrcode/groupreadqrcode.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/group/groupreadqrcode/groupreadqrcode.component.ts" afterDir="false" />
     </list>
@@ -236,12 +220,12 @@
       <workItem from="1549872808619" duration="6099000" />
       <workItem from="1549942363437" duration="1933000" />
       <workItem from="1549949817369" duration="1240000" />
-      <workItem from="1550008454363" duration="4274000" />
+      <workItem from="1550008454363" duration="4856000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260091000" />
+    <option name="totallyTimeSpent" value="260673000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">

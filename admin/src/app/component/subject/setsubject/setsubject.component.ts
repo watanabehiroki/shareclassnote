@@ -11,7 +11,7 @@ export class SetsubjectComponent implements OnInit {
   httpbody = {
     name: '',
     color: '',
-  }
+  };
   constructor(private httpservice: HttpService) { }
   ngOnInit() {
     this.httpservice.httpget('/subject/getallsubject').subscribe(resdata => {
