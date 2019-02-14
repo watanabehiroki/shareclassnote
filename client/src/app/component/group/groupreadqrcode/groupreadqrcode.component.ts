@@ -56,6 +56,11 @@ export class GroupreadqrcodeComponent implements OnInit {
         this.ngOnInit();
       }
 
+
     });
   }
+  changemozi() {
+
+  }
+
 }

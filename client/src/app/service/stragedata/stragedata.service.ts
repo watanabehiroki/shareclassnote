@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+import {Changebase64Service} from "../base64/changebase64.service";
 @Injectable({
   providedIn: 'root'
 })
@@ -10,7 +10,7 @@ export class StragedataService {
     passphrase:'',
     groupname: ''
   }
-  constructor() { }
+  constructor(private base64:Changebase64Service ) { }
   removenoteobj(){
     this.noteobj = undefined;
   }
@@ -51,8 +51,8 @@ export class StragedataService {
     var splitqrcode = qrdata.split('*');
     if(splitqrcode.length === 3) {
       this.groupqrcodedata.adminemail = splitqrcode[0];
-      this.groupqrcodedata.groupname = splitqrcode[1];
-      this.groupqrcodedata.passphrase = splitqrcode[2];
+      this.groupqrcodedata.groupname = this.base64.base64tofont(splitqrcode[1]);
+      this.groupqrcodedata.passphrase = this.base64.base64tofont(splitqrcode[2]);
       resultflg = true;
     }
     return resultflg;
