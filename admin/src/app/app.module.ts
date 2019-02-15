@@ -4,7 +4,6 @@ import { QRCodeModule} from 'angularx-qrcode';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './component/headerfooter/footer/footer.component';
@@ -15,7 +14,6 @@ import { LoginComponent } from './component/login/login.component';
 import { GroupaddComponent } from './component/group/groupadd/groupadd.component';
 import { GrouplistComponent } from './component/group/grouplist/grouplist.component';
 import { DetailgroupComponent } from './component/group/detailgroup/detailgroup.component';
-import { UserlistComponent } from './component/user/userlist/userlist.component';
 import { DetailuserComponent } from './component/user/detailuser/detailuser.component';
 import { ListsubjectComponent } from './component/subject/listsubject/listsubject.component';
 import { EditsubjectComponent } from './component/subject/editsubject/editsubject.component';
@@ -28,6 +26,12 @@ import { RemovegroupComponent } from './component/group/removegroup/removegroup.
 import {  HttpService } from './service/httpservice/http.service';
 import { LocalStrageService} from './service/local_strage/local-strage.service';
 import { StragedataService} from './service/stragedata/stragedata.service';
+import { GroupnotelistComponent } from './component/note/groupnotelist/groupnotelist.component';
+import { GroupnoteoperationComponent } from './component/note/groupnoteoperation/groupnoteoperation.component';
+import { ClientlistComponent } from './component/user/userlist/clientlist/clientlist.component';
+import { AdminlistComponent } from './component/user/userlist/adminlist/adminlist.component';
+import { TimelistComponent } from './component/time/timelist/timelist.component';
+import { NewtimeComponent } from './component/time/newtime/newtime.component';
 
 @NgModule({
   declarations: [
@@ -40,14 +44,19 @@ import { StragedataService} from './service/stragedata/stragedata.service';
     GroupaddComponent,
     GrouplistComponent,
     DetailgroupComponent,
-    UserlistComponent,
     DetailuserComponent,
     ListsubjectComponent,
     EditsubjectComponent,
     MenuComponent,
     GroupaddSuccessComponent,
     GroupaddqrcodeComponent,
-    RemovegroupComponent
+    RemovegroupComponent,
+    GroupnotelistComponent,
+    GroupnoteoperationComponent,
+    ClientlistComponent,
+    AdminlistComponent,
+    TimelistComponent,
+    NewtimeComponent,
   ],
   imports: [
     HttpClientModule,

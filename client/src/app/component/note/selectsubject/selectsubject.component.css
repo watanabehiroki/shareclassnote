@@ -30,4 +30,9 @@
 }
 a.subbtn{
   text-align: center;
+
+}
+input.btn.subbtn{
+  color: white;
+  font-size: 130%;
 }

@@ -1,0 +1,13 @@
+.header{
+  width: 100%;
+  min-height: 8%;
+}
+.middle{
+  height: 82%;
+}
+.footer{
+  height: 10%;
+}
+a{
+  width: 100%;
+}

@@ -139,6 +139,7 @@ router.get('/getgrouphrase', function(req,res){
        });
    }
 });
+
 router.post('/findgroupclient', function (req,res) {
     let sessionid = req.body.clientsession;
     let groupname = req.body.groupname;
@@ -205,6 +206,7 @@ router.post('/qraddgroupclient',function (req,res) {
                 clientid = rows[0].userid;
                 sql = 'select * from grouptable ' +
                     'where groupname="'+groupname+'" and adminemail = "'+adminemail+'" and qcode = "'+passphrase+'";';
+                console.log(sql);
                 connection.query(sql,function (err, rows) {
                     if(!err){
                         sqldata = rows;

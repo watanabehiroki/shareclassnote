@@ -1,0 +1,18 @@
+<div class="header">
+  <app-menu></app-menu>
+</div>
+<div class="middle">
+  <div class="card" >
+    <div class="card-header">グループを選択してください。</div>
+    <div class="card-body">
+      <table class="table">
+        <tr *ngFor="let groupobj of grouplist">
+          <td><a routerLink="/groupnotelist/{{groupobj.groupname}}" class="btn">{{groupobj.groupname}}</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>

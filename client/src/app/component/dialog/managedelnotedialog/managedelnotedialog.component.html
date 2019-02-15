@@ -1,0 +1,18 @@
+
+<div class="modal fade" bsModal #noteModal="bs-modal" id="sampleModal" tabindex="-1">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span>削除してもよろしいですか？</span>
+        <input type="button" class="close btn btn-danger" data-dismiss="modal" value="×" (click)="noteModal.hide()"/>
+      </div>
+      <div class="modal-body" >
+        <div ><img [src]="notelist.base64picture"/> </div>
+      </div>
+      <div class="modal-footer">
+        <input type="button" value="削除"  class="btn btn-danger"  (click)="clickdel()" />
+        <input type="button" value="キャンセル" class="btn btn-default" (click)="noteModal.hide()" />
+      </div>
+    </div>
+  </div>
+</div>

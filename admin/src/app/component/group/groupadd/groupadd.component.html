@@ -2,7 +2,7 @@
   <app-menu></app-menu>
 </div>
 <div class="middle">
-    <form class="card" (ngSubmit)="clicksubmit()">
+    <form class="card" #groupaddform="ngForm" (ngSubmit)="clicksubmit()">
       <div class="card-header">グループ作成画面 あと説明など</div>
       <table class="table card-body">
         <tr>
@@ -44,7 +44,7 @@
       </table>
       <div class="card-footer">
         {{responcereuslt}}
-        <input type="submit" value="作成" class="btn btn-primary" />
+        <input type="submit" [disabled]="groupaddform.invalid" value="作成" class="btn btn-primary" />
       </div>
     </form>
 </div>

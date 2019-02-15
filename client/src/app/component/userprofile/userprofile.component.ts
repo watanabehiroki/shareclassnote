@@ -26,7 +26,6 @@ export class UserprofileComponent implements OnInit {
       if(httpdata.result == 'success'){
         this.userprofile = httpdata.datas;
       }
-      console.log(this.userprofile);
     });
   }
   editcancel(){
@@ -38,14 +37,11 @@ export class UserprofileComponent implements OnInit {
   }
   editendflg(){
     this.editprofile[0].sessionid = this.localStrage.getsessionid();
-    console.log(this.editprofile);
     this.httpclient.httppost('/users/clienteditprofile',this.editprofile[0]).subscribe(data=>{
       var httpdata:any = data;
       if(httpdata.result == 'success'){
         this.httpclient.httpget('/users/getmyprofile?sessionid='+this.localStrage.getsessionid()).subscribe(profiledata => {
-          console.log(httpdata);
           httpdata = profiledata;
-          console.log(httpdata.result);
           if(httpdata.result == 'success'){
             this.userprofile = httpdata.datas;
           }

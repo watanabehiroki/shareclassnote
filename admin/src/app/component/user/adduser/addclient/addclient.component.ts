@@ -63,7 +63,7 @@ export class AddclientComponent implements OnInit {
      console.log(httpdata);
      if (httpdata.result === 'success' && httpdata.password !== undefined) {
        this.deleteformdata();
-       this.result.data = '登録完了しました' + 'IDは' + httpdata.userid + ' パスワードは' + httpdata.password;
+       this.result.data = '登録完了しました。　' + 'IDは' + httpdata.userid + ' パスワードは' + httpdata.password;
      } else if (httpdata.result === 'err' && httpdata.message === 'sameid') {
        this.result.data = 'IDがすでに登録されています';
      } else {

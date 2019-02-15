@@ -12,19 +12,27 @@
               グループ
             </a>
             <div class="dropdown-menu" aria-labelledby="groupdropdown">
-              <a class="nav-link" href="/groupadd">グループ追加</a>
-              <a class="nav-link" href="/grouplist">グループ一覧</a>
+              <a class="nav-link" routerLink="/groupadd">グループ追加</a>
+              <a class="nav-link" routerLink="/grouplist">グループ一覧</a>
             </div>
           </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" id="#groupnotedropdown" aria-haspopup="true">
+                ノート
+              </a>
+              <div class="dropdown-menu" aria-labelledby="groupnotedropdown">
+                <a class="nav-link" routerLink="/groupnoteope">ノート投稿一覧</a>
+              </div>
+            </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" role="button"
                data-toggle="dropdown" id="#useraddlist" aria-haspopup="true"
                aria-expanded="false">利用者</a>
             <div class="dropdown-menu" aria-labelledby="useraddlist">
-              <a class="nav-link" href="/addclient">生徒用アカウント追加</a>
-              <a class="nav-link" href="">生徒用アカウント一覧</a>
-              <a class="nav-link" href="/addadmin" >管理者用アカウント追加</a>
-              <a class="nav-link" href="">管理用アカウント一覧</a>
+              <a class="nav-link" routerLink="/addclient">生徒用アカウント追加</a>
+              <a class="nav-link" routerLink="/clientlist">生徒用アカウント一覧</a>
+              <a class="nav-link" routerLink="/addadmin" >管理者用アカウント追加</a>
+              <a class="nav-link" routerLink="/adminlist">管理用アカウント一覧</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -32,18 +40,11 @@
                data-toggle="dropdown" id="#subjectlist" aria-haspopup="true"
                aria-expanded="false" >教科</a>
             <div class="dropdown-menu" aria-labelledby="subjectlist">
-              <a class="nav-link" href="/listsubject">登録一覧</a>
-              <a class="nav-link" href="/setsubject">新規登録</a>
+              <a class="nav-link" routerLink="/listsubject">登録一覧</a>
+              <a class="nav-link" routerLink="/setsubject">新規登録</a>
             </div>
           </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" role="button"
-               data-toggle="dropdown" id="#sampledropdown" aria-haspopup="true"
-               aria-expanded="false">ドロップダウンサンプル</a>
-            <div class="dropdown-menu" aria-labelledby="sampledropdown">
-              <a href="#" class="dropdown-item">メニュー１</a>
-            </div>
-          </li>
+
           <li class="nav-item dropdown">
             <input type="button" value="ログアウト" class="btn btn-primary" (click)="logoutclick()"/>
           </li>

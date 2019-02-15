@@ -2,11 +2,29 @@
   background-color: rgba(27,27,32,0.86);
   color: white;
   height: 100%;
+  width: 100%;
 }
 .headerappname{
   margin:0;
   float:left;
+  width: 50%;
+  height: 100%;
 }
 .headerlogout{
-  text-align:right
+  float: right;
+  width: 50%;
+  height: 100%;
+}
+img.headerimg{
+  max-height: 100%;
+  max-width: 100%;
+  padding: 10px;
+}
+.rigthtag{
+  margin-top: 10px;
+  float: right;
+}
+span.rigthtag{
+  font-size: 100%;
+  margin-right: 2%;
 }

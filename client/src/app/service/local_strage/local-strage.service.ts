@@ -11,7 +11,6 @@ export class LocalStrageService {
   //処理内容
   setsessionjson(sessionid) {
     this.loginjsonvalue={sessionid: sessionid};
-    console.log(this.loginjsonvalue);
     this.setLocalStorage(this.loginjsonvalue);
   }
   removelocalstrage(){

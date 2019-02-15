@@ -1,0 +1,37 @@
+<div class="header">
+  <app-menu></app-menu>
+</div>
+<div class="middle">
+  <div class="card">
+    <div class="card-header">
+      <span>生徒一覧</span>
+    </div>
+    <div class="card-body">
+      <!--<table >
+        <tr>
+          <th *ngFor="let nameobj of listname">
+            <input type="button" value="{{nameobj.name}}" class="btn btn-default" />
+          </th>
+        </tr>
+      </table>
+      -->
+      <table class="table">
+        <tr>
+          <th>名前</th>
+          <th>年齢</th>
+        </tr>
+        <tr *ngFor="let userobj of listuser">
+          <td>
+            {{userobj.firstname}} {{userobj.lastname}}
+          </td>
+          <td>
+            {{userobj.age}}歳
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,16 @@
+.header{
+  width: 100%;
+  min-height: 8%;
+}
+.middle{
+  height: 82%;
+  overflow: auto;
+}
+.footer{
+  height: 10%;
+}
+img.img{
+  max-height: 100%;
+  max-width: 100%;
+  width: 100%;
+}

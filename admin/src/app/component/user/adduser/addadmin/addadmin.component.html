@@ -2,7 +2,7 @@
   <app-menu></app-menu>
 </div>
 <div class="middle">
-  <form class="card " (ngSubmit)="adminaddclick()">
+  <form class="card " #form="ngForm"(ngSubmit)="adminaddclick()">
     <div class="card-header"><span>管理者＆教員追加  説明文導入</span></div>
     <table class=" table card-body">
       <tr>
@@ -78,7 +78,7 @@
     </table>
     <div class="card-footer">
       <span>{{responceresult}}</span>
-      <input type="submit" value="登録" class="btn btn-primary" />
+      <input type="submit" value="登録" [disabled]="form.invalid" class="btn btn-primary" />
     </div>
   </form>
 </div>

@@ -10,7 +10,7 @@
     <table class="table card-body">
       <tr>
         <th>NO.</th>
-        <th>科目名</th>
+        <th>教科名</th>
         <th>色</th>
         <th>更新日</th>
         <th>オプション</th>
@@ -19,7 +19,7 @@
         <td>{{subjectobj.id}}</td>
         <td>{{subjectobj.name}}</td>
         <td><input type="color" value="{{subjectobj.color}}" disabled="disabled"/></td>
-        <td>{{subjectobj.updateday}}</td>
+        <td>{{datetostring(subjectobj.updateday)}}</td>
         <td><a href="/editsubject/{{subjectobj.id}}" class="btn btn-primary">編集ボタン</a></td>
       </tr>
     </table>

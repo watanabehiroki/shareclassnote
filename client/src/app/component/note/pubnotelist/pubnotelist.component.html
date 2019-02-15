@@ -2,11 +2,57 @@
   <app-header></app-header>
 </div>
 <div class="middle ">
-  <div class="card">
-    <div class="card-header"> 説明欄</div>
-    <div class="main card-body">
+  <div class="card" *ngIf="notelist === ''">
+    <div class="card-header">
+      <span class="commentheader">投稿一覧</span>
+      <a routerLink="/selectsubject" class="btn playbtn btn-primary">戻る</a>
+    </div>
+    <div class="card-body">
+      <h1>登録されているノートはありません</h1>
+    </div>
+  </div>
+  <div class="card" *ngIf="notelist !== ''">
+    <div class="card-header">
+      <span class="commentheader" >投稿一覧</span>
+      <a routerLink="/selectsubject" class="btn playbtn btn-primary">戻る</a>
+    </div>
+    <div class="card-body row" *ngFor="let noteobj of notelist">
+      <div class="col-sm-4">
+        <img [src]="noteobj.base64picture" />
+      </div>
+      <div class="col-sm-8">
+        <table class="table">
+          <tr>
+            <th>教科</th>
+            <td>{{noteobj.subjectname}}</td>
+          </tr>
+          <tr>
+            <th>時間</th>
+            <td>{{noteobj.timename}}</td>
+          </tr>
+          <tr>
+            <th>グループ名</th>
+            <td>{{noteobj.groupname}}</td>
+          </tr>
+          <tr>
+            <th>投稿者名</th>
+            <td>{{noteobj.firstname}}{{noteobj.lastname}}</td>
+          </tr>
+          <tr>
+            <th>
+              操作
+            </th>
+            <td>
+              <input type="button" value="画像拡大" class="btn btn-primary" (click)="openNoteDialog()" />
+              <app-notedialog [dialogData]="noteobj" #notedialog></app-notedialog>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="card-footer">
 
-     </div>
+    </div>
   </div>
 </div>
 <div class="footer">

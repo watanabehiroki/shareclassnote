@@ -1,0 +1,12 @@
+<div class="modal fade" bsModal #lgModal="bs-modal" id="sampleModal" tabindex="-1">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <input type="button" class="close btn btn-danger" data-dismiss="modal" value="×" (click)="lgModal.hide()"/>
+      </div>
+      <div class="modal-body" >
+        <img [src]="noteobj.base64picture"/><!--画像-->
+      </div>
+    </div>
+  </div>
+</div>

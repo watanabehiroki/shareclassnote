@@ -2,8 +2,20 @@
   height: 10%;
 }
 .middle{
-  height: 80%;
+  height:78%;
 }
 .footer{
-  height: 10%;
+  height: 12%;
+}
+.card-header{
+  padding: 0px;
+}
+.card-body{
+  height: 30%;
+  padding: 0px;
+  margin: auto;
+}
+video{
+  height: 100px;
+  width: 100px;
 }

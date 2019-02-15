@@ -13,7 +13,7 @@ var userloginRouter = require('./routes/userlogin');
 var groupRouter = require('./routes/group');
 var timeRouter = require('./routes/time');
 var noteRouter = require('./routes/note');
-
+var homeRouter = require('./routes/home');
 
 var app = express();
 // view engine setup
@@ -51,6 +51,7 @@ app.use('/login', userloginRouter);
 app.use('/group', groupRouter);
 app.use('/time', timeRouter);
 app.use('/note', noteRouter);
+app.use('/home', homeRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

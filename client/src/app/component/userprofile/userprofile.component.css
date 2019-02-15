@@ -2,12 +2,47 @@
   height: 10%;
 }
 .middle{
-  height: 80%;
+  height:78%;
   overflow: scroll;
 }
 .footer{
-  height: 10%;
+  height: 12%;
 }
 img{
   width: 100%;
+}
+.row{
+  padding: 0px;
+}
+img.profileimg{
+  border-radius: 20%;
+}
+.card{
+  width: 100%;
+  min-height: 100%;
+
+}
+.card-header{
+  height: 10%;
+  width: 100%;
+}
+.card-footer{
+  height: 10%;
+  width: 100%;
+  text-align: right;
+}
+.card-body{
+  min-height: 80%;
+  width: 100%;
+  height: 100%;
+}
+.row{
+  min-height: 80%;
+  width: 100%;
+  height: 100%;
+  height: 100%;
+}
+
+form.ng-untouched.ng-pristine.ng-valid{
+  height: 100%;
 }

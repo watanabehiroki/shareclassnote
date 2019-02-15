@@ -9,6 +9,7 @@ import {LocalStrageService} from '../../../service/local_strage/local-strage.ser
 })
 export class GroupaddqrcodeComponent implements OnInit {
   qrcodedata;
+  size = 350;
   constructor(private router: Router,
               private strageservice: StragedataService,
               private localstrage: LocalStrageService) { }
@@ -21,7 +22,7 @@ export class GroupaddqrcodeComponent implements OnInit {
       if (this.strageservice.confirmqrdataflg()) {
          stragejson = this.strageservice.getqrdata();
          console.log( stragejson);
-        this.qrcodedata = stragejson.adminemail + '*' + stragejson.groupname + '*' + stragejson.passphase;
+        this.qrcodedata = stragejson.adminemail + '*' + this.fonttobase64(stragejson.groupname) + '*' + this.fonttobase64(stragejson.passphase);
       } else {
         this.router.navigate(['/grouplist']);
       }
@@ -30,5 +31,9 @@ export class GroupaddqrcodeComponent implements OnInit {
   removeqrcode() {
     this.strageservice.removeqrdata();
     this.router.navigate(['/grouplist']);
+  }
+  fonttobase64(text){
+
+    return btoa(unescape(encodeURIComponent(text)));
   }
 }

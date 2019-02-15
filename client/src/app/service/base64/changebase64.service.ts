@@ -6,6 +6,13 @@ import { Injectable } from '@angular/core';
 export class Changebase64Service {
 
   constructor() { }
+  fonttobase64(text){
+
+    return btoa(unescape(encodeURIComponent(text)));
+  }
+  base64tofont(base64){
+    return decodeURIComponent(escape(atob(base64)));
+  }
   picturetobase64(img,mine_type){//minetype =>string image/png or image/jpeg other
     var canvas = document.createElement('canvas');
     canvas.width = img.width;
