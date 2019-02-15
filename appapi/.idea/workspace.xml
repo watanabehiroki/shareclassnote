@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="444a9397-a04d-42a6-ab20-98d89e7cfbc5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/group/groupadd/groupadd.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/group/groupadd/groupadd.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/group/groupaddqrcode/groupaddqrcode.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/group/groupaddqrcode/groupaddqrcode.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/subject/editsubject/editsubject.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/subject/editsubject/editsubject.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/group/groupadd/groupadd.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/group/groupadd/groupadd.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/headerfooter/menu/menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/headerfooter/menu/menu.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../admin/src/app/component/subject/setsubject/setsubject.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/subject/setsubject/setsubject.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/user/userlist/userlist.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/user/userlist/userlist.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/user/userlist/userlist.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/user/userlist/userlist.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/confing/urlconfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/confing/urlconfig.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/component/group/groupreadqrcode/groupreadqrcode.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/component/group/groupreadqrcode/groupreadqrcode.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/service/base64/changebase64.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/service/base64/changebase64.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/service/stragedata/stragedata.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/service/stragedata/stragedata.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/note.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/note.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/time.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/time.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/config/urlconfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/config/urlconfig.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
@@ -35,11 +41,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/group.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
+            <state relative-caret-position="570">
               <caret line="208" column="33" selection-start-line="208" selection-start-column="33" selection-end-line="208" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/note.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="321" column="55" selection-start-line="321" selection-start-column="55" selection-end-line="321" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/users.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1207">
+              <caret line="71" column="33" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/time.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="553">
+              <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -69,7 +111,6 @@
         <option value="$PROJECT_DIR$/../database/sql/initialdatabase.sql" />
         <option value="$PROJECT_DIR$/routes/subject.js" />
         <option value="$PROJECT_DIR$/routes/module/sessiondecision.js" />
-        <option value="$PROJECT_DIR$/routes/time.js" />
         <option value="$PROJECT_DIR$/routes/userlogin.js" />
         <option value="$PROJECT_DIR$/routes/module/uniquvalue.js" />
         <option value="$PROJECT_DIR$/routes/module/FileReaderWriter.js" />
@@ -80,18 +121,19 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routes/module/File.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/routes/group.js" />
+        <option value="$PROJECT_DIR$/routes/note.js" />
         <option value="$PROJECT_DIR$/config/sqlconfig.js" />
         <option value="$PROJECT_DIR$/routes/users.js" />
-        <option value="$PROJECT_DIR$/routes/note.js" />
-        <option value="$PROJECT_DIR$/routes/group.js" />
+        <option value="$PROJECT_DIR$/routes/time.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="307" />
-    <option name="y" value="346" />
-    <option name="width" value="1190" />
-    <option name="height" value="1115" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1296" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -99,8 +141,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -133,7 +175,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549813783056" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -225,12 +267,14 @@
       <workItem from="1549872808619" duration="6099000" />
       <workItem from="1549942363437" duration="1933000" />
       <workItem from="1549949817369" duration="1240000" />
-      <workItem from="1550008454363" duration="7020000" />
+      <workItem from="1550008454363" duration="7617000" />
+      <workItem from="1550120981653" duration="989000" />
+      <workItem from="1550188870048" duration="3908000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="262837000" />
+    <option name="totallyTimeSpent" value="268331000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -242,7 +286,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="205" y="231" width="793" height="743" extended-state="0" />
+    <frame x="-8" y="-8" width="1296" height="1040" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -250,10 +294,10 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4941957" visible="true" weight="0.2701228" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.4941957" visible="true" weight="0.27912623" />
       <window_info id="Structure" order="6" sideWeight="0.5058043" side_tool="true" weight="0.30040485" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.2831424" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.28114665" />
       <window_info anchor="bottom" id="Database Changes" order="2" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
@@ -268,7 +312,7 @@
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
       <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.13233288" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.13187702" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
@@ -359,13 +403,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/time.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/datas/note/2edb44b5b15dd6.5c08f096.txt" />
     <entry file="file://$PROJECT_DIR$/datas/note/3a4309b68bb896.5c08f096.txt">
       <provider selected="true" editor-type-id="text-editor" />
@@ -413,31 +450,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/sqlconfig.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="284" selection-start-line="284" selection-end-line="284" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -448,17 +464,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/note.js">
+    <entry file="file://$PROJECT_DIR$/config/sqlconfig.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="172" column="31" selection-start-line="172" selection-start-column="31" selection-end-line="172" selection-end-column="31" />
+        <state relative-caret-position="17">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/group.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
+        <state relative-caret-position="570">
           <caret line="208" column="33" selection-start-line="208" selection-start-column="33" selection-end-line="208" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/note.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="321" column="55" selection-start-line="321" selection-start-column="55" selection-end-line="321" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" column="33" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/time.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
         </state>
       </provider>
     </entry>

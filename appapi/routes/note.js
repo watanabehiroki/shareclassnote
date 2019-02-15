@@ -308,11 +308,18 @@ router.post('/clientsubmitnote',function(req,res){
                                    filemodule.NoteFileWriter(requestdata.noteid+'.'+requestdata.clientid,requestdata.base64picture);
                                    responceresult.result = 'success';
                                    responceresult.message= 'addnote';
+                               }else{
                                }
                                return res.json(responceresult);
                             });
+                        }else{
+                            responceresult.message = err;
+                            return res.json(responceresult);
                         }
                      });
+                   }else{
+                       responceresult.message =err;
+                       return res.json(responceresult);
                    }
 
                 });

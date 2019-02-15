@@ -3,10 +3,10 @@
 </div>
 <div class="middle">
   <form class="card" #subjectform="ngForm" (ngSubmit)="submitclick()">
-    <div class="card-header">科目入力ページ</div>
+    <div class="card-header">教科入力ページ</div>
     <table class="card-body table">
       <tr>
-        <th><span>科目</span></th>
+        <th><span>教科</span></th>
         <td>
           <input  type='text'  [(ngModel)]='httpbody.name'
                     name="subname"/>
@@ -30,7 +30,7 @@
 
   <div class="subjectmenu card">
     <div class="card-header">
-      <span>サンプル</span>
+      <span>登録一覧</span>
       <button class="btn btn-primary" data-toggle="collapse" data-target="#ListSubject">↓</button>
       <div class="collapse" id="ListSubject">
         <table class="card-body table">

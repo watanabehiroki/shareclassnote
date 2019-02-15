@@ -8,20 +8,38 @@ let filemodule = require('./module/File');
 
 /* GET users listing. */
 router.get('/getallclient', function( req, res){
-  var sql = 'select * from clientuser;'
+  var sessionid = req.query.sessionid;
+  var sql;
   var resultdata;
   try{
+    sql = 'select email from adminapisession ' +
+        'where sessionid ="'+sessionid+'";'
     connection.query(sql,function (err,rows) {
-      if(err){
-        resultdata = {
-         result: 'err',
-         message: err
-        }
+      let sqldata = rows;
+      if(!err && sqldata.length > 0){
+        sql = 'select userid, firstname, lastname, age from clientuser;';
+        connection.query(sql,function (err,rows) {
+          if(err){
+            resultdata = {
+              result: 'err',
+              message: err
+            }
+          }else{
+            resultdata={
+              result:'success',
+              datas: rows
+            }
+          }
+          return res.json(resultdata);
+        });
       }else{
-        resultdata = rows;
+        return res.json({
+          result: 'err',
+          message:'',
+        })
       }
-      return res.json(resultdata);
-    });
+    })
+
   }catch (e){
     return resultdata = {
       result: 'err',
@@ -30,6 +48,31 @@ router.get('/getallclient', function( req, res){
   }
 });
 
+router.get('/getalladminuser',function(req,res){
+  let sessionid = req.query.sessionid;
+  var sql;
+  var sqlresult = {
+    result:'err',
+    datas: '',
+  }
+  sql = 'select email from adminapisession' +
+      ' where sessionid ="'+sessionid+'";'
+  connection.query(sql,function (err,rows) {
+    var sqldata = rows;
+    if(!err && sqldata.length > 0){
+      sql = 'select firstname, lastname, age from adminuser;';
+      connection.query(sql,function (err, rows) {
+        if(!err){
+          sqlresult.result = 'success';
+          sqlresult.datas = rows;
+        }
+        return res.json(sqlresult);
+      })
+    }else{
+      return res.json(sqlresult);
+    }
+  })
+});
 
 router.post('/adminuseradd',function(req,res){
   var user = {
