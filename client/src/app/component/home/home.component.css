@@ -3,7 +3,17 @@
 }
 .middle{
   height:78%;
+  overflow: auto;
 }
 .footer{
   height: 12%;
+}
+.card{
+  height: 100%;
+}
+.card-header{
+  height: 10%;
+}
+.card-body{
+  height: 90%;
 }

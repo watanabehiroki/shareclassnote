@@ -2,7 +2,31 @@
   <app-header></app-header>
 </div>
 <div class="middle">
-  home
+  <div class="card">
+    <div class="card-header">
+      最新のノート投稿一覧
+    </div>
+    <div class="card-body" *ngIf="listcount < 0">
+      <h1>登録されているノートはありません。</h1>
+    </div>
+    <div class="card-body" *ngIf="listcount > 0">
+      <table class="table" >
+        <tr>
+          <th>授業日</th>
+          <th>教科</th>
+          <th></th>
+        </tr>
+        <tr *ngFor="let noteobj of listnote">
+          <td>{{dateToString(noteobj.lessonday)}}</td>
+          <td>{{noteobj.name}}</td>
+          <td>
+            <input type="button" class="btn btn-info" value="画像" (click)="openNoteDialog()"/>
+            <app-notedialog [dialogData]="noteobj" #notedialog></app-notedialog>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </div>
 <div class="footer">
   <app-footer></app-footer>
