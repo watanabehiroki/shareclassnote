@@ -243,6 +243,7 @@ router.post('/clientnotedel',function(req,res){
        if(!err && sqldata.length >0){
            sql = 'update classnote set delflg=true' +
                ' where noteid="'+httprequest.noteid+'";';
+           console.log(sql);
            connection.query(sql,function (err,rows) {
               if(!err){
                   httpresponce.result = 'success';

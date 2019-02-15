@@ -3,10 +3,19 @@
 </div>
 <div class="middle ">
   <div class="card" *ngIf="notelist === ''">
-    <h1>登録されているノートはありません</h1>
+    <div class="card-header">
+      <span class="commentheader">投稿一覧</span>
+      <a routerLink="/selectsubject" class="btn playbtn btn-primary">戻る</a>
+    </div>
+    <div class="card-body">
+      <h1>登録されているノートはありません</h1>
+    </div>
   </div>
   <div class="card" *ngIf="notelist !== ''">
-    <div class="card-header">選択</div>
+    <div class="card-header">
+      <span class="commentheader" >投稿一覧</span>
+      <a routerLink="/selectsubject" class="btn playbtn btn-primary">戻る</a>
+    </div>
     <div class="card-body row" *ngFor="let noteobj of notelist">
       <div class="col-sm-4">
         <img [src]="noteobj.base64picture" />

@@ -35,7 +35,8 @@
       </div>
       <div class="card-footer">
         <input type="button" value="編集" class="btn btn-primary" (click)="clickdetail(noteobj)"/>
-        <input type="button" value="削除" class="btn btn-danger" />
+        <input type="button" value="削除" class="btn btn-danger" (click)="opemanagenDialog()" />
+        <app-managedelnotedialog [dialogData]="noteobj" (clickCloseButton)="getDialogData($event)" #managedialog></app-managedelnotedialog>
       </div>
     </div>
   </div>

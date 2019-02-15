@@ -29,6 +29,7 @@ img.profileimg{
 .card-footer{
   height: 10%;
   width: 100%;
+  text-align: right;
 }
 .card-body{
   min-height: 80%;

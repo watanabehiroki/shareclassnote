@@ -14,3 +14,6 @@ img{
 td#imageobj{
   width: 30%;
 }
+.card-footer{
+  text-align: right;
+}
