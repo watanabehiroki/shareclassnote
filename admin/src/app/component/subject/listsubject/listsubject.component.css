@@ -17,3 +17,10 @@
 .card-body{
   width: 100%;
 }
+#asubject{
+  text-align: right;
+  float: right;
+}
+#kamoku{
+  text-align: left;
+}

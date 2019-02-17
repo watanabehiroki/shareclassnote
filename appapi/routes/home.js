@@ -30,7 +30,6 @@ router.get('/homenote',function(req,res){
                httprequestdata.userid+'" and classnote.updateday = CURRENT_DATE() order by classnote.lessonday  limit 10 ;';
            connection.query(sql,function (err,rows) {
                sqldata = rows;
-               console.log(sqldata);
                sqldata.forEach(function(noteobj){
                   noteobj['base64picture'] = filemodule.NoteFileRead(noteobj.directorypath);
                });

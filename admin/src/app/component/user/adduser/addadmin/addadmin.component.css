@@ -4,9 +4,12 @@
 }
 .middle{
   width: 100%;
-
+  overflow: auto;
 }
 .footer{
   width: 100%;
 
+}
+.card-footer{
+  text-align: right;
 }

@@ -2,7 +2,7 @@
   <app-menu></app-menu>
 </div>
 <div class="middle">
-  <form class="card " (ngSubmit)="submitclick()">
+  <form class="card " #addclientform="ngForm" (ngSubmit)="submitclick()">
     <div class="card-header"><span>説明文導入</span></div>
     <table class=" table card-body">
       <tr>
@@ -57,7 +57,7 @@
       </tr>
       <tr>
         <th>年齢:</th>
-        <td><input type="number" [(ngModel)]="userprofile.age" name="age"/></td>
+        <td><input type="number" [(ngModel)]="userprofile.age" required name="age"/></td>
       </tr>
       <tr>
         <th>性別:</th>
@@ -73,7 +73,7 @@
           <input type="radio" name="passwordradio" [(ngModel)]="passwordflg" [value]="true" />手動生成
           <br/><br/>
           <div *ngIf="passwordflg">
-            <input type="password" [(ngModel)]="userprofile.password" name="password" />
+            <input type="password" [(ngModel)]="userprofile.password"  name="password" />
           </div>
         </td>
       </tr>
@@ -81,7 +81,7 @@
     </table>
     <div class="card-footer">
       <span>{{result.data}}</span>
-      <input type="submit" value="登録" class="btn btn-primary" />
+      <input type="submit" value="登録"  [disabled]="addclientform.invalid" class="btn btn-primary" />
     </div>
   </form>
 </div>
