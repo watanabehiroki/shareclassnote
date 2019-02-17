@@ -2,13 +2,14 @@
   <app-header></app-header>
 </div>
 <div class="middle">
-  <form class="card" #form="ngForm" (ngSubmit)="clicksubmitnote()">
+  <form class="card" #notesubmitform="ngForm" (ngSubmit)="clicksubmitnote()">
     <div class="card-header">説明文挿入</div>
     <table class="card-body table">
       <tr>
-        <th>科目選択:</th>
+        <th>教科選択:</th>
         <td>
           <select [(ngModel)]="bodyobj.subjectid"  name="subjectlist" required #subjectvalidation="ngModel" >
+            <option value="">教科を選択してください。</option>
             <option *ngFor="let subjectobj of listsubject" value="{{subjectobj.id}}">{{subjectobj.name}}</option>
           </select>
           <br/>
@@ -26,6 +27,7 @@
         <th>グループ選択:</th>
         <td>
           <select [(ngModel)]="bodyobj.group" name="grouplist" required #groupvalidation="ngModel" >
+            <option value="">グループを選択してください。</option>
             <option *ngFor="let groupobj of grouplist" value="{{groupobj.groupname}}|{{groupobj.adminemail}}" >{{groupobj.groupname}}</option>
           </select>
           <br/>
@@ -44,6 +46,7 @@
         <th>時間割</th>
         <td>
           <select name="timelist" [(ngModel)]="bodyobj.timeid" name="timelist" #timevalidation="ngModel" required>
+            <option value="">時間割を選択してください。</option>
             <option *ngFor="let timeobj of timelist" value={{timeobj.id}}>{{timeobj.name}}</option>
           </select>
           <br/>
@@ -63,8 +66,7 @@
     </table>
     <div class="card-footer">
       <span>{{registrationdata}}</span>
-      <input type="submit" value="投稿" [disabled]="form.invalid" class="btn btn-primary"/>
-
+      <input type="submit" value="投稿" [disabled]="notesubmitform.invalid" class="btn btn-primary"/>
     </div>
   </form>
 </div>

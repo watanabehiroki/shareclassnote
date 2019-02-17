@@ -29,12 +29,13 @@ export class ManegementnotelistComponent implements OnInit {
         let httpdata: any = data;
         if (httpdata.result == 'success') {
           this.listnotedata = httpdata.datas;
+          console.log(this.listnotedata);
         }
       });
   }
 
-  opemanagenDialog(){
-   this.managedeldialog.openDialog();
+  opemanagenDialog(noteobj){
+   this.managedeldialog.openDialog(noteobj);
   }
   clickdetail(Noteobject){
     this.stragedata.setnoteobj(Noteobject);

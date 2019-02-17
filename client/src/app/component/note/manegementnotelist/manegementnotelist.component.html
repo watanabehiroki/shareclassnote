@@ -6,7 +6,7 @@
     <div class="card" *ngFor="let noteobj of listnotedata">
       <div class="card-header">{{noteobj.subjectname}}</div>
       <div class="card-body row">
-        <div class="col-sm-4" id="imageobj"><img [src]="noteobj.base64picture"/></div>
+        <div class="col-sm-4" *ngIf="noteobj.base64picture !== null" id="imageobj"><img [src]="noteobj.base64picture"/></div>
         <div class="col-sm-8">
           <table class="table">
             <tr>
@@ -35,8 +35,8 @@
       </div>
       <div class="card-footer">
         <input type="button" value="編集" class="btn btn-primary" (click)="clickdetail(noteobj)"/>
-        <input type="button" value="削除" class="btn btn-danger" (click)="opemanagenDialog()" />
-        <app-managedelnotedialog [dialogData]="noteobj" (clickCloseButton)="getDialogData($event)" #managedialog></app-managedelnotedialog>
+        <input type="button" value="削除" class="btn btn-danger" (click)="opemanagenDialog(noteobj)" />
+        <app-managedelnotedialog  (clickCloseButton)="getDialogData($event)" #managedialog></app-managedelnotedialog>
       </div>
     </div>
   </div>

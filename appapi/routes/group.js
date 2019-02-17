@@ -22,7 +22,6 @@ router.get('/getclientallgroup',function (req,res) {
                 userid = sqldata[0].userid;
                 sql = 'select * from groupmember left outer join grouptable on groupmember.adminemail = grouptable.adminemail and grouptable.groupname = groupmember.groupname ' +
                     'left outer join adminuser on grouptable.adminemail = adminuser.email where groupmember.clientid = "'+userid+'";';
-                console.log(sql);
                 connection.query(sql,function(err,rows){
                    if(!err){
                        resultdata.result = "success";
@@ -153,7 +152,6 @@ router.post('/findgroupclient', function (req,res) {
     }
     sql = 'select * from clientapisession ' +
         'where sessionid = "'+sessionid+'";';
-    console.log(sql);
     connection.query(sql, function (err,rows){
         var sqlresultdata;
 
@@ -165,7 +163,6 @@ router.post('/findgroupclient', function (req,res) {
                //session存在する
                sql = 'select * from grouptable left join adminuser on adminuser.email = grouptable.adminemail ' +
                    'where grouptable.adminemail = "'+adminemail+'" and grouptable.groupname = "'+groupname+'" and grouptable.qcode = "'+passphrase+'";';
-               console.log(sql);
                connection.query(sql,function (err,rows) {
                   if(err){
                   } else {
@@ -206,7 +203,6 @@ router.post('/qraddgroupclient',function (req,res) {
                 clientid = rows[0].userid;
                 sql = 'select * from grouptable ' +
                     'where groupname="'+groupname+'" and adminemail = "'+adminemail+'" and qcode = "'+passphrase+'";';
-                console.log(sql);
                 connection.query(sql,function (err, rows) {
                     if(!err){
                         sqldata = rows;

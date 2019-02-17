@@ -14,8 +14,9 @@ export class ManagedelnotedialogComponent {
 @Output() clickCloseButton = new EventEmitter<any>();
   notelist: any='';
   constructor(private http:HttpclientService,private localStrage:LocalStrageService) { }
-  openDialog(){
-    this.notelist = this.dialogData;
+  openDialog(noteobj){
+    console.log(noteobj);
+    this.notelist = noteobj;
     this.modalRef.show();
     console.log(this.notelist);
   }

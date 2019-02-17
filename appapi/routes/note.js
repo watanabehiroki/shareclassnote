@@ -45,7 +45,6 @@ router.get('/clientselectsubjectnote/:item/:sort',function(req,res){
            sql = 'select classnote.clientid, classnote.lessonday,classnote.groupname,classnote.adminemail,classnote.noteid,subject.name as subjectname,time.name as timename, clientuser.firstname,clientuser.lastname,uploadtable.directorypath from groupmember left outer join classnote on classnote.groupname = groupmember.groupname and classnote.adminemail = groupmember.adminemail ' +
                'left outer join clientuser on classnote.clientid = clientuser.userid left outer join time on classnote.timeid = time.id left outer join subject on classnote.subject = subject.id ' +
                'left outer join uploadtable on classnote.noteid = uploadtable.noteid where classnote.delflg= false and classnote.releaseflg=true and clientuser.delflg = false and groupmember.clientid ="'+userid+'" and subject.id = '+reqdata.subjectid+'  order by '+sqloptions.item+ ' '+sqloptions.sort+';';
-           console.log(sql);
            connection.query(sql,function(err,rows){
                sqldata = rows;
                if(!err && sqldata.length > 0){
@@ -140,8 +139,7 @@ router.post('/groupallnote',function(req,res){
                ' where groupmember.groupname="' +
                httpreqdata.groupname+'" and groupmember.adminemail = "'+httpreqdata.email+'" ' +
                'and classnote.updateday between '+ "date_format('"+httpreqdata.month+"','%Y-%m-01') and last_day('"+httpreqdata.month+"');"
-           console.log(sql);
-           connection.query(sql,function(err, rows){
+          connection.query(sql,function(err, rows){
               if(!err){
                   responcedata.datas = rows;
                   responcedata.datas.forEach(function(noteobj){
@@ -243,7 +241,6 @@ router.post('/clientnotedel',function(req,res){
        if(!err && sqldata.length >0){
            sql = 'update classnote set delflg=true' +
                ' where noteid="'+httprequest.noteid+'";';
-           console.log(sql);
            connection.query(sql,function (err,rows) {
               if(!err){
                   httpresponce.result = 'success';
@@ -297,13 +294,12 @@ router.post('/clientsubmitnote',function(req,res){
                      requestdata.noteid = randomid.findsessionid(sqlresponce);
                      sql = 'insert into classnote(noteid,clientid,releaseflg,delflg,groupname,adminemail,timeid,subject,lessonday,updateday) values ' +
                          '("'+requestdata.noteid+'","'+requestdata.clientid+'",'+requestdata.releaseflg+','+requestdata.delflg+',"'+requestdata.group.groupname+'","'
-                         +requestdata.group.adminemail+'",'+requestdata.timeid+','+requestdata.subjectid+",cast('"+requestdata.year+"' as date),now());";
+                         +requestdata.group.adminemail+'",'+requestdata.timeid+','+requestdata.subjectid+",date_add(cast('"+requestdata.year+"' as date),interval 1 day),now());";
                      connection.query(sql,function(err,rows){
                         if(!err){
                             requestdata.picturepath = requestdata.noteid + '|' +requestdata.clientid;
                             sql = 'insert into uploadtable(noteid,clientid,directorypath) ' +
                                 'values ("'+requestdata.noteid+'","'+requestdata.clientid+'","'+requestdata.noteid+'.'+requestdata.clientid+'");';
-                            console.log(sql);
                             connection.query(sql,function(err,rows){
                                if(!err){
                                    filemodule.NoteFileWriter(requestdata.noteid+'.'+requestdata.clientid,requestdata.base64picture);

@@ -55,6 +55,7 @@ export class SubmitnoteComponent implements OnInit {
     });
   }
   clicksubmitnote(){
+    console.log(this.bodyobj.year);
     const grouplist = this.bodyobj.group.split('|');
    if(grouplist.length == 2){
      this.bodyobj.groupname = grouplist[0];
@@ -70,6 +71,7 @@ export class SubmitnoteComponent implements OnInit {
          this.registrationdata = '登録することができませんでした';
        }
    });
+
   }
   private resetreqdata (){
     this.bodyobj = {

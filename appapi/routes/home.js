@@ -16,7 +16,6 @@ router.get('/homenote',function(req,res){
     }
     var sql = 'select userid from clientapisession ' +
         'where sessionid="'+httprequestdata.sessionid+'";';
-    console.log(sql);
     connection.query(sql,function(err,datas){
         var sqldata = datas;
        if(!err && sqldata.length > 0){
@@ -29,7 +28,6 @@ router.get('/homenote',function(req,res){
            'left outer join subject on classnote.subject = subject.id  left outer join time on time.id = classnote.timeid ' +
            'where classnote.delflg=false and classnote.releaseflg=true and groupmember.clientid="'+
                httprequestdata.userid+'" and classnote.updateday = CURRENT_DATE() order by classnote.lessonday  limit 10 ;';
-           console.log(sql);
            connection.query(sql,function (err,rows) {
                sqldata = rows;
                console.log(sqldata);
