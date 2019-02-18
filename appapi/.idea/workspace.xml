@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="444a9397-a04d-42a6-ab20-98d89e7cfbc5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/group/groupadd/groupadd.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/group/groupadd/groupadd.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/headerfooter/menu/menu.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/headerfooter/menu/menu.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/headerfooter/menu/menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/headerfooter/menu/menu.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/subject/listsubject/listsubject.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/subject/listsubject/listsubject.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/subject/listsubject/listsubject.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/subject/listsubject/listsubject.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/subject/setsubject/setsubject.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/subject/setsubject/setsubject.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/subject/setsubject/setsubject.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/subject/setsubject/setsubject.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/user/adduser/addadmin/addadmin.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/user/adduser/addadmin/addadmin.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/user/adduser/addclient/addclient.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/user/adduser/addclient/addclient.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/app/component/user/adduser/addclient/addclient.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/app/component/user/adduser/addclient/addclient.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/src/confing/urlconfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/src/confing/urlconfig.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/config/urlconfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/config/urlconfig.ts" afterDir="false" />
-    </list>
+    <list default="true" id="444a9397-a04d-42a6-ab20-98d89e7cfbc5" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,10 +79,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="685" />
-    <option name="y" value="387" />
-    <option name="width" value="384" />
-    <option name="height" value="440" />
+    <option name="x" value="783" />
+    <option name="width" value="1179" />
+    <option name="height" value="1091" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">

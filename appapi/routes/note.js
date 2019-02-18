@@ -27,9 +27,9 @@ router.get('/clientselectsubjectnote/:item/:sort',function(req,res){
    }
    var sql;
     if(reqdata.notesort == 1){
-        sqloptions.sort = 'DESC';
-    }else{
         sqloptions.sort = 'ASC';
+    }else{
+        sqloptions.sort = 'DESC';
     }
     if(reqdata.item){
 
@@ -193,7 +193,7 @@ router.post('/updatenote',function(req,res){
                         sqldata = rows;
                         if(sqldata.length > 0){
                             //ノートが存在する
-                            sql = 'update classnote set releaseflg = '+requestdata.releaseflg+', lessonday=cast("'+requestdata.lessonday+'" as date),' +
+                            sql = 'update classnote set releaseflg = '+requestdata.releaseflg+', lessonday=date_add(cast("'+requestdata.lessonday+'" as date),interval 1 day),' +
                                 'timeid ='+requestdata.timeid+',subject = '+requestdata.subjectid+' where noteid = "'+requestdata.noteid+'";';
                             connection.query(sql,function(err,rows){
                                if(!err){
